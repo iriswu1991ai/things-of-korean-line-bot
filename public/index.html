@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LINE 推播管理</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">LINE Official Account</p>
+          <h1>定時推播管理</h1>
+        </div>
+        <div class="status" id="status">讀取中</div>
+      </header>
+
+      <section class="grid">
+        <article class="panel finance">
+          <div>
+            <p class="eyebrow">07:30</p>
+            <h2>國際財金晨報</h2>
+            <p class="copy">金融業用的每日國際市場重點，含利率、匯率、風險資產與合規提醒。</p>
+          </div>
+          <div class="actions">
+            <button data-preview="finance">預覽</button>
+            <button data-push="finance">手動推播</button>
+          </div>
+        </article>
+
+        <article class="panel korean">
+          <div>
+            <p class="eyebrow">09:00</p>
+            <h2>韓檢單字 10 個</h2>
+            <p class="copy">每則包含中文翻譯、詞性、韓文例句與中文句譯。</p>
+          </div>
+          <div class="actions">
+            <button data-preview="korean-vocab">預覽</button>
+            <button data-push="korean-vocab">手動推播</button>
+          </div>
+        </article>
+
+        <article class="panel grammar">
+          <div>
+            <p class="eyebrow">10:00</p>
+            <h2>韓檢文法 2 個</h2>
+            <p class="copy">每則包含文法型態、用法說明與兩組韓中例句。</p>
+          </div>
+          <div class="actions">
+            <button data-preview="korean-grammar">預覽</button>
+            <button data-push="korean-grammar">手動推播</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="preview">
+        <div class="preview-head">
+          <h2>訊息預覽</h2>
+          <span id="result"></span>
+        </div>
+        <pre id="preview">請選擇一個推播內容。</pre>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
