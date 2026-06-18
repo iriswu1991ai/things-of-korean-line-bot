@@ -1,4 +1,6 @@
-import { textMessage } from "./line.js";
+function textMessage(text) {
+  return { type: "text", text: text.slice(0, 5000) };
+}
 
 const financeFallback = [
   "美國利率預期與美元走勢仍是今日市場定價主軸。",

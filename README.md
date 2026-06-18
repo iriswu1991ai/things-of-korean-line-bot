@@ -1,11 +1,29 @@
 # LINE Scheduled Official Account Sites
 
-這個專案是一個 Node.js 小服務，用同一個網站管理兩個 LINE 官方帳號：
+這個專案提供本機 Node.js 管理頁，以及可免費部署到 Cloudflare Workers 的韓檢 LINE Bot：
 
 - 金融業國際財金時事：每天早上 `07:30` 推播。
 - 韓檢 TOPIK：每天早上 `09:00` 推播 10 個單字，早上 `10:00` 推播 2 個文法。
 
 預設時區是 `Asia/Taipei`。本機可直接預覽內容；接上 LINE Channel Access Token / Channel Secret 後即可部署使用。
+
+## Cloudflare Workers 免費部署
+
+正式韓檢排程設定在 `wrangler.toml`：
+
+```text
+0 1 * * *  = 台北時間 09:00 單字
+0 2 * * *  = 台北時間 10:00 文法
+```
+
+Cloudflare Cron Triggers 使用 UTC。Worker 入口為 `src/worker.js`，需要設定：
+
+```text
+LINE_KOREAN_CHANNEL_SECRET
+LINE_KOREAN_CHANNEL_ACCESS_TOKEN
+LINE_KOREAN_TARGET_IDS
+ADMIN_TOKEN
+```
 
 ## 本機啟動
 
