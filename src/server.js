@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { loadEnv } from "./env.js";
 import { addSubscriber, getSubscribers, hasSent, markSent, removeSubscriber } from "./storage.js";
-import { configuredTargets, push, reply, textMessage, verifySignature } from "./line.js";
+import { configuredTargets, push, verifySignature } from "./line.js";
 import { financeMessages, koreanGrammarMessages, koreanVocabMessages, preview } from "./content.js";
 import { isScheduledTime, nowParts } from "./time.js";
 
@@ -91,13 +91,6 @@ async function handleWebhook(account, req, res) {
     }
     if (event.type === "unfollow") {
       await removeSubscriber(account, userId);
-    }
-    if (event.replyToken && event.type === "message") {
-      const message =
-        account === "finance"
-          ? "已訂閱每日 07:30 國際財金晨報。"
-          : "已訂閱每日 09:00 韓檢單字與 10:00 韓檢文法。";
-      await reply(account, event.replyToken, [textMessage(message)]);
     }
   }
 

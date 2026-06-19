@@ -63,21 +63,6 @@ async function handleWebhook(request, env) {
   );
   if (!valid) return json({ error: "Invalid LINE signature" }, 401);
 
-  const payload = JSON.parse(body);
-  for (const event of payload.events || []) {
-    if (event.type === "message" && event.replyToken) {
-      await lineRequest("/message/reply", env.LINE_KOREAN_CHANNEL_ACCESS_TOKEN, {
-        replyToken: event.replyToken,
-        messages: [
-          {
-            type: "text",
-            text: "已訂閱每日 09:00 韓檢單字與 10:00 韓檢文法。"
-          }
-        ]
-      });
-    }
-  }
-
   return json({ ok: true });
 }
 
