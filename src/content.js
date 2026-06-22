@@ -1,6 +1,8 @@
 import topikVocab from "../data/topik-vocab.json" with { type: "json" };
+import topikGrammar from "../data/topik-grammar.json" with { type: "json" };
 
 export const TOPIK_VOCAB_COUNT = topikVocab.length;
+export const TOPIK_GRAMMAR_COUNT = topikGrammar.length;
 
 function textMessage(text) {
   return { type: "text", text: text.slice(0, 5000) };
@@ -235,7 +237,7 @@ function grammarBubble(item, index) {
       contents: [
         {
           type: "text",
-          text: `GRAMMAR ${index + 1}`,
+          text: `TOPIK ${item.level} | GRAMMAR ${index + 1}`,
           color: "#EEE8FF",
           size: "xs",
           weight: "bold"
@@ -259,13 +261,20 @@ function grammarBubble(item, index) {
       contents: [
         {
           type: "text",
-          text: item.meaning,
+          text: item.attachment || "接續規則依詞性與時態調整。",
+          color: "#202832",
+          size: "sm",
+          wrap: true
+        },
+        {
+          type: "text",
+          text: item.meaning || "此文法的詳細說明整理中。",
           color: "#202832",
           size: "md",
           wrap: true
         },
         { type: "separator", margin: "md" },
-        ...item.examples.flatMap(([sentence, sentenceZh], exampleIndex) => [
+        ...(item.examples || []).flatMap(([sentence, sentenceZh], exampleIndex) => [
           {
             type: "text",
             text: `例句 ${exampleIndex + 1}`,
@@ -338,8 +347,22 @@ export function koreanVocabMessages(rows = koreanVocabRows()) {
   ];
 }
 
-export function koreanGrammarMessages() {
-  const rows = pickByDate(grammarBank, 2, 1);
+export function koreanGrammarRows() {
+  const fallback = new Map(grammarBank.map((item) => [item.pattern, item]));
+  return pickByDate(topikGrammar, 2, 1).map((item) => ({
+    level: item.level,
+    pattern: item.pattern,
+    attachment: "接續規則由詞性、時態與有無收音決定。",
+    meaning: fallback.get(item.pattern)?.meaning || "韓檢核心文法表達。",
+    examples:
+      fallback.get(item.pattern)?.examples || [
+        [`오늘은 '${item.pattern}' 문법을 공부합니다.`, "今天學習這個韓語文法。"],
+        ["문맥에 맞게 문법을 사용해 보세요.", "請嘗試依照語境使用這個文法。"]
+      ]
+  }));
+}
+
+export function koreanGrammarMessages(rows = koreanGrammarRows()) {
   return [flexCarousel("今日韓檢 TOPIK 文法 2 個", rows.map(grammarBubble))];
 }
 

@@ -1,0 +1,902 @@
+[
+  {
+    "id": "g1-01",
+    "level": 1,
+    "pattern": "-이에요/예요"
+  },
+  {
+    "id": "g1-02",
+    "level": 1,
+    "pattern": "-입니다"
+  },
+  {
+    "id": "g1-03",
+    "level": 1,
+    "pattern": "-이/가 아닙니다"
+  },
+  {
+    "id": "g1-04",
+    "level": 1,
+    "pattern": "-은/는"
+  },
+  {
+    "id": "g1-05",
+    "level": 1,
+    "pattern": "-이/가"
+  },
+  {
+    "id": "g1-06",
+    "level": 1,
+    "pattern": "-을/를"
+  },
+  {
+    "id": "g1-07",
+    "level": 1,
+    "pattern": "-에"
+  },
+  {
+    "id": "g1-08",
+    "level": 1,
+    "pattern": "-에서"
+  },
+  {
+    "id": "g1-09",
+    "level": 1,
+    "pattern": "-와/과"
+  },
+  {
+    "id": "g1-10",
+    "level": 1,
+    "pattern": "-하고"
+  },
+  {
+    "id": "g1-11",
+    "level": 1,
+    "pattern": "-도"
+  },
+  {
+    "id": "g1-12",
+    "level": 1,
+    "pattern": "-만"
+  },
+  {
+    "id": "g1-13",
+    "level": 1,
+    "pattern": "-의"
+  },
+  {
+    "id": "g1-14",
+    "level": 1,
+    "pattern": "-부터"
+  },
+  {
+    "id": "g1-15",
+    "level": 1,
+    "pattern": "-까지"
+  },
+  {
+    "id": "g1-16",
+    "level": 1,
+    "pattern": "-에게/한테"
+  },
+  {
+    "id": "g1-17",
+    "level": 1,
+    "pattern": "-(으)로"
+  },
+  {
+    "id": "g1-18",
+    "level": 1,
+    "pattern": "-보다"
+  },
+  {
+    "id": "g1-19",
+    "level": 1,
+    "pattern": "-고"
+  },
+  {
+    "id": "g1-20",
+    "level": 1,
+    "pattern": "-아/어요"
+  },
+  {
+    "id": "g1-21",
+    "level": 1,
+    "pattern": "-았/었어요"
+  },
+  {
+    "id": "g1-22",
+    "level": 1,
+    "pattern": "-(으)세요"
+  },
+  {
+    "id": "g1-23",
+    "level": 1,
+    "pattern": "-지 마세요"
+  },
+  {
+    "id": "g1-24",
+    "level": 1,
+    "pattern": "-고 싶어요"
+  },
+  {
+    "id": "g1-25",
+    "level": 1,
+    "pattern": "-(으)ㄹ까요?"
+  },
+  {
+    "id": "g1-26",
+    "level": 1,
+    "pattern": "-(으)ㅂ시다"
+  },
+  {
+    "id": "g1-27",
+    "level": 1,
+    "pattern": "-아/어 주세요"
+  },
+  {
+    "id": "g1-28",
+    "level": 1,
+    "pattern": "-(으)ㄹ 수 있다"
+  },
+  {
+    "id": "g1-29",
+    "level": 1,
+    "pattern": "-못"
+  },
+  {
+    "id": "g1-30",
+    "level": 1,
+    "pattern": "-안"
+  },
+  {
+    "id": "g2-01",
+    "level": 2,
+    "pattern": "-(으)ㄴ/는"
+  },
+  {
+    "id": "g2-02",
+    "level": 2,
+    "pattern": "-(으)ㄹ"
+  },
+  {
+    "id": "g2-03",
+    "level": 2,
+    "pattern": "-고 있다"
+  },
+  {
+    "id": "g2-04",
+    "level": 2,
+    "pattern": "-아/어 보다"
+  },
+  {
+    "id": "g2-05",
+    "level": 2,
+    "pattern": "-아/어야 하다"
+  },
+  {
+    "id": "g2-06",
+    "level": 2,
+    "pattern": "-아/어도 되다"
+  },
+  {
+    "id": "g2-07",
+    "level": 2,
+    "pattern": "-(으)면 안 되다"
+  },
+  {
+    "id": "g2-08",
+    "level": 2,
+    "pattern": "-(으)려고 하다"
+  },
+  {
+    "id": "g2-09",
+    "level": 2,
+    "pattern": "-(으)러 가다"
+  },
+  {
+    "id": "g2-10",
+    "level": 2,
+    "pattern": "-기 전에"
+  },
+  {
+    "id": "g2-11",
+    "level": 2,
+    "pattern": "-(으)ㄴ 후에"
+  },
+  {
+    "id": "g2-12",
+    "level": 2,
+    "pattern": "-(으)ㄹ 때"
+  },
+  {
+    "id": "g2-13",
+    "level": 2,
+    "pattern": "-(으)면"
+  },
+  {
+    "id": "g2-14",
+    "level": 2,
+    "pattern": "-아/어서"
+  },
+  {
+    "id": "g2-15",
+    "level": 2,
+    "pattern": "-(으)니까"
+  },
+  {
+    "id": "g2-16",
+    "level": 2,
+    "pattern": "-지만"
+  },
+  {
+    "id": "g2-17",
+    "level": 2,
+    "pattern": "-(으)면서"
+  },
+  {
+    "id": "g2-18",
+    "level": 2,
+    "pattern": "-거나"
+  },
+  {
+    "id": "g2-19",
+    "level": 2,
+    "pattern": "-기 때문에"
+  },
+  {
+    "id": "g2-20",
+    "level": 2,
+    "pattern": "-는 것"
+  },
+  {
+    "id": "g2-21",
+    "level": 2,
+    "pattern": "-기"
+  },
+  {
+    "id": "g2-22",
+    "level": 2,
+    "pattern": "-(으)ㄴ 적이 있다"
+  },
+  {
+    "id": "g2-23",
+    "level": 2,
+    "pattern": "-(으)ㄹ 거예요"
+  },
+  {
+    "id": "g2-24",
+    "level": 2,
+    "pattern": "-것 같다"
+  },
+  {
+    "id": "g2-25",
+    "level": 2,
+    "pattern": "-(으)ㄹ게요"
+  },
+  {
+    "id": "g2-26",
+    "level": 2,
+    "pattern": "-네요"
+  },
+  {
+    "id": "g2-27",
+    "level": 2,
+    "pattern": "-군요"
+  },
+  {
+    "id": "g2-28",
+    "level": 2,
+    "pattern": "-지요"
+  },
+  {
+    "id": "g2-29",
+    "level": 2,
+    "pattern": "-마다"
+  },
+  {
+    "id": "g2-30",
+    "level": 2,
+    "pattern": "-밖에"
+  },
+  {
+    "id": "g3-01",
+    "level": 3,
+    "pattern": "-는데/-(으)ㄴ데"
+  },
+  {
+    "id": "g3-02",
+    "level": 3,
+    "pattern": "-(으)ㄴ 지"
+  },
+  {
+    "id": "g3-03",
+    "level": 3,
+    "pattern": "-게 되다"
+  },
+  {
+    "id": "g3-04",
+    "level": 3,
+    "pattern": "-게 하다"
+  },
+  {
+    "id": "g3-05",
+    "level": 3,
+    "pattern": "-아/어지다"
+  },
+  {
+    "id": "g3-06",
+    "level": 3,
+    "pattern": "-기로 하다"
+  },
+  {
+    "id": "g3-07",
+    "level": 3,
+    "pattern": "-(으)ㄹ 예정이다"
+  },
+  {
+    "id": "g3-08",
+    "level": 3,
+    "pattern": "-(으)ㄹ지도 모르다"
+  },
+  {
+    "id": "g3-09",
+    "level": 3,
+    "pattern": "-(으)ㄹ 테니까"
+  },
+  {
+    "id": "g3-10",
+    "level": 3,
+    "pattern": "-는 동안"
+  },
+  {
+    "id": "g3-11",
+    "level": 3,
+    "pattern": "-는 중이다"
+  },
+  {
+    "id": "g3-12",
+    "level": 3,
+    "pattern": "-자마자"
+  },
+  {
+    "id": "g3-13",
+    "level": 3,
+    "pattern": "-고 나서"
+  },
+  {
+    "id": "g3-14",
+    "level": 3,
+    "pattern": "-다가"
+  },
+  {
+    "id": "g3-15",
+    "level": 3,
+    "pattern": "-아/어 놓다"
+  },
+  {
+    "id": "g3-16",
+    "level": 3,
+    "pattern": "-아/어 두다"
+  },
+  {
+    "id": "g3-17",
+    "level": 3,
+    "pattern": "-아/어 버리다"
+  },
+  {
+    "id": "g3-18",
+    "level": 3,
+    "pattern": "-아/어 보이다"
+  },
+  {
+    "id": "g3-19",
+    "level": 3,
+    "pattern": "-(으)ㄴ/는 편이다"
+  },
+  {
+    "id": "g3-20",
+    "level": 3,
+    "pattern": "-(으)ㄴ/는 데"
+  },
+  {
+    "id": "g3-21",
+    "level": 3,
+    "pattern": "-기 위해서"
+  },
+  {
+    "id": "g3-22",
+    "level": 3,
+    "pattern": "-(으)려면"
+  },
+  {
+    "id": "g3-23",
+    "level": 3,
+    "pattern": "-(으)ㄹ수록"
+  },
+  {
+    "id": "g3-24",
+    "level": 3,
+    "pattern": "-는 대신에"
+  },
+  {
+    "id": "g3-25",
+    "level": 3,
+    "pattern": "-뿐이다"
+  },
+  {
+    "id": "g3-26",
+    "level": 3,
+    "pattern": "-(으)ㄹ 뿐만 아니라"
+  },
+  {
+    "id": "g3-27",
+    "level": 3,
+    "pattern": "-덕분에"
+  },
+  {
+    "id": "g3-28",
+    "level": 3,
+    "pattern": "-(으)ㄴ/는 탓에"
+  },
+  {
+    "id": "g3-29",
+    "level": 3,
+    "pattern": "-(으)ㄴ/는 반면에"
+  },
+  {
+    "id": "g3-30",
+    "level": 3,
+    "pattern": "-아/어도"
+  },
+  {
+    "id": "g4-01",
+    "level": 4,
+    "pattern": "-는 바람에"
+  },
+  {
+    "id": "g4-02",
+    "level": 4,
+    "pattern": "-다 보니"
+  },
+  {
+    "id": "g4-03",
+    "level": 4,
+    "pattern": "-는 셈이다"
+  },
+  {
+    "id": "g4-04",
+    "level": 4,
+    "pattern": "-기 마련이다"
+  },
+  {
+    "id": "g4-05",
+    "level": 4,
+    "pattern": "-(으)ㄹ 리가 없다"
+  },
+  {
+    "id": "g4-06",
+    "level": 4,
+    "pattern": "-(으)ㄹ 뻔하다"
+  },
+  {
+    "id": "g4-07",
+    "level": 4,
+    "pattern": "-(으)ㄹ까 봐"
+  },
+  {
+    "id": "g4-08",
+    "level": 4,
+    "pattern": "-(으)ㄹ 텐데"
+  },
+  {
+    "id": "g4-09",
+    "level": 4,
+    "pattern": "-(으)ㄹ 만하다"
+  },
+  {
+    "id": "g4-10",
+    "level": 4,
+    "pattern": "-(으)ㄴ/는 척하다"
+  },
+  {
+    "id": "g4-11",
+    "level": 4,
+    "pattern": "-(으)ㄴ/는 줄 알다"
+  },
+  {
+    "id": "g4-12",
+    "level": 4,
+    "pattern": "-(으)ㄴ/는 모양이다"
+  },
+  {
+    "id": "g4-13",
+    "level": 4,
+    "pattern": "-나 보다"
+  },
+  {
+    "id": "g4-14",
+    "level": 4,
+    "pattern": "-는 듯하다"
+  },
+  {
+    "id": "g4-15",
+    "level": 4,
+    "pattern": "-(으)ㄴ 채로"
+  },
+  {
+    "id": "g4-16",
+    "level": 4,
+    "pattern": "-아/어 가다"
+  },
+  {
+    "id": "g4-17",
+    "level": 4,
+    "pattern": "-아/어 오다"
+  },
+  {
+    "id": "g4-18",
+    "level": 4,
+    "pattern": "-고 말다"
+  },
+  {
+    "id": "g4-19",
+    "level": 4,
+    "pattern": "-아/어 대다"
+  },
+  {
+    "id": "g4-20",
+    "level": 4,
+    "pattern": "-는 김에"
+  },
+  {
+    "id": "g4-21",
+    "level": 4,
+    "pattern": "-는 길에"
+  },
+  {
+    "id": "g4-22",
+    "level": 4,
+    "pattern": "-는 데다가"
+  },
+  {
+    "id": "g4-23",
+    "level": 4,
+    "pattern": "-더니"
+  },
+  {
+    "id": "g4-24",
+    "level": 4,
+    "pattern": "-았/었더니"
+  },
+  {
+    "id": "g4-25",
+    "level": 4,
+    "pattern": "-았/었던"
+  },
+  {
+    "id": "g4-26",
+    "level": 4,
+    "pattern": "-던"
+  },
+  {
+    "id": "g4-27",
+    "level": 4,
+    "pattern": "-는 법이다"
+  },
+  {
+    "id": "g4-28",
+    "level": 4,
+    "pattern": "-기는 하지만"
+  },
+  {
+    "id": "g4-29",
+    "level": 4,
+    "pattern": "-기도 하다"
+  },
+  {
+    "id": "g4-30",
+    "level": 4,
+    "pattern": "-더라도"
+  },
+  {
+    "id": "g5-01",
+    "level": 5,
+    "pattern": "-고자"
+  },
+  {
+    "id": "g5-02",
+    "level": 5,
+    "pattern": "-도록"
+  },
+  {
+    "id": "g5-03",
+    "level": 5,
+    "pattern": "-도록 하다"
+  },
+  {
+    "id": "g5-04",
+    "level": 5,
+    "pattern": "-(으)므로"
+  },
+  {
+    "id": "g5-05",
+    "level": 5,
+    "pattern": "-기에"
+  },
+  {
+    "id": "g5-06",
+    "level": 5,
+    "pattern": "-길래"
+  },
+  {
+    "id": "g5-07",
+    "level": 5,
+    "pattern": "-느라고"
+  },
+  {
+    "id": "g5-08",
+    "level": 5,
+    "pattern": "-는 통에"
+  },
+  {
+    "id": "g5-09",
+    "level": 5,
+    "pattern": "-는 한"
+  },
+  {
+    "id": "g5-10",
+    "level": 5,
+    "pattern": "-는 이상"
+  },
+  {
+    "id": "g5-11",
+    "level": 5,
+    "pattern": "-는 한편"
+  },
+  {
+    "id": "g5-12",
+    "level": 5,
+    "pattern": "-는 데 비해"
+  },
+  {
+    "id": "g5-13",
+    "level": 5,
+    "pattern": "-는 동시에"
+  },
+  {
+    "id": "g5-14",
+    "level": 5,
+    "pattern": "-을/를 비롯하여"
+  },
+  {
+    "id": "g5-15",
+    "level": 5,
+    "pattern": "-에 따르면"
+  },
+  {
+    "id": "g5-16",
+    "level": 5,
+    "pattern": "-에 의하면"
+  },
+  {
+    "id": "g5-17",
+    "level": 5,
+    "pattern": "-에 비추어"
+  },
+  {
+    "id": "g5-18",
+    "level": 5,
+    "pattern": "-에 따라"
+  },
+  {
+    "id": "g5-19",
+    "level": 5,
+    "pattern": "-에 반해"
+  },
+  {
+    "id": "g5-20",
+    "level": 5,
+    "pattern": "-에 불과하다"
+  },
+  {
+    "id": "g5-21",
+    "level": 5,
+    "pattern": "-기 나름이다"
+  },
+  {
+    "id": "g5-22",
+    "level": 5,
+    "pattern": "-기 십상이다"
+  },
+  {
+    "id": "g5-23",
+    "level": 5,
+    "pattern": "-기 일쑤이다"
+  },
+  {
+    "id": "g5-24",
+    "level": 5,
+    "pattern": "-기 짝이 없다"
+  },
+  {
+    "id": "g5-25",
+    "level": 5,
+    "pattern": "-기 그지없다"
+  },
+  {
+    "id": "g5-26",
+    "level": 5,
+    "pattern": "-는 경향이 있다"
+  },
+  {
+    "id": "g5-27",
+    "level": 5,
+    "pattern": "-는 경우가 많다"
+  },
+  {
+    "id": "g5-28",
+    "level": 5,
+    "pattern": "-(으)ㄹ 필요가 있다"
+  },
+  {
+    "id": "g5-29",
+    "level": 5,
+    "pattern": "-(으)ㄴ/는 만큼"
+  },
+  {
+    "id": "g5-30",
+    "level": 5,
+    "pattern": "-(으)ㄴ/는 가운데"
+  },
+  {
+    "id": "g6-01",
+    "level": 6,
+    "pattern": "-(으)ㄹ지언정"
+  },
+  {
+    "id": "g6-02",
+    "level": 6,
+    "pattern": "-(으)ㄹ망정"
+  },
+  {
+    "id": "g6-03",
+    "level": 6,
+    "pattern": "-(으)ㄹ진대"
+  },
+  {
+    "id": "g6-04",
+    "level": 6,
+    "pattern": "-(으)ㄹ지라도"
+  },
+  {
+    "id": "g6-05",
+    "level": 6,
+    "pattern": "-아/어 봤자"
+  },
+  {
+    "id": "g6-06",
+    "level": 6,
+    "pattern": "-(으)나 마나"
+  },
+  {
+    "id": "g6-07",
+    "level": 6,
+    "pattern": "-(으)ㄹ 바에야"
+  },
+  {
+    "id": "g6-08",
+    "level": 6,
+    "pattern": "-(으)ㄹ 법하다"
+  },
+  {
+    "id": "g6-09",
+    "level": 6,
+    "pattern": "-(으)ㄹ 성싶다"
+  },
+  {
+    "id": "g6-10",
+    "level": 6,
+    "pattern": "-(으)ㄹ 따름이다"
+  },
+  {
+    "id": "g6-11",
+    "level": 6,
+    "pattern": "-(으)ㄹ 뿐이다"
+  },
+  {
+    "id": "g6-12",
+    "level": 6,
+    "pattern": "-(으)ㄹ 터이다"
+  },
+  {
+    "id": "g6-13",
+    "level": 6,
+    "pattern": "-(으)ㄹ라치면"
+  },
+  {
+    "id": "g6-14",
+    "level": 6,
+    "pattern": "-(으)ㄹ세라"
+  },
+  {
+    "id": "g6-15",
+    "level": 6,
+    "pattern": "-(으)ㄴ들"
+  },
+  {
+    "id": "g6-16",
+    "level": 6,
+    "pattern": "-건만"
+  },
+  {
+    "id": "g6-17",
+    "level": 6,
+    "pattern": "-련만"
+  },
+  {
+    "id": "g6-18",
+    "level": 6,
+    "pattern": "-(으)련마는"
+  },
+  {
+    "id": "g6-19",
+    "level": 6,
+    "pattern": "-다고 손 치더라도"
+  },
+  {
+    "id": "g6-20",
+    "level": 6,
+    "pattern": "-기로서니"
+  },
+  {
+    "id": "g6-21",
+    "level": 6,
+    "pattern": "-다시피 하다"
+  },
+  {
+    "id": "g6-22",
+    "level": 6,
+    "pattern": "-다시피"
+  },
+  {
+    "id": "g6-23",
+    "level": 6,
+    "pattern": "-거니와"
+  },
+  {
+    "id": "g6-24",
+    "level": 6,
+    "pattern": "-거늘"
+  },
+  {
+    "id": "g6-25",
+    "level": 6,
+    "pattern": "-노라면"
+  },
+  {
+    "id": "g6-26",
+    "level": 6,
+    "pattern": "-느니"
+  },
+  {
+    "id": "g6-27",
+    "level": 6,
+    "pattern": "-느니만 못하다"
+  },
+  {
+    "id": "g6-28",
+    "level": 6,
+    "pattern": "-느니 차라리"
+  },
+  {
+    "id": "g6-29",
+    "level": 6,
+    "pattern": "-는 둥 마는 둥"
+  },
+  {
+    "id": "g6-30",
+    "level": 6,
+    "pattern": "-기 무섭게"
+  }
+]

@@ -1,7 +1,9 @@
 import {
   koreanGrammarMessages,
+  koreanGrammarRows,
   koreanVocabMessages,
   koreanVocabRows,
+  TOPIK_GRAMMAR_COUNT,
   TOPIK_VOCAB_COUNT
 } from "./content.js";
 
@@ -111,6 +113,67 @@ async function translatedVocabMessages(env) {
   return koreanVocabMessages(rows);
 }
 
+function parseGrammarDetails(value, rows) {
+  const text = typeof value === "string" ? value : value?.response;
+  if (!text) return null;
+  const match = text.match(/\[[\s\S]*\]/);
+  if (!match) return null;
+  try {
+    const parsed = JSON.parse(match[0]);
+    if (!Array.isArray(parsed) || parsed.length !== rows.length) return null;
+    return rows.map((row, index) => {
+      const detail = parsed[index];
+      const examples = Array.isArray(detail.examples)
+        ? detail.examples
+            .slice(0, 2)
+            .map((example) => [String(example.ko || ""), String(example.zh || "")])
+            .filter(([ko, zh]) => ko && zh)
+        : [];
+      if (examples.length !== 2) return row;
+      return {
+        ...row,
+        attachment: String(detail.attachment || row.attachment),
+        meaning: String(detail.meaning || row.meaning),
+        examples
+      };
+    });
+  } catch {
+    return null;
+  }
+}
+
+async function generatedGrammarMessages(env) {
+  const rows = koreanGrammarRows();
+  if (!env.AI) return koreanGrammarMessages(rows);
+
+  try {
+    const grammarList = rows
+      .map((item, index) => `${index + 1}. TOPIK ${item.level}: ${item.pattern}`)
+      .join("\n");
+    const result = await env.AI.run(
+      "@cf/meta/llama-3.1-8b-instruct-fp8-fast",
+      {
+        messages: [
+          {
+            role: "system",
+            content:
+              "You are a Korean language teacher. For each fixed grammar pattern, provide accurate attachment rules, a concise Traditional Chinese explanation used in Taiwan, and exactly two natural Korean example sentences with Traditional Chinese translations. Return only a JSON array. Each object must have attachment, meaning, and examples; examples is an array of exactly two objects with ko and zh. Preserve input order and never change the grammar patterns."
+          },
+          { role: "user", content: grammarList }
+        ],
+        temperature: 0.1,
+        max_tokens: 1200
+      }
+    );
+    const detailed = parseGrammarDetails(result, rows);
+    if (detailed) return koreanGrammarMessages(detailed);
+  } catch (error) {
+    console.error("Grammar generation failed:", error);
+  }
+
+  return koreanGrammarMessages(rows);
+}
+
 async function handleWebhook(request, env) {
   const body = await request.text();
   const valid = await verifySignature(
@@ -131,7 +194,7 @@ async function handleAdminPush(request, env) {
   const { kind } = await request.json();
   const messages =
     kind === "korean-vocab" ? await translatedVocabMessages(env) :
-    kind === "korean-grammar" ? koreanGrammarMessages() :
+    kind === "korean-grammar" ? await generatedGrammarMessages(env) :
     null;
   if (!messages) return json({ error: "Unknown push kind" }, 400);
 
@@ -156,6 +219,7 @@ export default {
         ok: true,
         service: "Things of Korean LINE Bot",
         vocabularyCount: TOPIK_VOCAB_COUNT,
+        grammarCount: TOPIK_GRAMMAR_COUNT,
         schedules: ["09:00 Asia/Taipei vocabulary", "10:00 Asia/Taipei grammar"]
       });
     }
@@ -168,7 +232,7 @@ export default {
       controller.cron === "0 1 * * *"
         ? await translatedVocabMessages(env)
         : controller.cron === "0 2 * * *"
-          ? koreanGrammarMessages()
+          ? await generatedGrammarMessages(env)
           : null;
 
     if (messages) {
