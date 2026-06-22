@@ -25,6 +25,15 @@ LINE_KOREAN_TARGET_IDS
 ADMIN_TOKEN
 ```
 
+## TOPIK 單字題庫
+
+- 核心題庫共 6,000 個不重複字面，每天 10 個，600 天後才重新循環。
+- 詞義、詞性與韓文例句取自韓國國立國語院「韓國語基礎辭典」Open API。
+- 官方僅提供初級／中級／高級，本專案依官方等級與韓語詞頻推估為 TOPIK 1–6 級，並非 TOPIK 官方分級表。
+- 簡體中文詞義使用 OpenCC 轉為繁體中文。
+- 韓文例句的繁中句譯由 Cloudflare Workers AI 在當日推播時產生；失敗時回退顯示官方繁中詞義說明。
+- 韓國語基礎辭典文字資料依 CC BY-SA 2.0 KR 使用：https://krdict.korean.go.kr/
+
 ## 本機啟動
 
 ```bash

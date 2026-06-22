@@ -1,4 +1,8 @@
-import { koreanGrammarMessages, koreanVocabMessages } from "./content.js";
+import {
+  koreanGrammarMessages,
+  koreanVocabMessages,
+  koreanVocabRows
+} from "./content.js";
 
 const encoder = new TextEncoder();
 
@@ -54,6 +58,58 @@ async function pushToTargets(env, messages) {
   return targets.length;
 }
 
+function parseTranslationArray(value, expectedLength) {
+  if (!value) return null;
+  const text = typeof value === "string" ? value : value.response;
+  if (!text) return null;
+  const match = text.match(/\[[\s\S]*\]/);
+  if (!match) return null;
+  try {
+    const parsed = JSON.parse(match[0]);
+    return Array.isArray(parsed) && parsed.length === expectedLength
+      ? parsed.map(String)
+      : null;
+  } catch {
+    return null;
+  }
+}
+
+async function translatedVocabMessages(env) {
+  const rows = koreanVocabRows();
+  if (!env.AI) return koreanVocabMessages(rows);
+
+  try {
+    const numbered = rows
+      .map((item, index) => `${index + 1}. ${item.exampleKo}`)
+      .join("\n");
+    const result = await env.AI.run(
+      "@cf/meta/llama-3.1-8b-instruct-fp8-fast",
+      {
+        messages: [
+          {
+            role: "system",
+            content:
+              "Translate Korean example sentences into natural Traditional Chinese used in Taiwan. Return only a JSON array of translated strings in the same order. Do not add explanations."
+          },
+          { role: "user", content: numbered }
+        ],
+        temperature: 0.1,
+        max_tokens: 800
+      }
+    );
+    const translations = parseTranslationArray(result, rows.length);
+    if (translations) {
+      rows.forEach((item, index) => {
+        item.exampleZh = translations[index];
+      });
+    }
+  } catch (error) {
+    console.error("Example translation failed:", error);
+  }
+
+  return koreanVocabMessages(rows);
+}
+
 async function handleWebhook(request, env) {
   const body = await request.text();
   const valid = await verifySignature(
@@ -73,7 +129,7 @@ async function handleAdminPush(request, env) {
 
   const { kind } = await request.json();
   const messages =
-    kind === "korean-vocab" ? koreanVocabMessages() :
+    kind === "korean-vocab" ? await translatedVocabMessages(env) :
     kind === "korean-grammar" ? koreanGrammarMessages() :
     null;
   if (!messages) return json({ error: "Unknown push kind" }, 400);
@@ -108,7 +164,7 @@ export default {
   async scheduled(controller, env, ctx) {
     const messages =
       controller.cron === "0 1 * * *"
-        ? koreanVocabMessages()
+        ? await translatedVocabMessages(env)
         : controller.cron === "0 2 * * *"
           ? koreanGrammarMessages()
           : null;

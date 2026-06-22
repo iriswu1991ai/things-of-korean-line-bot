@@ -1,5 +1,7 @@
 .env
-data/*.json
+data/sent-log.json
+data/subscribers.json
 work/
+data/krdict/
 node_modules/
 .DS_Store

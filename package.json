@@ -6,6 +6,8 @@
   "scripts": {
     "build": "node --check src/worker.js",
     "dev": "node src/server.js",
+    "import:krdict": "node scripts/import-krdict.mjs",
+    "prepare:krdict": "python3 scripts/prepare-krdict.py",
     "start": "node src/server.js",
     "deploy": "wrangler deploy"
   },
