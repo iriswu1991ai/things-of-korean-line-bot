@@ -152,22 +152,9 @@ const grammarBank = [
 ];
 
 function pickByDate(items, count, offset = 0) {
-  let seed = (Math.floor(Date.now() / 86400000) + offset * 1009) >>> 0;
-  const shuffled = [...items];
-  const random = () => {
-    seed += 0x6D2B79F5;
-    let value = seed;
-    value = Math.imul(value ^ (value >>> 15), value | 1);
-    value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
-    return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
-  };
-
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const target = Math.floor(random() * (index + 1));
-    [shuffled[index], shuffled[target]] = [shuffled[target], shuffled[index]];
-  }
-
-  return shuffled.slice(0, count);
+  const day = Math.floor(Date.now() / 86400000) + offset;
+  const start = (day * count) % items.length;
+  return Array.from({ length: count }, (_, index) => items[(start + index) % items.length]);
 }
 
 async function fetchFinanceHeadlines() {
