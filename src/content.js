@@ -1,5 +1,7 @@
 import topikVocab from "../data/topik-vocab.json" with { type: "json" };
 
+export const TOPIK_VOCAB_COUNT = topikVocab.length;
+
 function textMessage(text) {
   return { type: "text", text: text.slice(0, 5000) };
 }

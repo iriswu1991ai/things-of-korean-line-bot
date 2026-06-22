@@ -1,7 +1,8 @@
 import {
   koreanGrammarMessages,
   koreanVocabMessages,
-  koreanVocabRows
+  koreanVocabRows,
+  TOPIK_VOCAB_COUNT
 } from "./content.js";
 
 const encoder = new TextEncoder();
@@ -154,6 +155,7 @@ export default {
       return json({
         ok: true,
         service: "Things of Korean LINE Bot",
+        vocabularyCount: TOPIK_VOCAB_COUNT,
         schedules: ["09:00 Asia/Taipei vocabulary", "10:00 Asia/Taipei grammar"]
       });
     }
