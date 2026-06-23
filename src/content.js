@@ -354,11 +354,7 @@ export function koreanGrammarRows() {
     pattern: item.pattern,
     attachment: "接續規則由詞性、時態與有無收音決定。",
     meaning: fallback.get(item.pattern)?.meaning || "韓檢核心文法表達。",
-    examples:
-      fallback.get(item.pattern)?.examples || [
-        [`오늘은 '${item.pattern}' 문법을 공부합니다.`, "今天學習這個韓語文法。"],
-        ["문맥에 맞게 문법을 사용해 보세요.", "請嘗試依照語境使用這個文法。"]
-      ]
+    examples: fallback.get(item.pattern)?.examples || []
   }));
 }
 

@@ -114,64 +114,145 @@ async function translatedVocabMessages(env) {
 }
 
 function parseGrammarDetails(value, rows) {
-  const text = typeof value === "string" ? value : value?.response;
-  if (!text) return null;
-  const match = text.match(/\[[\s\S]*\]/);
-  if (!match) return null;
+  const response = value?.response ?? value;
+  let parsed = response;
+  if (typeof response === "string") {
+    try {
+      parsed = JSON.parse(response);
+    } catch {
+      return null;
+    }
+  }
+  const items = parsed?.items;
+  if (!Array.isArray(items) || items.length !== rows.length) return null;
+
   try {
-    const parsed = JSON.parse(match[0]);
-    if (!Array.isArray(parsed) || parsed.length !== rows.length) return null;
-    return rows.map((row, index) => {
-      const detail = parsed[index];
+    const detailed = rows.map((row, index) => {
+      const detail = items[index];
+      if (detail.pattern !== row.pattern) return null;
       const examples = Array.isArray(detail.examples)
         ? detail.examples
             .slice(0, 2)
-            .map((example) => [String(example.ko || ""), String(example.zh || "")])
-            .filter(([ko, zh]) => ko && zh)
+            .map((example) => ({
+              ko: String(example.ko || "").trim(),
+              zh: String(example.zh || "").trim(),
+              applied: String(example.applied || "").trim()
+            }))
+            .filter(
+              (example) =>
+                example.ko &&
+                example.zh &&
+                example.applied.length >= 2 &&
+                /[가-힣]/.test(example.applied) &&
+                example.ko.includes(example.applied)
+            )
         : [];
-      if (examples.length !== 2) return row;
+      if (examples.length !== 2) return null;
       return {
         ...row,
         attachment: String(detail.attachment || row.attachment),
         meaning: String(detail.meaning || row.meaning),
-        examples
+        examples: examples.map((example) => [example.ko, example.zh])
       };
     });
+    return detailed.every(Boolean) ? detailed : null;
   } catch {
     return null;
   }
+}
+
+function hasPlaceholderExample(rows) {
+  const invalidPhrases = [
+    "문법을 공부합니다",
+    "문법을 사용해 보세요",
+    "문법을 연습합니다",
+    "今天學習這個韓語文法",
+    "請嘗試依照語境使用這個文法"
+  ];
+  return rows.some((row) =>
+    row.examples.some(([ko, zh]) =>
+      invalidPhrases.some((phrase) => ko.includes(phrase) || zh.includes(phrase))
+    )
+  );
 }
 
 async function generatedGrammarMessages(env) {
   const rows = koreanGrammarRows();
   if (!env.AI) return koreanGrammarMessages(rows);
 
-  try {
-    const grammarList = rows
-      .map((item, index) => `${index + 1}. TOPIK ${item.level}: ${item.pattern}`)
-      .join("\n");
-    const result = await env.AI.run(
-      "@cf/meta/llama-3.1-8b-instruct-fp8-fast",
-      {
+  const grammarList = rows
+    .map((item, index) => `${index + 1}. TOPIK ${item.level}: ${item.pattern}`)
+    .join("\n");
+  const responseFormat = {
+    type: "json_schema",
+    json_schema: {
+      type: "object",
+      properties: {
+        items: {
+          type: "array",
+          minItems: 2,
+          maxItems: 2,
+          items: {
+            type: "object",
+            properties: {
+              pattern: { type: "string" },
+              attachment: { type: "string" },
+              meaning: { type: "string" },
+              examples: {
+                type: "array",
+                minItems: 2,
+                maxItems: 2,
+                items: {
+                  type: "object",
+                  properties: {
+                    ko: { type: "string" },
+                    zh: { type: "string" },
+                    applied: { type: "string" }
+                  },
+                  required: ["ko", "zh", "applied"],
+                  additionalProperties: false
+                }
+              }
+            },
+            required: ["pattern", "attachment", "meaning", "examples"],
+            additionalProperties: false
+          }
+        }
+      },
+      required: ["items"],
+      additionalProperties: false
+    }
+  };
+
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const result = await env.AI.run(
+        "@cf/meta/llama-3.1-8b-instruct-fast",
+        {
         messages: [
           {
             role: "system",
             content:
-              "You are a Korean language teacher. For each fixed grammar pattern, provide accurate attachment rules, a concise Traditional Chinese explanation used in Taiwan, and exactly two natural Korean example sentences with Traditional Chinese translations. Return only a JSON array. Each object must have attachment, meaning, and examples; examples is an array of exactly two objects with ko and zh. Preserve input order and never change the grammar patterns."
+              "You are a meticulous Korean language teacher. For each fixed grammar pattern, provide accurate attachment rules, a concise Traditional Chinese explanation used in Taiwan, and exactly two natural Korean example sentences that genuinely use that grammar. For each example, applied must be the exact conjugated Korean substring appearing verbatim inside ko that realizes the requested grammar. Never write meta sentences about studying, practicing, or using grammar. Preserve each pattern exactly and keep the input order."
           },
           { role: "user", content: grammarList }
         ],
         temperature: 0.1,
-        max_tokens: 1200
+          max_tokens: 1400,
+          response_format: responseFormat
+        }
+      );
+      const detailed = parseGrammarDetails(result, rows);
+      if (detailed && !hasPlaceholderExample(detailed)) {
+        return koreanGrammarMessages(detailed);
       }
-    );
-    const detailed = parseGrammarDetails(result, rows);
-    if (detailed) return koreanGrammarMessages(detailed);
-  } catch (error) {
-    console.error("Grammar generation failed:", error);
+      console.error(`Grammar validation failed on attempt ${attempt}`);
+    } catch (error) {
+      console.error(`Grammar generation attempt ${attempt} failed:`, error);
+    }
   }
 
-  return koreanGrammarMessages(rows);
+  throw new Error("Grammar content generation failed validation; push cancelled");
 }
 
 async function handleWebhook(request, env) {
