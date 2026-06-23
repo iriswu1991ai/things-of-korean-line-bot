@@ -301,6 +301,7 @@ export default {
         service: "Things of Korean LINE Bot",
         vocabularyCount: TOPIK_VOCAB_COUNT,
         grammarCount: TOPIK_GRAMMAR_COUNT,
+        grammarValidation: "strict",
         schedules: ["09:00 Asia/Taipei vocabulary", "10:00 Asia/Taipei grammar"]
       });
     }
