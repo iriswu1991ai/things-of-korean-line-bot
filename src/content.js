@@ -49,6 +49,132 @@ const grammarBank = [
     ]
   },
   {
+    pattern: "-(으)러 가다",
+    attachment: "動詞語幹 + (으)러 가다/오다；有收音用 으러，無收音用 러。",
+    meaning: "表示移動的目的，相當於「去／來做某事」。",
+    examples: [
+      ["친구를 만나러 카페에 갑니다.", "我去咖啡廳見朋友。"],
+      ["책을 사러 서점에 갔어요.", "我去書店買書了。"]
+    ]
+  },
+  {
+    pattern: "-기 전에",
+    attachment: "動詞語幹 + 기 전에；名詞 + 전에。",
+    meaning: "表示某動作或時間之前，相當於「在...之前」。",
+    examples: [
+      ["밥을 먹기 전에 손을 씻으세요.", "吃飯前請洗手。"],
+      ["시험을 보기 전에 복습을 했습니다.", "考試前我複習了。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄴ 후에",
+    attachment: "動詞語幹 + (으)ㄴ 후에；有收音用 은 후에，無收音用 ㄴ 후에。",
+    meaning: "表示前一動作完成之後，相當於「...之後」。",
+    examples: [
+      ["숙제를 한 후에 텔레비전을 봤어요.", "做完作業後看了電視。"],
+      ["회의가 끝난 후에 점심을 먹었습니다.", "會議結束後吃了午餐。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄹ 때",
+    attachment: "動詞／形容詞語幹 + (으)ㄹ 때；有收音用 을 때，無收音用 ㄹ 때。",
+    meaning: "表示某個時間或情況，相當於「當...的時候」。",
+    examples: [
+      ["비가 올 때 우산을 가지고 가세요.", "下雨的時候請帶傘。"],
+      ["한국어를 공부할 때 사전을 자주 봅니다.", "學韓文時我常查字典。"]
+    ]
+  },
+  {
+    pattern: "-(으)면",
+    attachment: "動詞／形容詞語幹 + (으)면；有收音用 으면，無收音用 면。",
+    meaning: "表示條件或假設，相當於「如果...就...」。",
+    examples: [
+      ["시간이 있으면 같이 커피를 마셔요.", "如果有時間，就一起喝咖啡吧。"],
+      ["날씨가 좋으면 산책하러 갈 거예요.", "如果天氣好，我會去散步。"]
+    ]
+  },
+  {
+    pattern: "-아/어서",
+    attachment: "動詞／形容詞語幹 + 아/어서，依母音選擇 아서 或 어서。",
+    meaning: "表示原因或動作先後，相當於「因為...／先...再...」。",
+    examples: [
+      ["길이 막혀서 약속에 늦었어요.", "因為塞車，所以約會遲到了。"],
+      ["집에 가서 저녁을 먹을 거예요.", "我要回家後吃晚餐。"]
+    ]
+  },
+  {
+    pattern: "-(으)니까",
+    attachment: "動詞／形容詞語幹 + (으)니까；有收音用 으니까，無收音用 니까。",
+    meaning: "表示原因、理由或發現，相當於「因為...」。",
+    examples: [
+      ["비가 오니까 창문을 닫으세요.", "因為下雨，請關窗戶。"],
+      ["시간이 없으니까 택시를 탑시다.", "因為沒時間，我們搭計程車吧。"]
+    ]
+  },
+  {
+    pattern: "-지만",
+    attachment: "動詞／形容詞語幹 + 지만。",
+    meaning: "表示轉折，相當於「雖然...但是...」。",
+    examples: [
+      ["이 음식은 맵지만 맛있어요.", "這道菜雖然辣，但是很好吃。"],
+      ["피곤하지만 숙제를 해야 합니다.", "雖然累，但必須做作業。"]
+    ]
+  },
+  {
+    pattern: "-(으)면서",
+    attachment: "動詞語幹 + (으)면서；有收音用 으면서，無收音用 면서。",
+    meaning: "表示兩個動作同時進行，相當於「一邊...一邊...」。",
+    examples: [
+      ["음악을 들으면서 공부합니다.", "我一邊聽音樂一邊讀書。"],
+      ["친구와 이야기하면서 걸었어요.", "我一邊和朋友聊天一邊走路。"]
+    ]
+  },
+  {
+    pattern: "-거나",
+    attachment: "動詞／形容詞語幹 + 거나。",
+    meaning: "表示選擇，相當於「或者...」。",
+    examples: [
+      ["주말에는 영화를 보거나 책을 읽어요.", "週末我看電影或看書。"],
+      ["바쁘면 전화하거나 메시지를 보내세요.", "如果忙，可以打電話或傳訊息。"]
+    ]
+  },
+  {
+    pattern: "-기 때문에",
+    attachment: "動詞／形容詞語幹 + 기 때문에；名詞 + 때문에。",
+    meaning: "表示原因，相當於「因為...」。",
+    examples: [
+      ["시험이 있기 때문에 일찍 자야 해요.", "因為有考試，所以必須早點睡。"],
+      ["눈이 많이 오기 때문에 길이 미끄러워요.", "因為下很多雪，路很滑。"]
+    ]
+  },
+  {
+    pattern: "-는 것",
+    attachment: "動詞語幹 + 는 것。",
+    meaning: "把動作名詞化，相當於「做...這件事」。",
+    examples: [
+      ["매일 운동하는 것은 건강에 좋아요.", "每天運動對健康很好。"],
+      ["한국어를 배우는 것이 재미있습니다.", "學韓文很有趣。"]
+    ]
+  },
+  {
+    pattern: "-기",
+    attachment: "動詞／形容詞語幹 + 기。",
+    meaning: "將動作或狀態名詞化，常用於標題、清單或固定表達。",
+    examples: [
+      ["일찍 일어나기가 쉽지 않아요.", "早起不容易。"],
+      ["한국어 말하기를 연습하고 있어요.", "我正在練習說韓文。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄴ 적이 있다",
+    attachment: "動詞語幹 + (으)ㄴ 적이 있다；有收音用 은 적，無收音用 ㄴ 적。",
+    meaning: "表示曾經有過某經驗，相當於「曾經...」。",
+    examples: [
+      ["제주도에 간 적이 있어요.", "我曾經去過濟州島。"],
+      ["한국 음식을 만든 적이 있습니다.", "我曾經做過韓國料理。"]
+    ]
+  },
+  {
     pattern: "-는 바람에",
     meaning: "表示因意外原因造成負面結果，相當於「因為...結果...」。",
     examples: [
@@ -349,13 +475,16 @@ export function koreanVocabMessages(rows = koreanVocabRows()) {
 
 export function koreanGrammarRows() {
   const fallback = new Map(grammarBank.map((item) => [item.pattern, item]));
-  return pickByDate(topikGrammar, 2, 1).map((item) => ({
-    level: item.level,
-    pattern: item.pattern,
-    attachment: "接續規則由詞性、時態與有無收音決定。",
-    meaning: fallback.get(item.pattern)?.meaning || "韓檢核心文法表達。",
-    examples: fallback.get(item.pattern)?.examples || []
-  }));
+  return pickByDate(topikGrammar, 2, 1).map((item) => {
+    const fixed = fallback.get(item.pattern);
+    return {
+      level: item.level,
+      pattern: item.pattern,
+      attachment: fixed?.attachment || "接續規則由詞性、時態與有無收音決定。",
+      meaning: fixed?.meaning || "韓檢核心文法表達。",
+      examples: fixed?.examples || []
+    };
+  });
 }
 
 export function koreanGrammarMessages(rows = koreanGrammarRows()) {

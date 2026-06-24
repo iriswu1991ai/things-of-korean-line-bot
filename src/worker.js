@@ -178,6 +178,9 @@ function hasPlaceholderExample(rows) {
 
 async function generatedGrammarMessages(env) {
   const rows = koreanGrammarRows();
+  if (rows.every((row) => row.examples.length === 2)) {
+    return koreanGrammarMessages(rows);
+  }
   if (!env.AI) return koreanGrammarMessages(rows);
 
   const grammarList = rows
@@ -302,6 +305,7 @@ export default {
         vocabularyCount: TOPIK_VOCAB_COUNT,
         grammarCount: TOPIK_GRAMMAR_COUNT,
         grammarValidation: "strict",
+        grammarContentMode: "fixed-examples-first",
         schedules: ["09:00 Asia/Taipei vocabulary", "10:00 Asia/Taipei grammar"]
       });
     }
