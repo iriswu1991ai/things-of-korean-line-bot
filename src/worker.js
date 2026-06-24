@@ -298,12 +298,6 @@ export default {
       return handleAdminPush(request, env);
     }
 
-    if (request.method === "POST" && url.pathname === "/api/manual-grammar-20260624-8f6253fd-65c7-404d-98b5-d8205418f777") {
-      const messages = await generatedGrammarMessages(env);
-      const recipients = await pushToTargets(env, messages);
-      return json({ ok: true, recipients });
-    }
-
     if (url.pathname === "/healthz" || url.pathname === "/") {
       return json({
         ok: true,
