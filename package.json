@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node --check src/worker.js",
     "build:grammar": "node scripts/build-grammar-library.mjs",
+    "generate:ig": "node scripts/generate-ig-images.mjs",
     "dev": "node src/server.js",
     "import:krdict": "node scripts/import-krdict.mjs",
     "prepare:krdict": "python3 scripts/prepare-krdict.py",
