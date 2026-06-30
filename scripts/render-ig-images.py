@@ -287,9 +287,7 @@ def render_text(vocab_rows, grammar_rows, output_path):
     for index, item in enumerate(vocab_rows[:10], start=1):
         lines.extend(
             [
-                f"{index}. TOPIK {item['level']}｜{item['word']}｜{item['pos']}｜{item['translation']}",
-                f"   {item['exampleKo']}",
-                f"   {text_example_or_definition(item)}",
+                f"{index}. TOPIK {item['level']}｜{item['word']}｜{item['translation']}",
                 "",
             ]
         )
@@ -305,12 +303,9 @@ def render_text(vocab_rows, grammar_rows, output_path):
         lines.extend(
             [
                 f"{index}. TOPIK {item['level']}｜{item['pattern']}",
-                f"接續：{item.get('attachment', '')}",
                 f"意思：{item.get('meaning', '')}",
             ]
         )
-        for example_index, (sentence, translation) in enumerate(item.get("examples", [])[:2], start=1):
-            lines.append(f"例句{example_index}：{sentence}　{translation}")
         lines.append("")
 
     lines.extend(["@Things of Korean", ""])
