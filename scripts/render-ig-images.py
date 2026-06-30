@@ -83,6 +83,17 @@ def translate_example(row):
     return row.get("definitionZh") or ""
 
 
+def text_example_or_definition(row):
+    if row.get("exampleZh"):
+        return row["exampleZh"]
+    translated = translate_example(row)
+    if translated and translated != row.get("definitionZh"):
+        return translated
+    if row.get("definitionZh"):
+        return f"詞義：{row['definitionZh']}"
+    return ""
+
+
 def gradient(bg1=(255, 248, 244), bg2=(238, 247, 241)):
     img = Image.new("RGB", (WIDTH, HEIGHT), bg1)
     draw = ImageDraw.Draw(img)
@@ -268,6 +279,44 @@ def render_grammar(rows, output_path):
     img.save(output_path, quality=95)
 
 
+def render_text(vocab_rows, grammar_rows, output_path):
+    lines = [
+        "TOPIK單字",
+        "",
+    ]
+    for index, item in enumerate(vocab_rows[:10], start=1):
+        lines.extend(
+            [
+                f"{index}. TOPIK {item['level']}｜{item['word']}｜{item['pos']}｜{item['translation']}",
+                f"   {item['exampleKo']}",
+                f"   {text_example_or_definition(item)}",
+                "",
+            ]
+        )
+
+    lines.extend(
+        [
+            "",
+            "TOPIK文法",
+            "",
+        ]
+    )
+    for index, item in enumerate(grammar_rows[:2], start=1):
+        lines.extend(
+            [
+                f"{index}. TOPIK {item['level']}｜{item['pattern']}",
+                f"接續：{item.get('attachment', '')}",
+                f"意思：{item.get('meaning', '')}",
+            ]
+        )
+        for example_index, (sentence, translation) in enumerate(item.get("examples", [])[:2], start=1):
+            lines.append(f"例句{example_index}：{sentence}　{translation}")
+        lines.append("")
+
+    lines.extend(["@Things of Korean", ""])
+    output_path.write_text("\n".join(lines), encoding="utf-8")
+
+
 def main():
     payload = json.loads(sys.stdin.read())
     date = payload["date"]
@@ -276,11 +325,14 @@ def main():
 
     vocab_path = output_dir / f"topik-vocab-{date}.png"
     grammar_path = output_dir / f"topik-grammar-{date}.png"
+    text_path = output_dir / f"topik-post-{date}.txt"
     render_vocab(payload["vocab"], vocab_path)
     render_grammar(payload["grammar"], grammar_path)
+    render_text(payload["vocab"], payload["grammar"], text_path)
 
     print(vocab_path)
     print(grammar_path)
+    print(text_path)
 
 
 if __name__ == "__main__":
