@@ -306,6 +306,7 @@ export default {
         grammarCount: TOPIK_GRAMMAR_COUNT,
         grammarValidation: "strict",
         grammarContentMode: "fixed-examples-first",
+        levelRotation: "mixed-daily",
         schedules: ["09:00 Asia/Taipei vocabulary", "10:00 Asia/Taipei grammar"]
       });
     }

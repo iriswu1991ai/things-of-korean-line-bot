@@ -175,6 +175,159 @@ const grammarBank = [
     ]
   },
   {
+    pattern: "-(으)ㄹ 테니까",
+    attachment: "動詞／形容詞語幹 + (으)ㄹ 테니까；有收音用 을 테니까，無收音用 ㄹ 테니까。",
+    meaning: "表示說話者的推測、意志或前提，相當於「因為會...所以...」。",
+    examples: [
+      ["제가 먼저 갈 테니까 천천히 오세요.", "我會先去，所以你慢慢來。"],
+      ["길이 막힐 테니까 일찍 출발합시다.", "路上可能會塞車，所以我們早點出發吧。"]
+    ]
+  },
+  {
+    pattern: "-는 동안",
+    attachment: "動詞語幹 + 는 동안；名詞 + 동안。",
+    meaning: "表示某段時間內，相當於「在...期間」。",
+    examples: [
+      ["친구를 기다리는 동안 책을 읽었어요.", "等朋友的期間我看了書。"],
+      ["방학 동안 한국어를 열심히 공부했습니다.", "放假期間我認真學了韓文。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄹ 만하다",
+    attachment: "動詞語幹 + (으)ㄹ 만하다；有收音用 을 만하다，無收音用 ㄹ 만하다。",
+    meaning: "表示值得做或程度可以接受，相當於「值得...／還算...」。",
+    examples: [
+      ["이 영화는 한 번 볼 만해요.", "這部電影值得看一次。"],
+      ["그 식당은 가격도 괜찮고 가 볼 만합니다.", "那間餐廳價格也不錯，值得去看看。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄴ/는 척하다",
+    attachment: "動詞現在形 + 는 척하다；動詞過去形 + (으)ㄴ 척하다；形容詞 + (으)ㄴ 척하다。",
+    meaning: "表示假裝某種行為或狀態，相當於「假裝...」。",
+    examples: [
+      ["그는 모르는 척했어요.", "他裝作不知道。"],
+      ["아이는 자는 척하고 있었어요.", "孩子正在裝睡。"]
+    ]
+  },
+  {
+    pattern: "-는 한",
+    attachment: "動詞語幹 + 는 한。",
+    meaning: "表示在某條件持續成立的範圍內，相當於「只要...就...」。",
+    examples: [
+      ["포기하지 않는 한 기회는 있습니다.", "只要不放棄，就還有機會。"],
+      ["약속을 지키는 한 서로 믿을 수 있어요.", "只要遵守約定，就能彼此信任。"]
+    ]
+  },
+  {
+    pattern: "-는 이상",
+    attachment: "動詞語幹 + 는 이상；形容詞語幹 + (으)ㄴ 이상。",
+    meaning: "表示既然前提已成立，後項也應成立，相當於「既然...就...」。",
+    examples: [
+      ["시작한 이상 끝까지 해야 합니다.", "既然開始了，就應該做到最後。"],
+      ["약속한 이상 꼭 지켜야 해요.", "既然約好了，就一定要遵守。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄹ 성싶다",
+    attachment: "動詞／形容詞語幹 + (으)ㄹ 성싶다；有收音用 을 성싶다，無收音用 ㄹ 성싶다。",
+    meaning: "表示說話者的推測，相當於「看來可能...」。",
+    examples: [
+      ["오늘은 비가 올 성싶어요.", "今天看來可能會下雨。"],
+      ["그 일은 쉽게 끝날 성싶지 않습니다.", "那件事看來不太可能輕易結束。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄹ 따름이다",
+    attachment: "動詞／形容詞語幹 + (으)ㄹ 따름이다；有收音用 을 따름이다，無收音用 ㄹ 따름이다。",
+    meaning: "表示只有某種想法、狀態或行為，相當於「只是...而已」。",
+    examples: [
+      ["저는 사실을 말했을 따름입니다.", "我只是說了事實而已。"],
+      ["도와주셔서 감사할 따름입니다.", "得到您的幫助，我只有感謝。"]
+    ]
+  },
+  {
+    pattern: "-하고",
+    attachment: "名詞 + 하고。",
+    meaning: "表示並列或共同對象，相當於「和...」。",
+    examples: [
+      ["저는 친구하고 영화를 봤어요.", "我和朋友看了電影。"],
+      ["빵하고 우유를 샀습니다.", "我買了麵包和牛奶。"]
+    ]
+  },
+  {
+    pattern: "-도",
+    attachment: "名詞 + 도。",
+    meaning: "表示包含或追加，相當於「也」。",
+    examples: [
+      ["저도 한국어를 공부해요.", "我也學韓文。"],
+      ["오늘은 커피도 마시고 차도 마셨어요.", "今天咖啡也喝了，茶也喝了。"]
+    ]
+  },
+  {
+    pattern: "-는 중이다",
+    attachment: "動詞語幹 + 는 중이다；名詞 + 중이다。",
+    meaning: "表示動作正在進行，相當於「正在...」。",
+    examples: [
+      ["지금 회의를 하는 중입니다.", "現在正在開會。"],
+      ["저는 점심을 먹는 중이에요.", "我正在吃午餐。"]
+    ]
+  },
+  {
+    pattern: "-자마자",
+    attachment: "動詞語幹 + 자마자。",
+    meaning: "表示前一動作一發生，後一動作立刻發生，相當於「一...就...」。",
+    examples: [
+      ["집에 도착하자마자 잠이 들었어요.", "一到家就睡著了。"],
+      ["수업이 끝나자마자 도서관에 갔습니다.", "課一結束就去了圖書館。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄴ/는 줄 알다",
+    attachment: "動詞現在形 + 는 줄 알다；動詞過去形／形容詞 + (으)ㄴ 줄 알다。",
+    meaning: "表示以為或知道某事實，相當於「以為...／知道...」。",
+    examples: [
+      ["저는 오늘이 월요일인 줄 알았어요.", "我以為今天是星期一。"],
+      ["그 사람이 이미 떠난 줄 알았습니다.", "我以為那個人已經離開了。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄴ/는 모양이다",
+    attachment: "動詞現在形 + 는 모양이다；動詞過去形／形容詞 + (으)ㄴ 모양이다。",
+    meaning: "表示根據情況推測，相當於「看樣子...」。",
+    examples: [
+      ["밖이 조용한 걸 보니 모두 잠든 모양이에요.", "看外面很安靜，大家好像都睡了。"],
+      ["사람들이 우산을 쓰고 있는 걸 보니 비가 오는 모양입니다.", "看到人們撐傘，看樣子正在下雨。"]
+    ]
+  },
+  {
+    pattern: "-는 한편",
+    attachment: "動詞語幹 + 는 한편；形容詞語幹 + (으)ㄴ 한편。",
+    meaning: "表示同時具有兩個面向，相當於「一方面...另一方面...」。",
+    examples: [
+      ["그 회사는 비용을 줄이는 한편 품질을 높이고 있습니다.", "那家公司一方面降低成本，一方面提升品質。"],
+      ["이 도시는 전통을 지키는 한편 새로운 문화를 받아들입니다.", "這座城市一方面保留傳統，一方面接受新文化。"]
+    ]
+  },
+  {
+    pattern: "-는 데 비해",
+    attachment: "動詞語幹 + 는 데 비해；形容詞語幹 + (으)ㄴ 데 비해。",
+    meaning: "表示比較基準，相當於「和...相比」。",
+    examples: [
+      ["가격이 비싼 데 비해 품질은 좋지 않아요.", "和價格昂貴相比，品質並不好。"],
+      ["그는 나이가 어린 데 비해 생각이 깊습니다.", "他和年紀小相比，想法很成熟。"]
+    ]
+  },
+  {
+    pattern: "-(으)ㄹ 뿐이다",
+    attachment: "動詞／形容詞語幹 + (으)ㄹ 뿐이다；有收音用 을 뿐이다，無收音用 ㄹ 뿐이다。",
+    meaning: "表示除此之外沒有其他，相當於「只是...而已」。",
+    examples: [
+      ["저는 해야 할 일을 했을 뿐입니다.", "我只是做了該做的事而已。"],
+      ["그 말은 제 의견일 뿐이에요.", "那句話只是我的意見而已。"]
+    ]
+  },
+  {
     pattern: "-는 바람에",
     meaning: "表示因意外原因造成負面結果，相當於「因為...結果...」。",
     examples: [
@@ -240,10 +393,47 @@ const grammarBank = [
   }
 ];
 
-function pickByDate(items, count, offset = 0) {
-  const day = Math.floor(Date.now() / 86400000) + offset;
-  const start = (day * count) % items.length;
-  return Array.from({ length: count }, (_, index) => items[(start + index) % items.length]);
+const TOPIK_LEVELS = [1, 2, 3, 4, 5, 6];
+
+function dayNumber(offset = 0) {
+  return Math.floor(Date.now() / 86400000) + offset;
+}
+
+function levelSlotsForDay(day, count) {
+  const start = day % TOPIK_LEVELS.length;
+  return Array.from({ length: count }, (_, index) => TOPIK_LEVELS[(start + index) % TOPIK_LEVELS.length]);
+}
+
+function countLevelSlotsBeforeDay(day, count, level) {
+  const fullCycles = Math.floor(day / TOPIK_LEVELS.length);
+  const remainingDays = day % TOPIK_LEVELS.length;
+  let total = fullCycles * count;
+  for (let dayOffset = 0; dayOffset < remainingDays; dayOffset += 1) {
+    total += levelSlotsForDay(dayOffset, count).filter((slotLevel) => slotLevel === level).length;
+  }
+  return total;
+}
+
+function groupByLevel(items, levelKey) {
+  return items.reduce((groups, item) => {
+    const level = Number(item[levelKey]);
+    if (!groups.has(level)) groups.set(level, []);
+    groups.get(level).push(item);
+    return groups;
+  }, new Map());
+}
+
+function pickByDateAcrossLevels(items, count, levelKey, offset = 0) {
+  const day = dayNumber(offset);
+  const groups = groupByLevel(items, levelKey);
+  const pickedByLevel = new Map();
+  return levelSlotsForDay(day, count).map((level) => {
+    const group = groups.get(level) || items;
+    const pickedToday = pickedByLevel.get(level) || 0;
+    const index = (countLevelSlotsBeforeDay(day, count, level) + pickedToday) % group.length;
+    pickedByLevel.set(level, pickedToday + 1);
+    return group[index];
+  });
 }
 
 async function fetchFinanceHeadlines() {
@@ -455,7 +645,7 @@ export async function financeMessages() {
 }
 
 export function koreanVocabRows() {
-  return pickByDate(topikVocab, 10).map((item) => ({
+  return pickByDateAcrossLevels(topikVocab, 10, "l").map((item) => ({
     word: item.w,
     level: item.l,
     pos: item.p,
@@ -475,7 +665,7 @@ export function koreanVocabMessages(rows = koreanVocabRows()) {
 
 export function koreanGrammarRows() {
   const fallback = new Map(grammarBank.map((item) => [item.pattern, item]));
-  return pickByDate(topikGrammar, 2, 1).map((item) => {
+  return pickByDateAcrossLevels(topikGrammar, 2, "level", 1).map((item) => {
     const fixed = fallback.get(item.pattern);
     return {
       level: item.level,
