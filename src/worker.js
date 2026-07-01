@@ -315,16 +315,7 @@ export default {
     return json({ error: "Not found" }, 404);
   },
 
-  async scheduled(controller, env, ctx) {
-    const messages =
-      controller.cron === "0 1 * * *"
-        ? await translatedVocabMessages(env)
-        : controller.cron === "0 2 * * *"
-          ? await generatedGrammarMessages(env)
-          : null;
-
-    if (messages) {
-      ctx.waitUntil(pushToTargets(env, messages));
-    }
+  async scheduled(controller) {
+    console.log(`LINE scheduled push is paused; ignored cron ${controller.cron}`);
   }
 };
