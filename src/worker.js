@@ -271,6 +271,8 @@ async function handleWebhook(request, env) {
 }
 
 async function handleAdminPush(request, env) {
+  return json({ ok: false, linePushStatus: "paused", error: "LINE push is paused" }, 423);
+
   if (!env.ADMIN_TOKEN || request.headers.get("x-admin-token") !== env.ADMIN_TOKEN) {
     return json({ error: "Admin token required" }, 401);
   }
@@ -308,6 +310,7 @@ export default {
         grammarContentMode: "fixed-examples-first",
         levelRotation: "mixed-daily",
         linePushStatus: "paused",
+        manualPushStatus: "paused",
         schedules: []
       });
     }
