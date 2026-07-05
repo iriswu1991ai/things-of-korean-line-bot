@@ -396,7 +396,15 @@ const grammarBank = [
 const TOPIK_LEVELS = [1, 2, 3, 4, 5, 6];
 
 function dayNumber(offset = 0) {
-  return Math.floor(Date.now() / 86400000) + offset;
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Taipei",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(new Date());
+  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  const taipeiMidnightUtc = Date.UTC(Number(values.year), Number(values.month) - 1, Number(values.day));
+  return Math.floor(taipeiMidnightUtc / 86400000) + offset;
 }
 
 function levelSlotsForDay(day, count) {
@@ -645,6 +653,18 @@ export async function financeMessages() {
 }
 
 export function koreanVocabRows() {
+  const exampleZhByWord = {
+    "나라님": "在古老故事裡，百姓們尊敬國君。",
+    "긍정적": "主管對我的提案表現出正面的反應。",
+    "계시": "他在困難時期像得到啟示一樣，心情變得平靜。",
+    "치명적": "小小的失誤也可能成為專案中的致命問題。",
+    "의미하다": "這個標示表示會議室不能使用。",
+    "낚시하다": "週末我和爸爸在河邊釣魚。",
+    "별생각": "一開始我沒想太多就進了會議。",
+    "돼지머리": "開幕儀式時，桌上放了豬頭。",
+    "값있다": "失敗的經驗後來也成了寶貴的學習。",
+    "눌러앉다": "我只是去朋友家一下，結果一直待到晚上。"
+  };
   return pickByDateAcrossLevels(topikVocab, 10, "l").map((item) => ({
     word: item.w,
     level: item.l,
@@ -652,7 +672,7 @@ export function koreanVocabRows() {
     translation: item.t || item.d || "詞義整理中",
     definitionZh: item.d || "例句翻譯整理中",
     exampleKo: item.e || `오늘의 단어는 '${item.w}'입니다.`,
-    exampleZh: ""
+    exampleZh: exampleZhByWord[item.w] || ""
   }));
 }
 

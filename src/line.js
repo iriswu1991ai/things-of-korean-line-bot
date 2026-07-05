@@ -10,6 +10,11 @@ const accounts = {
     token: () => process.env.LINE_KOREAN_CHANNEL_ACCESS_TOKEN,
     secret: () => process.env.LINE_KOREAN_CHANNEL_SECRET,
     targetIds: () => parseIds(process.env.LINE_KOREAN_TARGET_IDS)
+  },
+  hanhan: {
+    token: () => process.env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN,
+    secret: () => process.env.LINE_HANHAN_CHANNEL_SECRET,
+    targetIds: () => parseIds(process.env.LINE_HANHAN_TARGET_IDS)
   }
 };
 
@@ -60,10 +65,22 @@ export async function push(account, to, messages) {
   await lineRequest(account, "/message/push", { to, messages });
 }
 
+export async function broadcast(account, messages) {
+  await lineRequest(account, "/message/broadcast", { messages });
+}
+
 export function configuredTargets(account) {
   return accounts[account]?.targetIds() ?? [];
 }
 
 export function textMessage(text) {
   return { type: "text", text: text.slice(0, 5000) };
+}
+
+export function imageMessage(url) {
+  return {
+    type: "image",
+    originalContentUrl: url,
+    previewImageUrl: url
+  };
 }

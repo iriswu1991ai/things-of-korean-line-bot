@@ -44,6 +44,269 @@ FONTS = {
     "footer": load_font(FONT_ROUND, 24),
 }
 
+VOCAB_OVERRIDES = {
+    "주거하다": {
+        "exampleKo": "서울에 주거하는 학생들은 통학 시간이 짧아서 편하다고 했어요.",
+        "exampleZh": "住在首爾的學生們說，因為通學時間短所以很方便。",
+        "highlight": "주거하는",
+    },
+    "무": {
+        "exampleKo": "엄마는 저녁 국에 무를 넣어서 시원한 맛을 냈어요.",
+        "exampleZh": "媽媽在晚餐湯裡放了白蘿蔔，做出了清爽的味道。",
+        "highlight": "무를",
+    },
+    "글쎄요": {
+        "exampleKo": "글쎄요, 이번 회의 안건은 팀장님이 먼저 정하실 것 같아요.",
+        "exampleZh": "這個嘛，我想這次會議議程應該會由組長先決定。",
+        "highlight": "글쎄요",
+    },
+    "확인되다": {
+        "exampleKo": "지각 사유가 사실로 확인되자 선생님이 출석부를 다시 살폈어요.",
+        "exampleZh": "遲到原因被確認屬實後，老師又看了一次點名簿。",
+        "highlight": "확인되자",
+    },
+    "팁": {
+        "exampleKo": "선배가 발표 자료를 만들 때는 핵심 문장을 먼저 적으라고 팁을 줬어요.",
+        "exampleZh": "前輩給了我建議，說做簡報資料時要先寫下重點句。",
+        "highlight": "팁을",
+    },
+    "계시하다": {
+        "exampleKo": "교수님은 연구 방향을 설명하며 관련 문헌을 하나씩 계시해 주셨어요.",
+        "exampleZh": "教授說明研究方向時，還一一提示了相關文獻。",
+        "highlight": "계시해",
+    },
+    "처형되다": {
+        "exampleKo": "오래된 법에 따라 죄인이 공개적으로 처형되었다는 기록이 남아 있어요.",
+        "exampleZh": "有記錄顯示，依照舊法，罪犯曾被公開處刑。",
+        "highlight": "처형되었다는",
+    },
+    "얘기": {
+        "exampleKo": "점심시간에 동료와 퇴근 후 얘기를 잠깐 나눴어요.",
+        "exampleZh": "午餐時間我和同事簡單聊了一下下班後的事情。",
+        "highlight": "얘기를",
+    },
+    "갚다": {
+        "exampleKo": "이번 달 월급을 받으면 친구에게 빌린 돈을 바로 갚을 거예요.",
+        "exampleZh": "這個月領到薪水後，我會立刻還朋友借給我的錢。",
+        "highlight": "갚을",
+    },
+    "막": {
+        "exampleKo": "회의가 막 시작했으니 지금 들어가도 괜찮아요.",
+        "exampleZh": "會議才剛開始，所以現在進去也沒關係。",
+        "highlight": "막 시작했으니",
+    },
+    "접근법": {
+        "exampleKo": "팀장은 문제를 해결하는 접근법을 다시 설명해 주었다.",
+        "exampleZh": "組長又說明了一次解決問題的方法。",
+        "highlight": "접근법을",
+    },
+    "저리되다": {
+        "exampleKo": "프로젝트가 계속 미뤄지면 일이 저리될 수 있어요.",
+        "exampleZh": "如果專案一直延後，事情可能會變成那樣。",
+        "highlight": "저리될",
+    },
+    "괜찮다": {
+        "exampleKo": "오늘 회의 일정은 오후라서 저는 괜찮아요.",
+        "exampleZh": "今天的會議時間在下午，所以我沒問題。",
+        "highlight": "괜찮아요",
+    },
+    "셋째": {
+        "exampleKo": "이번 보고서에서는 셋째 항목을 먼저 검토합시다.",
+        "exampleZh": "這份報告裡，我們先檢查第三項吧。",
+        "highlight": "셋째",
+    },
+    "첫사랑": {
+        "exampleKo": "동창회에서 민준은 첫사랑 이야기를 조심스럽게 꺼냈다.",
+        "exampleZh": "在同學會上，民俊小心翼翼地提起了初戀的話題。",
+        "highlight": "첫사랑",
+    },
+    "실망시키다": {
+        "exampleKo": "약속을 지키지 못한 직원은 팀원들을 실망시켰다.",
+        "exampleZh": "那位沒能遵守約定的員工讓團隊成員失望了。",
+        "highlight": "실망시켰다",
+    },
+    "회원제": {
+        "exampleKo": "이 헬스장은 회원제로 운영돼서 등록이 필요해요.",
+        "exampleZh": "這間健身房採會員制營運，所以需要登記。",
+        "highlight": "회원제로",
+    },
+    "저리하다": {
+        "exampleKo": "선배는 후배가 실수해도 저리하지 않고 차분하게 알려 주었다.",
+        "exampleZh": "學長就算學弟犯錯也沒有那樣做，而是冷靜地告訴了他。",
+        "highlight": "저리하지",
+    },
+    "드리다": {
+        "exampleKo": "상무님께 자료를 드리기 전에 다시 확인했습니다.",
+        "exampleZh": "在把資料交給常務之前，我又確認了一次。",
+        "highlight": "드리기",
+    },
+    "시골": {
+        "exampleKo": "주말이면 저는 시골에 내려가 할머니를 도와드려요.",
+        "exampleZh": "到了週末，我會去鄉下幫奶奶。",
+        "highlight": "시골에",
+    },
+    "손님": {
+        "exampleKo": "오늘 카페에 손님이 많아요.",
+        "exampleZh": "今天咖啡廳客人很多。",
+        "highlight": "손님",
+    },
+    "없이": {
+        "exampleKo": "저는 설탕 없이 커피를 마셔요.",
+        "exampleZh": "我喝咖啡不加糖。",
+        "highlight": "없이",
+    },
+    "악화": {
+        "exampleKo": "감기가 악화돼서 병원에 갔어요.",
+        "exampleZh": "感冒變嚴重，所以我去了醫院。",
+        "highlight": "악화",
+    },
+    "가끔가다가": {
+        "exampleKo": "가끔가다가 혼자 영화를 봐요.",
+        "exampleZh": "我偶爾會一個人看電影。",
+        "highlight": "가끔가다가",
+    },
+    "저리다": {
+        "exampleKo": "오래 앉아 있었더니 다리가 저려요.",
+        "exampleZh": "坐太久了，腿有點麻。",
+        "highlight": "저려요",
+    },
+    "안녕하다": {
+        "exampleKo": "오랜만이에요. 그동안 안녕하셨어요?",
+        "exampleZh": "好久不見，這段時間你過得好嗎？",
+        "highlight": "안녕하셨어요",
+    },
+    "택배": {
+        "exampleKo": "오늘 택배가 집에 도착했어요.",
+        "exampleZh": "今天包裹送到家了。",
+        "highlight": "택배",
+    },
+    "첫차": {
+        "exampleKo": "내일은 첫차를 타고 공항에 가야 해요.",
+        "exampleZh": "明天要搭首班車去機場。",
+        "highlight": "첫차",
+    },
+    "고급화": {
+        "exampleKo": "이 브랜드는 제품 고급화에 힘쓰고 있어요.",
+        "exampleZh": "這個品牌正在努力讓產品更高級化。",
+        "highlight": "고급화",
+    },
+    "민주화하다": {
+        "exampleKo": "사람들은 사회를 더 민주화하려고 노력했어요.",
+        "exampleZh": "人們努力讓社會更加民主化。",
+        "highlight": "민주화하려고",
+    },
+    "나라님": {
+        "exampleKo": "옛날 이야기에서 백성들은 나라님을 존경했어요.",
+        "exampleZh": "在古老故事裡，百姓們尊敬國君。",
+        "highlight": "나라님",
+    },
+    "긍정적": {
+        "exampleKo": "팀장님은 제 제안에 긍정적인 반응을 보였어요.",
+        "exampleZh": "主管對我的提案表現出正面的反應。",
+        "highlight": "긍정적인",
+    },
+    "계시": {
+        "exampleKo": "그는 힘든 시기에 계시를 받은 것처럼 마음이 편해졌어요.",
+        "exampleZh": "他在困難時期像得到啟示一樣，心情變得平靜。",
+        "highlight": "계시",
+    },
+    "치명적": {
+        "exampleKo": "작은 실수가 프로젝트에 치명적인 문제가 될 수 있어요.",
+        "exampleZh": "小小的失誤也可能成為專案中的致命問題。",
+        "highlight": "치명적인",
+    },
+    "의미하다": {
+        "exampleKo": "이 표시는 회의실을 사용할 수 없다는 뜻을 의미해요.",
+        "exampleZh": "這個標示表示會議室不能使用。",
+        "highlight": "의미해요",
+    },
+    "낚시하다": {
+        "exampleKo": "주말에 아버지와 강에서 낚시했어요.",
+        "exampleZh": "週末我和爸爸在河邊釣魚。",
+        "highlight": "낚시했어요",
+    },
+    "별생각": {
+        "exampleKo": "처음에는 별생각 없이 회의에 들어갔어요.",
+        "exampleZh": "一開始我沒想太多就進了會議。",
+        "highlight": "별생각",
+    },
+    "돼지머리": {
+        "exampleKo": "개업식 때 상 위에 돼지머리를 올려 두었어요.",
+        "exampleZh": "開幕儀式時，桌上放了豬頭。",
+        "highlight": "돼지머리",
+    },
+    "값있다": {
+        "exampleKo": "실패한 경험도 나중에는 값있는 배움이 되었어요.",
+        "exampleZh": "失敗的經驗後來也成了寶貴的學習。",
+        "highlight": "값있는",
+    },
+    "눌러앉다": {
+        "exampleKo": "친구 집에 잠깐 갔다가 저녁까지 눌러앉았어요.",
+        "exampleZh": "我只是去朋友家一下，結果一直待到晚上。",
+        "highlight": "눌러앉았어요",
+    },
+    "악화되다": {
+        "exampleKo": "회사의 상황이 더 악화되지 않았어요.",
+        "exampleZh": "公司的情況沒有再惡化。",
+        "highlight": "악화되지",
+    },
+    "값하다": {
+        "exampleKo": "이 노트북은 비싸지만 성능이 좋아서 값해요.",
+        "exampleZh": "這台筆電雖然貴，但很值得。",
+        "highlight": "값해요",
+    },
+    "압도되다": {
+        "exampleKo": "큰 무대에 압도되어 말을 못 했어요.",
+        "exampleZh": "我被大場面震懾住，說不出話。",
+        "highlight": "압도되어",
+    },
+    "하루": {
+        "exampleKo": "오늘 하루도 정말 바쁘게 지나갔어요.",
+        "exampleZh": "今天一整天也過得非常忙碌。",
+        "highlight": "하루",
+    },
+    "글쎄": {
+        "exampleKo": "글쎄, 이번 주 안에 끝낼 수 있을지 모르겠어요.",
+        "exampleZh": "這個嘛，我不確定這週內能不能完成。",
+        "highlight": "글쎄",
+    },
+    "인간적": {
+        "pos": "형용사",
+        "translation": "有人情味的",
+        "exampleKo": "그는 인간적으로 제 상황을 이해해 줬어요.",
+        "exampleZh": "他很有人情味地體諒了我的情況。",
+        "highlight": "인간적으로",
+    },
+    "악화하다": {
+        "exampleKo": "무리한 야근은 건강을 악화할 수 있어요.",
+        "exampleZh": "過度加班可能會使健康惡化。",
+        "highlight": "악화할",
+    },
+    "꽃답다": {
+        "exampleKo": "졸업식 날 학생들의 웃음이 꽃답게 빛났어요.",
+        "exampleZh": "畢業典禮那天，學生們笑得燦爛。",
+        "highlight": "꽃답게",
+    },
+    "압도하다": {
+        "exampleKo": "그 선수는 뛰어난 실력으로 상대를 압도했어요.",
+        "exampleZh": "那位選手以出色實力壓倒了對手。",
+        "highlight": "압도했어요",
+    },
+    "언제": {
+        "exampleKo": "회의가 언제 시작하는지 다시 확인해 주세요.",
+        "exampleZh": "請再確認會議什麼時候開始。",
+        "highlight": "언제",
+    },
+}
+
+
+def display_vocab_row(row):
+    override = VOCAB_OVERRIDES.get(row.get("word"))
+    if override:
+        return {**row, **override}
+    word = row.get("word", "未知單字")
+    raise ValueError(f"Missing curated vocabulary example for {word}. Add it to VOCAB_OVERRIDES before rendering.")
+
 
 def argos_translator():
     try:
@@ -73,25 +336,18 @@ TRANSLATE = argos_translator()
 def translate_example(row):
     if row.get("exampleZh"):
         return row["exampleZh"]
-    if TRANSLATE:
-        try:
-            translated = TRANSLATE(row["exampleKo"]).strip()
-            if translated:
-                return translated
-        except Exception:
-            pass
-    return row.get("definitionZh") or ""
+    return f"詞義：{row.get('translation') or row.get('definitionZh') or '整理中'}"
 
 
 def text_example_or_definition(row):
     if row.get("exampleZh"):
         return row["exampleZh"]
     translated = translate_example(row)
-    if translated and translated != row.get("definitionZh"):
+    if translated and translated != "例句翻譯整理中":
         return translated
     if row.get("definitionZh"):
         return f"詞義：{row['definitionZh']}"
-    return ""
+    return "例句翻譯整理中"
 
 
 def gradient(bg1=(255, 248, 244), bg2=(238, 247, 241)):
@@ -139,7 +395,7 @@ def wrap(draw, text, xy, font, fill, max_width, max_lines=2, gap=4):
 
 def draw_marker(draw, x, y, text, target, max_width, font, fill):
     shown = ellipsize(draw, text, font, max_width)
-    if target not in shown:
+    if not target or target not in shown:
         draw.text((x, y), shown, font=font, fill=fill)
         return y + 25
 
@@ -177,7 +433,8 @@ def render_vocab(rows, output_path):
     card_width, card_height = 463, 166
     top_y, gap_y = 310, 18
 
-    for index, item in enumerate(rows[:10]):
+    for index, raw_item in enumerate(rows[:10]):
+        item = display_vocab_row(raw_item)
         col, row = divmod(index, 5)
         x = left_x if col == 0 else right_x
         y = top_y + row * (card_height + gap_y)
@@ -196,7 +453,7 @@ def render_vocab(rows, output_path):
         remaining_width = 225 - draw.textlength(pos_text, font=FONTS["meta"])
         draw.text((px + draw.textlength(pos_text, font=FONTS["meta"]), py), ellipsize(draw, item["translation"], FONTS["meta"], remaining_width), font=FONTS["meta"], fill="#263238")
 
-        draw_marker(draw, x + 22, y + 107, item["exampleKo"], item["word"], 410, FONTS["ko"], "#4A5751")
+        draw_marker(draw, x + 22, y + 107, item["exampleKo"], item.get("highlight", item["word"]), 410, FONTS["ko"], "#4A5751")
         wrap(draw, translate_example(item), (x + 22, y + 132), FONTS["zh"], "#7B8580", 410, 1, 2)
 
     draw_footer(draw)
@@ -206,6 +463,12 @@ def render_vocab(rows, output_path):
 def grammar_targets(pattern, sentence):
     if pattern == "-기 전에":
         return "기 전에"
+    if pattern == "-는 동안":
+        return "는 동안" if "는 동안" in sentence else "동안"
+    if pattern == "-(으)ㄹ 만하다":
+        for target in ["볼 만해요", "가 볼 만합니다", "을 만하다", "ㄹ 만하다", "만해요", "만합니다"]:
+            if target in sentence:
+                return target
     if pattern == "-(으)ㄹ 테니까":
         if "갈 테니까" in sentence:
             return "갈 테니까"
@@ -284,10 +547,11 @@ def render_text(vocab_rows, grammar_rows, output_path):
         "TOPIK單字",
         "",
     ]
-    for index, item in enumerate(vocab_rows[:10], start=1):
+    for raw_item in vocab_rows[:10]:
+        item = display_vocab_row(raw_item)
         lines.extend(
             [
-                f"{index}. TOPIK {item['level']}｜{item['word']}｜{item['translation']}",
+                f"{item['word']}｜{item['translation']}",
                 "",
             ]
         )
@@ -299,10 +563,10 @@ def render_text(vocab_rows, grammar_rows, output_path):
             "",
         ]
     )
-    for index, item in enumerate(grammar_rows[:2], start=1):
+    for item in grammar_rows[:2]:
         lines.extend(
             [
-                f"{index}. TOPIK {item['level']}｜{item['pattern']}",
+                f"TOPIK {item['level']}｜{item['pattern']}",
                 f"意思：{item.get('meaning', '')}",
             ]
         )
