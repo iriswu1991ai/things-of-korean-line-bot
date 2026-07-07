@@ -13,10 +13,22 @@ FONT_ZH = "/System/Library/Fonts/PingFang.ttc"
 FONT_ROUND = "/System/Library/Fonts/SFNSRounded.ttf"
 FONT_ROUND_BOLD = "/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf"
 FONT_ALL = "/System/Library/Fonts/Supplemental/Arial Unicode.ttf"
+LINUX_CJK = "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
+LINUX_CJK_BOLD = "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
+LINUX_SANS = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+LINUX_SANS_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
 
 def load_font(path, size):
-    for candidate in [path, FONT_ZH, FONT_ALL]:
+    for candidate in [
+        path,
+        FONT_ZH,
+        FONT_ALL,
+        LINUX_CJK,
+        LINUX_CJK_BOLD,
+        LINUX_SANS,
+        LINUX_SANS_BOLD,
+    ]:
         try:
             return ImageFont.truetype(candidate, size)
         except Exception:
