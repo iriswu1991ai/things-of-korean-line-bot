@@ -70,14 +70,6 @@ if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
     if (commitResult.stdout) process.stdout.write(commitResult.stdout);
     if (commitResult.stderr) process.stderr.write(commitResult.stderr);
     if (commitResult.status !== 0) process.exit(commitResult.status ?? 1);
-
-    const pushResult = spawnSync("git", ["push", "origin", "main"], {
-      cwd: rootDir,
-      encoding: "utf8"
-    });
-    if (pushResult.stdout) process.stdout.write(pushResult.stdout);
-    if (pushResult.stderr) process.stderr.write(pushResult.stderr);
-    if (pushResult.status !== 0) process.exit(pushResult.status ?? 1);
   } else if (diffResult.status === 0) {
     console.log("HANHAN images already published to GitHub.");
   } else {
@@ -85,6 +77,14 @@ if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
     if (diffResult.stderr) process.stderr.write(diffResult.stderr);
     process.exit(diffResult.status ?? 1);
   }
+
+  const pushResult = spawnSync("git", ["push", "origin", "main"], {
+    cwd: rootDir,
+    encoding: "utf8"
+  });
+  if (pushResult.stdout) process.stdout.write(pushResult.stdout);
+  if (pushResult.stderr) process.stderr.write(pushResult.stderr);
+  if (pushResult.status !== 0) process.exit(pushResult.status ?? 1);
 }
 
 if (process.env.PUSH_HANHAN_LINE === "1") {
