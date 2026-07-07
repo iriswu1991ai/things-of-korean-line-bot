@@ -1,0 +1,52 @@
+name: HANHAN daily TOPIK push
+
+on:
+  schedule:
+    # 07:00 Asia/Taipei
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install renderer dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+          python -m pip install --upgrade pip
+          python -m pip install pillow
+
+      - name: Configure Git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Generate assets, publish images, and push to HANHAN
+        env:
+          PUBLISH_HANHAN_IMAGES_GITHUB: "1"
+          PUSH_HANHAN_LINE: "1"
+          PYTHON: "python"
+          LINE_HANHAN_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_HANHAN_CHANNEL_ACCESS_TOKEN }}
+          LINE_HANHAN_CHANNEL_SECRET: ${{ secrets.LINE_HANHAN_CHANNEL_SECRET }}
+          LINE_HANHAN_TARGET_IDS: ${{ secrets.LINE_HANHAN_TARGET_IDS }}
+          HANHAN_IMAGE_BASE_URL: https://raw.githubusercontent.com/iriswu1991ai/things-of-korean-line-bot/main/out/ig
+        run: node scripts/generate-ig-images.mjs
