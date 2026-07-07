@@ -430,9 +430,10 @@ VOCAB_OVERRIDES = {
         "highlight": "백팔십도로",
     },
     "추모하다": {
-        "exampleKo": "학교에서는 사고로 세상을 떠난 선생님을 추모하는 시간을 가졌어요.",
-        "exampleZh": "學校舉行了悼念因事故過世老師的時間。",
-        "highlight": "추모하는",
+        "translation": "追思，悼念",
+        "exampleKo": "학생들은 선생님을 함께 추모했어요.",
+        "exampleZh": "學生們一起悼念了老師。",
+        "highlight": "추모했어요",
     },
     "운동": {
         "exampleKo": "저는 퇴근 후에 동네 공원에서 운동을 해요.",
@@ -531,6 +532,20 @@ def ellipsize(draw, text, font, max_width):
     return f"{clipped}..."
 
 
+def fit_font(draw, text, font, max_width, min_size=15):
+    current = font
+    while draw.textlength(text, font=current) > max_width and getattr(current, "size", min_size) > min_size:
+        current = current.font_variant(size=current.size - 1)
+    return current
+
+
+def draw_fit_line(draw, x, y, text, font, fill, max_width, min_size=15):
+    fitted = fit_font(draw, text, font, max_width, min_size)
+    draw.text((x, y), text, font=fitted, fill=fill)
+    bbox = draw.textbbox((x, y), text, font=fitted)
+    return y + (bbox[3] - bbox[1])
+
+
 def wrap(draw, text, xy, font, fill, max_width, max_lines=2, gap=4):
     x, y = xy
     lines = []
@@ -556,7 +571,8 @@ def wrap(draw, text, xy, font, fill, max_width, max_lines=2, gap=4):
 
 
 def draw_marker(draw, x, y, text, target, max_width, font, fill):
-    shown = ellipsize(draw, text, font, max_width)
+    shown = text
+    font = fit_font(draw, shown, font, max_width, 15)
     if not target or target not in shown:
         draw.text((x, y), shown, font=font, fill=fill)
         return y + 25
@@ -616,7 +632,7 @@ def render_vocab(rows, output_path):
         draw.text((px + draw.textlength(pos_text, font=FONTS["meta"]), py), ellipsize(draw, item["translation"], FONTS["meta"], remaining_width), font=FONTS["meta"], fill="#263238")
 
         draw_marker(draw, x + 22, y + 107, item["exampleKo"], item.get("highlight", item["word"]), 410, FONTS["ko"], "#4A5751")
-        wrap(draw, translate_example(item), (x + 22, y + 132), FONTS["zh"], "#7B8580", 410, 1, 2)
+        draw_fit_line(draw, x + 22, y + 132, translate_example(item), FONTS["zh"], "#7B8580", 410, 15)
 
     draw_footer(draw)
     img.save(output_path, quality=95)
