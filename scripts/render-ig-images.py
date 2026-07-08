@@ -523,9 +523,27 @@ VOCAB_OVERRIDES = {
 def display_vocab_row(row):
     override = VOCAB_OVERRIDES.get(row.get("word"))
     if override:
-        return {**row, **override}
+        item = {**row, **override}
+        return normalize_vocab_item(item)
     word = row.get("word", "未知單字")
     raise ValueError(f"Missing curated vocabulary example for {word}. Add it to VOCAB_OVERRIDES before rendering.")
+
+
+def adjective_translation(text):
+    parts = [part.strip() for part in text.split("，")]
+    normalized = []
+    for part in parts:
+        if not part:
+            continue
+        normalized.append(part if part.endswith("的") else f"{part}的")
+    return "，".join(normalized)
+
+
+def normalize_vocab_item(item):
+    normalized = dict(item)
+    if normalized.get("pos") == "형용사" and normalized.get("translation"):
+        normalized["translation"] = adjective_translation(normalized["translation"])
+    return normalized
 
 
 def argos_translator():
@@ -739,15 +757,16 @@ def draw_example(draw, x, y, sentence, translation, target, max_width):
         return y + 36
 
     draw_marker(draw, x, y, sentence, target, max_width, FONTS["ex_ko"], "#263238")
-    return wrap(draw, translation, (x, y + 34), FONTS["ex_zh"], "#6F7B75", max_width, 1, 4)
+    draw_fit_line(draw, x, y + 34, translation, FONTS["ex_zh"], "#6F7B75", max_width, 18)
+    return y + 58
 
 
 def render_grammar(rows, output_path):
     img, draw = gradient((255, 249, 246), (241, 248, 247))
     draw_header(draw, "TOPIK文法")
     palette = [("#2F7D6D", "#E1F4EE"), ("#7957C8", "#EEE8FF")]
-    ys = [292, 758]
-    card_x, card_width, card_height = 62, 956, 445
+    ys = [286, 754]
+    card_x, card_width, card_height = 62, 956, 463
 
     for index, item in enumerate(rows[:2]):
         accent, tint = palette[index % len(palette)]
@@ -763,15 +782,15 @@ def render_grammar(rows, output_path):
         cy = y + 202
         draw.text((card_x + 34, cy), "接續", font=FONTS["label"], fill=accent)
         wrap(draw, item.get("attachment", ""), (card_x + 112, cy - 2), FONTS["attach"], "#263238", 790, 1, 5)
-        cy += 61
+        cy += 54
         draw.text((card_x + 34, cy), "意思", font=FONTS["label"], fill=accent)
-        cy = wrap(draw, item.get("meaning", ""), (card_x + 112, cy - 2), FONTS["body"], "#263238", 790, 2, 6) + 25
+        cy = wrap(draw, item.get("meaning", ""), (card_x + 112, cy - 2), FONTS["body"], "#263238", 790, 2, 6) + 18
 
         for example_index, (sentence, translation) in enumerate(item.get("examples", [])[:2], start=1):
             draw.rounded_rectangle([card_x + 34, cy - 3, card_x + 94, cy + 35], radius=19, fill=tint)
             draw.text((card_x + 49, cy + 5), str(example_index), font=FONTS["tag"], fill=accent)
             target = grammar_targets(item["pattern"], sentence)
-            cy = draw_example(draw, card_x + 118, cy - 2, sentence, translation, target, 785) + 16
+            cy = draw_example(draw, card_x + 118, cy - 2, sentence, translation, target, 785) + 8
 
     draw_footer(draw)
     img.save(output_path, quality=95)
