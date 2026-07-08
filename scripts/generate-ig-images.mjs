@@ -91,9 +91,15 @@ if (process.env.PUSH_HANHAN_LINE === "1") {
   const textPath = resolve(rootDir, "out", "ig", date, `topik-post-${date}.txt`);
   const text = readFileSync(textPath, "utf8").trim();
   const imageBaseUrl = process.env.HANHAN_IMAGE_BASE_URL?.replace(/\/$/, "");
+  const revisionResult = spawnSync("git", ["rev-parse", "--short", "HEAD"], {
+    cwd: rootDir,
+    encoding: "utf8"
+  });
+  const imageVersion = (process.env.HANHAN_IMAGE_VERSION || revisionResult.stdout.trim() || Date.now().toString()).replace(/[^A-Za-z0-9._-]/g, "");
+  const cacheBuster = `?v=${imageVersion}`;
   const messages = imageBaseUrl ? [
-    imageMessage(`${imageBaseUrl}/${date}/topik-vocab-${date}.png`),
-    imageMessage(`${imageBaseUrl}/${date}/topik-grammar-${date}.png`),
+    imageMessage(`${imageBaseUrl}/${date}/topik-vocab-${date}.png${cacheBuster}`),
+    imageMessage(`${imageBaseUrl}/${date}/topik-grammar-${date}.png${cacheBuster}`),
     textMessage(text)
   ] : [textMessage(text)];
   const targets = configuredTargets("hanhan");
