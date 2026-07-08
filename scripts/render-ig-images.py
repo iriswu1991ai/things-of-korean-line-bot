@@ -460,6 +460,63 @@ VOCAB_OVERRIDES = {
         "exampleZh": "最近會議方式變得更民主化，所以任何人都更容易提出意見。",
         "highlight": "민주화되어",
     },
+    "새사람": {
+        "translation": "像變了個人",
+        "exampleKo": "입사 후 그는 새사람처럼 성실해졌어요.",
+        "exampleZh": "入職後，他像變了個人一樣變得認真。",
+        "highlight": "새사람처럼",
+    },
+    "에이": {
+        "exampleKo": "에이, 실수는 누구나 할 수 있으니 너무 걱정하지 마세요.",
+        "exampleZh": "唉，誰都可能會犯錯，所以不要太擔心。",
+        "highlight": "에이,",
+    },
+    "죽어지내다": {
+        "translation": "低調過日子",
+        "exampleKo": "취업 준비가 길어져서 요즘은 방에서 거의 죽어지내고 있어요.",
+        "exampleZh": "因為求職準備拖得很久，我最近幾乎都窩在房間裡過日子。",
+        "highlight": "죽어지내고",
+    },
+    "타격하다": {
+        "translation": "打擊，攻擊",
+        "exampleKo": "상대 팀의 약점을 타격했어요.",
+        "exampleZh": "攻擊了對方隊伍的弱點。",
+        "highlight": "타격했어요",
+    },
+    "여러분": {
+        "translation": "各位",
+        "exampleKo": "여러분, 지금부터 오늘 발표를 시작하겠습니다.",
+        "exampleZh": "各位，現在開始今天的發表。",
+        "highlight": "여러분,",
+    },
+    "검정색": {
+        "exampleKo": "회의 때는 검정색 정장을 입어야 해서 미리 준비했어요.",
+        "exampleZh": "開會時必須穿黑色西裝，所以我先準備好了。",
+        "highlight": "검정색",
+    },
+    "관계있다": {
+        "translation": "有關",
+        "exampleKo": "이 자료는 이번 프로젝트와 관계가 있어요.",
+        "exampleZh": "這份資料和這次專案有關。",
+        "highlight": "관계가",
+    },
+    "위로": {
+        "translation": "安慰",
+        "exampleKo": "친구가 힘들어 보여서 따뜻한 위로를 건넸어요.",
+        "exampleZh": "朋友看起來很辛苦，所以我送上了溫暖的慰勞。",
+        "highlight": "위로를",
+    },
+    "하늘거리다": {
+        "exampleKo": "창가 커튼이 바람에 하늘거리며 오후 햇빛을 받았어요.",
+        "exampleZh": "窗邊的窗簾隨風飄搖，映著午後的陽光。",
+        "highlight": "하늘거리며",
+    },
+    "특유하다": {
+        "translation": "獨特",
+        "exampleKo": "그 카페는 특유한 분위기로 유명해요.",
+        "exampleZh": "那間咖啡廳以獨特的氛圍聞名。",
+        "highlight": "특유한",
+    },
 }
 
 
