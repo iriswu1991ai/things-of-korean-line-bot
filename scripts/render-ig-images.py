@@ -677,6 +677,44 @@ def draw_fit_line(draw, x, y, text, font, fill, max_width, min_size=15):
     return y + (bbox[3] - bbox[1])
 
 
+def draw_fit_or_wrap(draw, x, y, text, font, fill, max_width, max_lines=2, min_size=18, gap=4):
+    fitted = fit_font(draw, text, font, max_width, min_size)
+    if draw.textlength(text, font=fitted) <= max_width:
+        draw.text((x, y), text, font=fitted, fill=fill)
+        bbox = draw.textbbox((x, y), text, font=fitted)
+        return y + (bbox[3] - bbox[1])
+
+    lines = []
+    line = ""
+    for char in text:
+        test = line + char
+        if draw.textlength(test, font=fitted) <= max_width:
+            line = test
+        else:
+            if line:
+                lines.append(line)
+            line = char
+            if len(lines) >= max_lines - 1:
+                break
+    remaining = text[len("".join(lines)):]
+    if remaining:
+        line = ""
+        for char in remaining:
+            test = line + char
+            if draw.textlength(test, font=fitted) <= max_width:
+                line = test
+            else:
+                break
+        if line:
+            lines.append(line)
+
+    for line in lines[:max_lines]:
+        draw.text((x, y), line, font=fitted, fill=fill)
+        bbox = draw.textbbox((x, y), line, font=fitted)
+        y += (bbox[3] - bbox[1]) + gap
+    return y - gap
+
+
 def wrap(draw, text, xy, font, fill, max_width, max_lines=2, gap=4):
     x, y = xy
     lines = []
@@ -846,8 +884,19 @@ def render_grammar(rows, output_path):
 
         cy = y + 202
         draw.text((card_x + 34, cy), "接續", font=FONTS["label"], fill=accent)
-        wrap(draw, item.get("attachment", ""), (card_x + 112, cy - 2), FONTS["attach"], "#263238", 790, 1, 5)
-        cy += 54
+        attachment_bottom = draw_fit_or_wrap(
+            draw,
+            card_x + 112,
+            cy - 2,
+            item.get("attachment", ""),
+            FONTS["attach"],
+            "#263238",
+            790,
+            2,
+            17,
+            5,
+        )
+        cy = max(cy + 54, attachment_bottom + 18)
         draw.text((card_x + 34, cy), "意思", font=FONTS["label"], fill=accent)
         cy = wrap(draw, item.get("meaning", ""), (card_x + 112, cy - 2), FONTS["body"], "#263238", 790, 2, 6) + 18
 
