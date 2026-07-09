@@ -90,12 +90,15 @@ if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
 if (process.env.PUSH_HANHAN_LINE === "1") {
   const textPath = resolve(rootDir, "out", "ig", date, `topik-post-${date}.txt`);
   const text = readFileSync(textPath, "utf8").trim();
-  const imageBaseUrl = process.env.HANHAN_IMAGE_BASE_URL?.replace(/\/$/, "");
   const revisionResult = spawnSync("git", ["rev-parse", "--short", "HEAD"], {
     cwd: rootDir,
     encoding: "utf8"
   });
   const imageVersion = (process.env.HANHAN_IMAGE_VERSION || revisionResult.stdout.trim() || Date.now().toString()).replace(/[^A-Za-z0-9._-]/g, "");
+  const configuredImageBaseUrl = process.env.HANHAN_IMAGE_BASE_URL?.replace(/\/$/, "");
+  const imageBaseUrl = configuredImageBaseUrl?.startsWith("https://raw.githubusercontent.com/iriswu1991ai/things-of-korean-line-bot/")
+    ? `https://cdn.jsdelivr.net/gh/iriswu1991ai/things-of-korean-line-bot@${imageVersion}/out/ig`
+    : configuredImageBaseUrl;
   const cacheBuster = `?v=${imageVersion}`;
   const messages = imageBaseUrl ? [
     imageMessage(`${imageBaseUrl}/${date}/topik-vocab-${date}.png${cacheBuster}`),
