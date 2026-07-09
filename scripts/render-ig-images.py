@@ -107,6 +107,62 @@ VOCAB_OVERRIDES = {
         "exampleZh": "隨著會議規則變得更民主化，新進員工也能自由發表意見。",
         "highlight": "민주화되면서",
     },
+    "한계": {
+        "translation": "限制，極限",
+        "exampleKo": "이 장비로는 촬영 시간에 한계가 있어요.",
+        "exampleZh": "用這台設備拍攝時間有限制。",
+        "highlight": "한계가",
+    },
+    "떼이다": {
+        "translation": "被賴帳",
+        "exampleKo": "빌려준 돈을 떼일까 봐 기록을 남겼어요.",
+        "exampleZh": "怕借出去的錢被賴帳，所以留下紀錄。",
+        "highlight": "떼일까",
+    },
+    "패배하다": {
+        "translation": "敗北",
+        "exampleKo": "우리 팀은 마지막 경기에서 아쉽게 패배했지만 끝까지 최선을 다했어요.",
+        "exampleZh": "我們隊在最後一場比賽中可惜落敗，但還是拚到了最後。",
+        "highlight": "패배했지만",
+    },
+    "꼭": {
+        "exampleKo": "내일 오전 회의에는 꼭 참석해 주세요.",
+        "exampleZh": "請務必出席明天上午的會議。",
+        "highlight": "꼭",
+    },
+    "메모하다": {
+        "exampleKo": "회의 중에 나온 의견은 잊지 않도록 노트에 메모해 두었어요.",
+        "exampleZh": "我把會議中提出的意見記在筆記本上，以免忘記。",
+        "highlight": "메모해",
+    },
+    "관계하다": {
+        "translation": "有關，參與",
+        "exampleKo": "이 문제는 예산과 관계해서 다시 논의해야 해요.",
+        "exampleZh": "這個問題和預算有關，需要再討論。",
+        "highlight": "관계해서",
+    },
+    "돼지꿈": {
+        "translation": "吉夢",
+        "exampleKo": "아침에 돼지꿈을 꿔서 오늘은 왠지 일이 잘 풀릴 것 같았어요.",
+        "exampleZh": "我早上夢見了豬，所以覺得今天事情好像會很順利。",
+        "highlight": "돼지꿈을",
+    },
+    "매력적": {
+        "translation": "有魅力的",
+        "exampleKo": "신입 사원의 발표 방식이 차분하고 매력적이라 모두가 집중해서 들었어요.",
+        "exampleZh": "新進員工的簡報方式沉穩又有魅力，大家都專心聽了。",
+        "highlight": "매력적이라",
+    },
+    "공단": {
+        "exampleKo": "우리 회사는 시내에서 조금 떨어진 공단 안에 있어요.",
+        "exampleZh": "我們公司位於離市區稍遠的工業園區裡。",
+        "highlight": "공단 안에",
+    },
+    "가격": {
+        "exampleKo": "점심 가격이 올랐지만 회사 식당은 아직 부담이 적은 편이에요.",
+        "exampleZh": "午餐價格雖然漲了，但公司的餐廳還算負擔不大。",
+        "highlight": "가격이",
+    },
     "이": {
         "exampleKo": "이 보고서는 오늘 회의에서 팀장님께 제출할 예정이에요.",
         "exampleZh": "這份報告預計今天在會議上交給組長。",
@@ -704,7 +760,16 @@ def render_vocab(rows, output_path):
         px, py = x + 210, y + 63
         draw.text((px, py), pos_text, font=FONTS["meta"], fill=accent)
         remaining_width = 225 - draw.textlength(pos_text, font=FONTS["meta"])
-        draw.text((px + draw.textlength(pos_text, font=FONTS["meta"]), py), ellipsize(draw, item["translation"], FONTS["meta"], remaining_width), font=FONTS["meta"], fill="#263238")
+        draw_fit_line(
+            draw,
+            px + draw.textlength(pos_text, font=FONTS["meta"]),
+            py,
+            item["translation"],
+            FONTS["meta"],
+            "#263238",
+            remaining_width,
+            16,
+        )
 
         draw_marker(draw, x + 22, y + 107, item["exampleKo"], item.get("highlight", item["word"]), 410, FONTS["ko"], "#4A5751")
         draw_fit_line(draw, x + 22, y + 132, translate_example(item), FONTS["zh"], "#7B8580", 410, 15)
