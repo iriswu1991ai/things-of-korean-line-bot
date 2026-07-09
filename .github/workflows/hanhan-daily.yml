@@ -2,7 +2,7 @@ name: HANHAN daily TOPIK push
 
 on:
   schedule:
-   # 07:30 Asia/Taipei
+    # 07:30 Asia/Taipei = 23:30 UTC
     - cron: "30 23 * * *"
   workflow_dispatch:
 
@@ -12,6 +12,7 @@ permissions:
 jobs:
   generate-and-push:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
