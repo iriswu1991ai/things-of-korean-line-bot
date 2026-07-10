@@ -2,9 +2,14 @@ name: HANHAN daily TOPIK push
 
 on:
   schedule:
-    # 07:30 Asia/Taipei = 23:30 UTC
-    - cron: "30 23 * * *"
+    # 07:20-08:20 Asia/Taipei, multiple attempts
+    - cron: "20,30,40,50 23 * * *"
+    - cron: "0,10,20 0 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: hanhan-daily
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -50,4 +55,6 @@ jobs:
           LINE_HANHAN_CHANNEL_SECRET: ${{ secrets.LINE_HANHAN_CHANNEL_SECRET }}
           LINE_HANHAN_TARGET_IDS: ${{ secrets.LINE_HANHAN_TARGET_IDS }}
           HANHAN_IMAGE_BASE_URL: https://raw.githubusercontent.com/iriswu1991ai/things-of-korean-line-bot/main/out/ig
+          HANHAN_REQUIRE_TAIPEI_MORNING: "1"
+          HANHAN_DEDUPE_GITHUB: "1"
         run: node scripts/generate-ig-images.mjs
