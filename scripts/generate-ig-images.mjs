@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { koreanGrammarRows, koreanVocabRows } from "../src/content.js";
@@ -15,6 +15,25 @@ const date = new Intl.DateTimeFormat("en-CA", {
   month: "2-digit",
   day: "2-digit"
 }).format(new Date());
+
+const taipeiTimeParts = new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Asia/Taipei",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false
+}).formatToParts(new Date());
+const taipeiHour = Number(taipeiTimeParts.find((part) => part.type === "hour")?.value ?? "0");
+const taipeiMinute = Number(taipeiTimeParts.find((part) => part.type === "minute")?.value ?? "0");
+const taipeiMinutes = taipeiHour * 60 + taipeiMinute;
+const isScheduledRun = process.env.GITHUB_EVENT_NAME === "schedule";
+const shouldRequireMorningWindow = process.env.HANHAN_REQUIRE_TAIPEI_MORNING === "1" && isScheduledRun;
+const morningStart = 7 * 60 + 20;
+const morningEnd = 8 * 60 + 30;
+
+if (shouldRequireMorningWindow && (taipeiMinutes < morningStart || taipeiMinutes > morningEnd)) {
+  console.log(`Skipped HANHAN scheduled push outside Taipei morning window: ${String(taipeiHour).padStart(2, "0")}:${String(taipeiMinute).padStart(2, "0")}`);
+  process.exit(0);
+}
 
 const payload = {
   date,
@@ -89,6 +108,13 @@ if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
 
 if (process.env.PUSH_HANHAN_LINE === "1") {
   const textPath = resolve(rootDir, "out", "ig", date, `topik-post-${date}.txt`);
+  const markerPath = resolve(rootDir, "out", "ig", date, `hanhan-pushed-${date}.txt`);
+  const shouldDedupe = process.env.HANHAN_DEDUPE_GITHUB === "1" && isScheduledRun;
+  if (shouldDedupe && existsSync(markerPath)) {
+    console.log(`Skipped HANHAN LINE push: ${date} was already pushed.`);
+    process.exit(0);
+  }
+
   const text = readFileSync(textPath, "utf8").trim();
   const revisionResult = spawnSync("git", ["rev-parse", "--short", "HEAD"], {
     cwd: rootDir,
@@ -117,5 +143,36 @@ if (process.env.PUSH_HANHAN_LINE === "1") {
   } else {
     await broadcast("hanhan", messages);
     console.log("Broadcasted HANHAN LINE text.");
+  }
+
+  if (shouldDedupe && process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
+    mkdirSync(dirname(markerPath), { recursive: true });
+    writeFileSync(markerPath, `${new Date().toISOString()}\n`, "utf8");
+    const markerRelativePath = `out/ig/${date}/hanhan-pushed-${date}.txt`;
+    const addMarkerResult = spawnSync("git", ["add", "-f", markerRelativePath], {
+      cwd: rootDir,
+      encoding: "utf8"
+    });
+    if (addMarkerResult.status !== 0) {
+      if (addMarkerResult.stdout) process.stdout.write(addMarkerResult.stdout);
+      if (addMarkerResult.stderr) process.stderr.write(addMarkerResult.stderr);
+      process.exit(addMarkerResult.status ?? 1);
+    }
+
+    const commitMarkerResult = spawnSync("git", ["commit", "-m", `Mark ${date} HANHAN push sent`, "--", markerRelativePath], {
+      cwd: rootDir,
+      encoding: "utf8"
+    });
+    if (commitMarkerResult.stdout) process.stdout.write(commitMarkerResult.stdout);
+    if (commitMarkerResult.stderr) process.stderr.write(commitMarkerResult.stderr);
+    if (commitMarkerResult.status !== 0) process.exit(commitMarkerResult.status ?? 1);
+
+    const pushMarkerResult = spawnSync("git", ["push", "origin", "main"], {
+      cwd: rootDir,
+      encoding: "utf8"
+    });
+    if (pushMarkerResult.stdout) process.stdout.write(pushMarkerResult.stdout);
+    if (pushMarkerResult.stderr) process.stderr.write(pushMarkerResult.stderr);
+    if (pushMarkerResult.status !== 0) process.exit(pushMarkerResult.status ?? 1);
   }
 }
