@@ -238,6 +238,15 @@ const grammarBank = [
     ]
   },
   {
+    pattern: "-(으)ㄹ 터이다",
+    attachment: "動詞／形容詞語幹 + (으)ㄹ 터이다；有收音用 을 터이다，無收音用 ㄹ 터이다。",
+    meaning: "表示說話者的意志、打算或推測，相當於「會...、打算...」。",
+    examples: [
+      ["내일 회의 자료는 제가 준비할 터입니다.", "明天的會議資料我會準備。"],
+      ["길이 막힐 터이니 조금 일찍 출발합시다.", "路上應該會塞車，所以我們早點出發吧。"]
+    ]
+  },
+  {
     pattern: "-(으)ㄹ 따름이다",
     attachment: "動詞／形容詞語幹 + (으)ㄹ 따름이다；有收音用 을 따름이다，無收音用 ㄹ 따름이다。",
     meaning: "表示只有某種想法、狀態或行為，相當於「只是...而已」。",
@@ -262,6 +271,15 @@ const grammarBank = [
     examples: [
       ["저도 한국어를 공부해요.", "我也學韓文。"],
       ["오늘은 커피도 마시고 차도 마셨어요.", "今天咖啡也喝了，茶也喝了。"]
+    ]
+  },
+  {
+    pattern: "-만",
+    attachment: "名詞／數量詞 + 만。",
+    meaning: "表示限定，相當於「只有、只」。",
+    examples: [
+      ["오늘은 회의가 하나만 있어요.", "今天只有一個會議。"],
+      ["저는 아침에 커피만 마셨어요.", "我早上只喝了咖啡。"]
     ]
   },
   {
@@ -684,15 +702,23 @@ export function koreanVocabMessages(rows = koreanVocabRows()) {
 }
 
 export function koreanGrammarRows() {
-  const fallback = new Map(grammarBank.map((item) => [item.pattern, item]));
-  return pickByDateAcrossLevels(topikGrammar, 2, "level", 1).map((item) => {
-    const fixed = fallback.get(item.pattern);
+  const levelByPattern = new Map(topikGrammar.map((item) => [item.pattern, item.level]));
+  const completeGrammar = grammarBank
+    .map((item) => ({ ...item, level: levelByPattern.get(item.pattern) || item.level }))
+    .filter((item) =>
+      item.level &&
+      item.attachment &&
+      item.meaning &&
+      Array.isArray(item.examples) &&
+      item.examples.length >= 2
+    );
+  return pickByDateAcrossLevels(completeGrammar, 2, "level", 1).map((item) => {
     return {
       level: item.level,
       pattern: item.pattern,
-      attachment: fixed?.attachment || "接續規則由詞性、時態與有無收音決定。",
-      meaning: fixed?.meaning || "韓檢核心文法表達。",
-      examples: fixed?.examples || []
+      attachment: item.attachment,
+      meaning: item.meaning,
+      examples: item.examples
     };
   });
 }
