@@ -394,6 +394,8 @@ export default {
         levelRotation: "mixed-daily",
         linePushStatus: "hanhan-worker-enabled",
         manualPushStatus: "hanhan-daily-enabled",
+        hanhanTokenConfigured: Boolean(env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN),
+        hanhanImageBaseConfigured: Boolean(env.HANHAN_IMAGE_BASE_URL),
         schedules: ["30 23 * * *"]
       });
     }
