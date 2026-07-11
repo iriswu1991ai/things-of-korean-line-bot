@@ -414,13 +414,15 @@ const grammarBank = [
 const TOPIK_LEVELS = [1, 2, 3, 4, 5, 6];
 
 function dayNumber(offset = 0) {
-  const parts = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Taipei",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit"
-  }).formatToParts(new Date());
-  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  const overrideDate = globalThis.process?.env?.HANHAN_DATE || globalThis.HANHAN_DATE;
+  const values = overrideDate
+    ? { year: overrideDate.slice(0, 4), month: overrideDate.slice(5, 7), day: overrideDate.slice(8, 10) }
+    : Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Asia/Taipei",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    }).formatToParts(new Date()).map((part) => [part.type, part.value]));
   const taipeiMidnightUtc = Date.UTC(Number(values.year), Number(values.month) - 1, Number(values.day));
   return Math.floor(taipeiMidnightUtc / 86400000) + offset;
 }

@@ -61,6 +61,82 @@ async function pushToTargets(env, messages) {
   return targets.length;
 }
 
+function imageMessage(url) {
+  return {
+    type: "image",
+    originalContentUrl: url,
+    previewImageUrl: url
+  };
+}
+
+function todayInTaipei() {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Taipei",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(new Date());
+}
+
+function taipeiMinutesNow() {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Taipei",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).formatToParts(new Date());
+  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return Number(values.hour) * 60 + Number(values.minute);
+}
+
+async function pushHanhan(env, messages) {
+  const token = env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN;
+  if (!token) throw new Error("Missing LINE_HANHAN_CHANNEL_ACCESS_TOKEN");
+
+  const targets = (env.LINE_HANHAN_TARGET_IDS || "")
+    .split(",")
+    .map((id) => id.trim())
+    .filter(Boolean);
+
+  if (targets.length) {
+    for (const to of targets) {
+      await lineRequest("/message/push", token, { to, messages });
+    }
+    return { mode: "push", recipients: targets.length };
+  }
+
+  await lineRequest("/message/broadcast", token, { messages });
+  return { mode: "broadcast", recipients: 0 };
+}
+
+async function hanhanDailyMessages(env, date = todayInTaipei()) {
+  const imageBaseUrl = (env.HANHAN_IMAGE_BASE_URL || "https://cdn.jsdelivr.net/gh/iriswu1991ai/things-of-korean-line-bot@main/out/ig").replace(/\/$/, "");
+  const folderUrl = `${imageBaseUrl}/${date}`;
+  const cache = `?v=${date}`;
+  const textUrl = `${folderUrl}/topik-post-${date}.txt${cache}`;
+  const response = await fetch(textUrl);
+  if (!response.ok) throw new Error(`Missing HANHAN text ${date}: ${response.status}`);
+  const text = (await response.text()).trim();
+
+  return [
+    imageMessage(`${folderUrl}/topik-vocab-${date}.png${cache}`),
+    imageMessage(`${folderUrl}/topik-grammar-${date}.png${cache}`),
+    textMessage(text)
+  ];
+}
+
+async function pushHanhanDaily(env, { requireMorningWindow = false } = {}) {
+  const minutes = taipeiMinutesNow();
+  if (requireMorningWindow && (minutes < 7 * 60 + 20 || minutes > 8 * 60 + 40)) {
+    return { ok: true, skipped: true, reason: "outside_taipei_morning_window", minutes };
+  }
+
+  const date = todayInTaipei();
+  const messages = await hanhanDailyMessages(env, date);
+  const result = await pushHanhan(env, messages);
+  return { ok: true, date, ...result };
+}
+
 function parseTranslationArray(value, expectedLength) {
   if (!value) return null;
   const text = typeof value === "string" ? value : value.response;
@@ -300,6 +376,13 @@ export default {
       return handleAdminPush(request, env);
     }
 
+    if (request.method === "POST" && url.pathname === "/api/hanhan-daily") {
+      if (!env.ADMIN_PUSH_SECRET || request.headers.get("Authorization") !== `Bearer ${env.ADMIN_PUSH_SECRET}`) {
+        return json({ error: "Unauthorized" }, 401);
+      }
+      return json(await pushHanhanDaily(env));
+    }
+
     if (url.pathname === "/healthz" || url.pathname === "/") {
       return json({
         ok: true,
@@ -309,16 +392,17 @@ export default {
         grammarValidation: "strict",
         grammarContentMode: "fixed-examples-first",
         levelRotation: "mixed-daily",
-        linePushStatus: "paused",
-        manualPushStatus: "paused",
-        schedules: []
+        linePushStatus: "hanhan-worker-enabled",
+        manualPushStatus: "hanhan-daily-enabled",
+        schedules: ["30 23 * * *"]
       });
     }
 
     return json({ error: "Not found" }, 404);
   },
 
-  async scheduled(controller) {
-    console.log(`LINE scheduled push is paused; ignored cron ${controller.cron}`);
+  async scheduled(controller, env) {
+    const result = await pushHanhanDaily(env, { requireMorningWindow: true });
+    console.log(`HANHAN scheduled ${controller.cron}: ${JSON.stringify(result)}`);
   }
 };

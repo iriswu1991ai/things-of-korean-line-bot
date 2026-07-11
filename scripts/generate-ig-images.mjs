@@ -9,7 +9,7 @@ import { broadcast, configuredTargets, imageMessage, push, textMessage } from ".
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 loadEnv(resolve(rootDir, ".env"));
 
-const date = new Intl.DateTimeFormat("en-CA", {
+const date = process.env.HANHAN_DATE || new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Taipei",
   year: "numeric",
   month: "2-digit",
