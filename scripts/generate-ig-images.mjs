@@ -31,7 +31,9 @@ const morningStart = 7 * 60 + 20;
 const morningEnd = 8 * 60 + 30;
 
 if (shouldRequireMorningWindow && (taipeiMinutes < morningStart || taipeiMinutes > morningEnd)) {
-  console.log(`Skipped HANHAN scheduled push outside Taipei morning window: ${String(taipeiHour).padStart(2, "0")}:${String(taipeiMinute).padStart(2, "0")}`);
+  console.log(
+    `Skipped HANHAN LINE push: scheduled run started at ${String(taipeiHour).padStart(2, "0")}:${String(taipeiMinute).padStart(2, "0")} Asia/Taipei, outside allowed 07:20-08:30 window.`
+  );
   process.exit(0);
 }
 
@@ -63,11 +65,12 @@ if (result.stderr) process.stderr.write(result.stderr);
 if (result.status !== 0) process.exit(result.status ?? 1);
 
 if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
-  const imagePaths = [
+  const publishPaths = [
     `out/ig/${date}/topik-vocab-${date}.png`,
-    `out/ig/${date}/topik-grammar-${date}.png`
+    `out/ig/${date}/topik-grammar-${date}.png`,
+    `out/ig/${date}/topik-post-${date}.txt`
   ];
-  const addResult = spawnSync("git", ["add", "-f", ...imagePaths], {
+  const addResult = spawnSync("git", ["add", "-f", ...publishPaths], {
     cwd: rootDir,
     encoding: "utf8"
   });
@@ -77,12 +80,12 @@ if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
     process.exit(addResult.status ?? 1);
   }
 
-  const diffResult = spawnSync("git", ["diff", "--cached", "--quiet", "--", ...imagePaths], {
+  const diffResult = spawnSync("git", ["diff", "--cached", "--quiet", "--", ...publishPaths], {
     cwd: rootDir,
     encoding: "utf8"
   });
   if (diffResult.status === 1) {
-    const commitResult = spawnSync("git", ["commit", "-m", `Add ${date} TOPIK images`, "--", ...imagePaths], {
+    const commitResult = spawnSync("git", ["commit", "-m", `Add ${date} TOPIK assets`, "--", ...publishPaths], {
       cwd: rootDir,
       encoding: "utf8"
     });
@@ -90,7 +93,7 @@ if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
     if (commitResult.stderr) process.stderr.write(commitResult.stderr);
     if (commitResult.status !== 0) process.exit(commitResult.status ?? 1);
   } else if (diffResult.status === 0) {
-    console.log("HANHAN images already published to GitHub.");
+    console.log("HANHAN assets already published to GitHub.");
   } else {
     if (diffResult.stdout) process.stdout.write(diffResult.stdout);
     if (diffResult.stderr) process.stderr.write(diffResult.stderr);
