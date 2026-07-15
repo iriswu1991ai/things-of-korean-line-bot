@@ -9,6 +9,10 @@ import { broadcast, configuredTargets, imageMessage, push, textMessage } from ".
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 loadEnv(resolve(rootDir, ".env"));
 
+function sleep(ms) {
+  return new Promise((resolveSleep) => setTimeout(resolveSleep, ms));
+}
+
 const date = process.env.HANHAN_DATE || new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Taipei",
   year: "numeric",
@@ -28,9 +32,24 @@ const taipeiMinutes = taipeiHour * 60 + taipeiMinute;
 const isScheduledRun = process.env.GITHUB_EVENT_NAME === "schedule";
 const shouldRequireMorningWindow = process.env.HANHAN_REQUIRE_TAIPEI_MORNING === "1" && isScheduledRun;
 const morningStart = 7 * 60 + 20;
+const morningTarget = 7 * 60 + 30;
 const morningEnd = 8 * 60 + 30;
+const maxWaitMinutes = Number(process.env.HANHAN_MAX_WAIT_MINUTES || "300");
 
-if (shouldRequireMorningWindow && (taipeiMinutes < morningStart || taipeiMinutes > morningEnd)) {
+if (shouldRequireMorningWindow && taipeiMinutes < morningStart) {
+  const waitMinutes = morningTarget - taipeiMinutes;
+  if (waitMinutes > 0 && waitMinutes <= maxWaitMinutes) {
+    console.log(
+      `HANHAN scheduled run started at ${String(taipeiHour).padStart(2, "0")}:${String(taipeiMinute).padStart(2, "0")} Asia/Taipei; waiting ${waitMinutes} minute(s) to push at 07:30.`
+    );
+    await sleep(waitMinutes * 60 * 1000);
+  } else {
+    console.log(
+      `Skipped HANHAN LINE push: scheduled run started at ${String(taipeiHour).padStart(2, "0")}:${String(taipeiMinute).padStart(2, "0")} Asia/Taipei, too early to wait safely for 07:30.`
+    );
+    process.exit(0);
+  }
+} else if (shouldRequireMorningWindow && taipeiMinutes > morningEnd) {
   console.log(
     `Skipped HANHAN LINE push: scheduled run started at ${String(taipeiHour).padStart(2, "0")}:${String(taipeiMinute).padStart(2, "0")} Asia/Taipei, outside allowed 07:20-08:30 window.`
   );
