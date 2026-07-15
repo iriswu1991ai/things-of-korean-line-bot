@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { koreanGrammarRows, koreanVocabRows } from "../src/content.js";
@@ -55,6 +55,66 @@ if (shouldRequireMorningWindow && taipeiMinutes < morningStart) {
   );
   process.exit(0);
 }
+
+function parsePublishedPost(text) {
+  const vocab = new Set();
+  const grammar = new Set();
+  let section = "";
+
+  for (const rawLine of text.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith("@")) continue;
+    if (line === "TOPIK單字") {
+      section = "vocab";
+      continue;
+    }
+    if (line === "TOPIK文法") {
+      section = "grammar";
+      continue;
+    }
+    if (line.startsWith("意思：")) continue;
+
+    if (section === "vocab") {
+      const normalized = line
+        .replace(/^\d+\.\s*/, "")
+        .replace(/^TOPIK\s+\d+\s*｜\s*/, "");
+      const word = normalized.split("｜")[0]?.trim();
+      if (word) vocab.add(word);
+    }
+
+    if (section === "grammar") {
+      const normalized = line.replace(/^\d+\.\s*/, "");
+      const match = normalized.match(/^TOPIK\s+\d+\s*｜\s*(.+)$/);
+      if (match?.[1]) grammar.add(match[1].trim());
+    }
+  }
+
+  return { vocab, grammar };
+}
+
+function readPublishedHistory(currentDate) {
+  const history = { vocab: new Set(), grammar: new Set() };
+  const igDir = resolve(rootDir, "out", "ig");
+  if (!existsSync(igDir)) return history;
+
+  for (const entry of readdirSync(igDir, { withFileTypes: true })) {
+    if (!entry.isDirectory() || entry.name >= currentDate) continue;
+    const postPath = resolve(igDir, entry.name, `topik-post-${entry.name}.txt`);
+    if (!existsSync(postPath)) continue;
+    const parsed = parsePublishedPost(readFileSync(postPath, "utf8"));
+    for (const word of parsed.vocab) history.vocab.add(word);
+    for (const pattern of parsed.grammar) history.grammar.add(pattern);
+  }
+
+  return history;
+}
+
+const publishedHistory = readPublishedHistory(date);
+process.env.HANHAN_EXCLUDE_VOCAB_WORDS = [...publishedHistory.vocab].join("\n");
+process.env.HANHAN_EXCLUDE_GRAMMAR_PATTERNS = [...publishedHistory.grammar].join("\n");
+console.log(
+  `Loaded HANHAN history: ${publishedHistory.vocab.size} vocab word(s), ${publishedHistory.grammar.size} grammar pattern(s) excluded before ${date}.`
+);
 
 const payload = {
   date,

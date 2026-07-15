@@ -408,11 +408,116 @@ const grammarBank = [
       ["매일 연습하다 보니 발음이 좋아졌습니다.", "每天練習之後，發音自然變好了。"],
       ["오랫동안 함께 일하다 보니 서로를 잘 이해하게 되었습니다.", "長期一起工作後，變得很了解彼此。"]
     ]
+  },
+  {
+    level: 2,
+    pattern: "-아/어 보다",
+    attachment: "動詞語幹 + 아/어 보다。",
+    meaning: "表示嘗試做某事，相當於「試著...」。",
+    examples: [
+      ["이 방법으로 다시 한번 해 보세요.", "請用這個方法再試一次。"],
+      ["시간이 있으면 그 식당에 가 보려고 해요.", "如果有時間，我想去那間餐廳試試看。"]
+    ]
+  },
+  {
+    level: 2,
+    pattern: "-고 있다",
+    attachment: "動詞語幹 + 고 있다。",
+    meaning: "表示動作正在進行或狀態持續，相當於「正在...」。",
+    examples: [
+      ["저는 지금 회의 자료를 정리하고 있어요.", "我現在正在整理會議資料。"],
+      ["동생은 방에서 숙제를 하고 있습니다.", "弟弟正在房間裡寫作業。"]
+    ]
+  },
+  {
+    level: 2,
+    pattern: "-아/어야 하다",
+    attachment: "動詞 / 形容詞語幹 + 아/어야 하다。",
+    meaning: "表示必須做某事，相當於「應該...、必須...」。",
+    examples: [
+      ["내일 일찍 출근해야 해서 오늘은 빨리 잘 거예요.", "明天必須早點上班，所以今天要早點睡。"],
+      ["시험 전에는 단어를 꼭 복습해야 해요.", "考試前一定要複習單字。"]
+    ]
+  },
+  {
+    level: 2,
+    pattern: "-아/어도 되다",
+    attachment: "動詞語幹 + 아/어도 되다。",
+    meaning: "表示允許或可以做某事，相當於「可以...」。",
+    examples: [
+      ["여기 앉아도 돼요?", "我可以坐這裡嗎？"],
+      ["회의가 끝나면 먼저 가도 됩니다.", "會議結束後可以先離開。"]
+    ]
+  },
+  {
+    level: 2,
+    pattern: "-(으)면 안 되다",
+    attachment: "動詞語幹有收音用 으면 안 되다，無收音用 면 안 되다。",
+    meaning: "表示禁止做某事，相當於「不可以...」。",
+    examples: [
+      ["도서관에서는 크게 말하면 안 돼요.", "在圖書館不可以大聲說話。"],
+      ["중요한 파일은 함부로 지우면 안 됩니다.", "重要檔案不可以隨便刪除。"]
+    ]
+  },
+  {
+    level: 3,
+    pattern: "-(으)려고 하다",
+    attachment: "動詞語幹有收音用 으려고 하다，無收音用 려고 하다。",
+    meaning: "表示打算或準備做某事，相當於「想要...、打算...」。",
+    examples: [
+      ["퇴근 후에 친구를 만나려고 해요.", "下班後我打算見朋友。"],
+      ["이번 주말에는 집에서 쉬려고 합니다.", "這週末我打算在家休息。"]
+    ]
+  },
+  {
+    level: 2,
+    pattern: "-(으)러 오다",
+    attachment: "動詞語幹有收音用 으러 오다，無收音用 러 오다。",
+    meaning: "表示來的目的，相當於「來...」。",
+    examples: [
+      ["친구가 저를 만나러 회사 근처에 왔어요.", "朋友來公司附近找我。"],
+      ["학생들이 한국어를 배우러 교실에 왔습니다.", "學生們來教室學韓文。"]
+    ]
+  },
+  {
+    level: 3,
+    pattern: "-고 나서",
+    attachment: "動詞語幹 + 고 나서。",
+    meaning: "表示前一動作完成後再做後一動作，相當於「...之後」。",
+    examples: [
+      ["회의가 끝나고 나서 결과를 메일로 보냈어요.", "會議結束後，我用信件寄出了結果。"],
+      ["저녁을 먹고 나서 산책을 했습니다.", "吃完晚餐後去散步了。"]
+    ]
+  },
+  {
+    level: 2,
+    pattern: "-아/어 주다",
+    attachment: "動詞語幹 + 아/어 주다。",
+    meaning: "表示為別人做某事，相當於「幫...」。",
+    examples: [
+      ["모르는 단어를 친구가 설명해 줬어요.", "朋友幫我說明了不懂的單字。"],
+      ["바쁘면 제가 자료를 복사해 드릴게요.", "如果你忙，我來幫你影印資料。"]
+    ]
+  },
+  {
+    level: 3,
+    pattern: "-(으)ㄴ 것 같다",
+    attachment: "動詞過去形 / 形容詞語幹 + (으)ㄴ 것 같다。",
+    meaning: "表示推測，相當於「好像...」。",
+    examples: [
+      ["밖이 조용한 걸 보니 회의가 끝난 것 같아요.", "看外面很安靜，會議好像結束了。"],
+      ["표정을 보니 기분이 좋은 것 같습니다.", "看表情，心情好像不錯。"]
+    ]
   }
 ];
 
 const TOPIK_LEVELS = [1, 2, 3, 4, 5, 6];
+const BLOCKED_VOCAB_WORDS = new Set(["구도", "이", "다", "한", "도", "어", "나", "지", "무", "삼"]);
 const CURATED_VOCAB_WORDS = new Set([
+  "학교", "친구", "시간", "음식", "회의", "준비하다", "끝나다", "약속", "방법", "건강",
+  "은행", "병원", "회사원", "직장", "점심", "저녁", "버스", "날씨", "옷", "커피",
+  "가게", "교실", "거리", "나라", "물건", "선물", "질문", "책상", "침대", "휴일",
+  "노래", "운전", "휴대폰", "뉴스",
   "장갑", "막다", "명단", "백팔십도", "추모하다", "운동", "한두", "결과적", "보급", "민주화되다",
   "한계", "떼이다", "패배하다", "꼭", "메모하다", "관계하다", "돼지꿈", "매력적", "공단", "가격",
   "번역어", "광산", "넣다", "깎다", "큰집", "맞서다", "실거래", "구도", "높다", "속옷",
@@ -430,6 +535,11 @@ const CURATED_VOCAB_WORDS = new Set([
   "하늘거리다", "특유하다", "신규", "염려", "연결", "연극", "연관", "연간", "도달하다", "애초",
   "답", "연락처", "테니스", "관련되다", "검토되다", "큰아기", "업소", "운동하다", "삼촌", "질"
 ]);
+
+function excludedValues(name) {
+  const value = globalThis.process?.env?.[name] || globalThis[name] || "";
+  return new Set(String(value).split(/\n|,/).map((item) => item.trim()).filter(Boolean));
+}
 
 function dayNumber(offset = 0) {
   const overrideDate = globalThis.process?.env?.HANHAN_DATE || globalThis.HANHAN_DATE;
@@ -473,12 +583,18 @@ function pickByDateAcrossLevels(items, count, levelKey, offset = 0) {
   const day = dayNumber(offset);
   const groups = groupByLevel(items, levelKey);
   const pickedByLevel = new Map();
+  const pickedKeys = new Set();
+  const itemKey = (item) => item.w || item.pattern || JSON.stringify(item);
   return levelSlotsForDay(day, count).map((level) => {
-    const group = groups.get(level) || items;
+    const group = (groups.get(level) || []).filter((item) => !pickedKeys.has(itemKey(item)));
+    const fallback = items.filter((item) => !pickedKeys.has(itemKey(item)));
+    const candidates = group.length ? group : fallback.length ? fallback : (groups.get(level) || items);
     const pickedToday = pickedByLevel.get(level) || 0;
-    const index = (countLevelSlotsBeforeDay(day, count, level) + pickedToday) % group.length;
+    const index = (countLevelSlotsBeforeDay(day, count, level) + pickedToday) % candidates.length;
+    const item = candidates[index];
     pickedByLevel.set(level, pickedToday + 1);
-    return group[index];
+    pickedKeys.add(itemKey(item));
+    return item;
   });
 }
 
@@ -703,7 +819,12 @@ export function koreanVocabRows() {
     "값있다": "失敗的經驗後來也成了寶貴的學習。",
     "눌러앉다": "我只是去朋友家一下，結果一直待到晚上。"
   };
-  const curatedVocab = topikVocab.filter((item) => CURATED_VOCAB_WORDS.has(item.w));
+  const excludedWords = excludedValues("HANHAN_EXCLUDE_VOCAB_WORDS");
+  const curatedVocab = topikVocab.filter((item) =>
+    CURATED_VOCAB_WORDS.has(item.w) &&
+    !BLOCKED_VOCAB_WORDS.has(item.w) &&
+    !excludedWords.has(item.w)
+  );
   return pickByDateAcrossLevels(curatedVocab.length ? curatedVocab : topikVocab, 10, "l").map((item) => ({
     word: item.w,
     level: item.l,
@@ -724,6 +845,7 @@ export function koreanVocabMessages(rows = koreanVocabRows()) {
 
 export function koreanGrammarRows() {
   const levelByPattern = new Map(topikGrammar.map((item) => [item.pattern, item.level]));
+  const excludedPatterns = excludedValues("HANHAN_EXCLUDE_GRAMMAR_PATTERNS");
   const completeGrammar = grammarBank
     .map((item) => ({ ...item, level: levelByPattern.get(item.pattern) || item.level }))
     .filter((item) =>
@@ -731,7 +853,8 @@ export function koreanGrammarRows() {
       item.attachment &&
       item.meaning &&
       Array.isArray(item.examples) &&
-      item.examples.length >= 2
+      item.examples.length >= 2 &&
+      !excludedPatterns.has(item.pattern)
     );
   return pickByDateAcrossLevels(completeGrammar, 2, "level", 1).map((item) => {
     return {
