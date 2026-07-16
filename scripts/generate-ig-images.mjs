@@ -13,6 +13,17 @@ function sleep(ms) {
   return new Promise((resolveSleep) => setTimeout(resolveSleep, ms));
 }
 
+function runGit(args, { allowFailure = false } = {}) {
+  const result = spawnSync("git", args, {
+    cwd: rootDir,
+    encoding: "utf8"
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (!allowFailure && result.status !== 0) process.exit(result.status ?? 1);
+  return result;
+}
+
 const date = process.env.HANHAN_DATE || new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Taipei",
   year: "numeric",
@@ -56,6 +67,17 @@ if (shouldRequireMorningWindow && taipeiMinutes < morningStart) {
   process.exit(0);
 }
 
+const markerPath = resolve(rootDir, "out", "ig", date, `hanhan-pushed-${date}.txt`);
+const shouldDedupe = process.env.HANHAN_DEDUPE_GITHUB === "1" && isScheduledRun;
+
+if (shouldDedupe) {
+  runGit(["pull", "--rebase", "origin", "main"], { allowFailure: true });
+  if (existsSync(markerPath)) {
+    console.log(`Skipped HANHAN LINE push: ${date} was already pushed.`);
+    process.exit(0);
+  }
+}
+
 function parsePublishedPost(text) {
   const vocab = new Set();
   const grammar = new Set();
@@ -94,6 +116,26 @@ function parsePublishedPost(text) {
 
 function readPublishedHistory(currentDate) {
   const history = { vocab: new Set(), grammar: new Set() };
+  const historyPath = resolve(rootDir, "data", "hanhan-published-history.json");
+  if (existsSync(historyPath)) {
+    try {
+      const parsed = JSON.parse(readFileSync(historyPath, "utf8"));
+      const byDateEntries = Object.entries(parsed.byDate || {});
+      if (byDateEntries.length) {
+        for (const [publishedDate, item] of byDateEntries) {
+          if (publishedDate >= currentDate) continue;
+          for (const word of item.vocab || []) history.vocab.add(word);
+          for (const pattern of item.grammar || []) history.grammar.add(pattern);
+        }
+      } else {
+        for (const word of parsed.vocab || []) history.vocab.add(word);
+        for (const pattern of parsed.grammar || []) history.grammar.add(pattern);
+      }
+    } catch (error) {
+      console.warn(`Unable to read HANHAN published history: ${error.message}`);
+    }
+  }
+
   const igDir = resolve(rootDir, "out", "ig");
   if (!existsSync(igDir)) return history;
 
@@ -107,6 +149,35 @@ function readPublishedHistory(currentDate) {
   }
 
   return history;
+}
+
+function writePublishedHistory(currentDate, textPath) {
+  const historyPath = resolve(rootDir, "data", "hanhan-published-history.json");
+  const history = existsSync(historyPath)
+    ? JSON.parse(readFileSync(historyPath, "utf8"))
+    : {};
+  const byDate = history.byDate || {};
+  const current = parsePublishedPost(readFileSync(textPath, "utf8"));
+  byDate[currentDate] = {
+    vocab: [...current.vocab],
+    grammar: [...current.grammar]
+  };
+
+  const vocab = new Set();
+  const grammar = new Set();
+  for (const item of Object.values(byDate)) {
+    for (const word of Array.isArray(item.vocab) ? item.vocab : []) vocab.add(word);
+    for (const pattern of Array.isArray(item.grammar) ? item.grammar : []) grammar.add(pattern);
+  }
+
+  const updated = {
+    generatedAt: new Date().toISOString(),
+    byDate: Object.fromEntries(Object.entries(byDate).sort(([a], [b]) => a.localeCompare(b))),
+    vocab: [...vocab].sort(),
+    grammar: [...grammar].sort()
+  };
+  writeFileSync(historyPath, `${JSON.stringify(updated, null, 2)}\n`, "utf8");
+  return historyPath;
 }
 
 const publishedHistory = readPublishedHistory(date);
@@ -143,11 +214,15 @@ if (result.stdout) process.stdout.write(result.stdout);
 if (result.stderr) process.stderr.write(result.stderr);
 if (result.status !== 0) process.exit(result.status ?? 1);
 
+const generatedTextPath = resolve(rootDir, "out", "ig", date, `topik-post-${date}.txt`);
+const publishedHistoryPath = writePublishedHistory(date, generatedTextPath);
+
 if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
   const publishPaths = [
     `out/ig/${date}/topik-vocab-${date}.png`,
     `out/ig/${date}/topik-grammar-${date}.png`,
-    `out/ig/${date}/topik-post-${date}.txt`
+    `out/ig/${date}/topik-post-${date}.txt`,
+    publishedHistoryPath.replace(`${rootDir}/`, "")
   ];
   const addResult = spawnSync("git", ["add", "-f", ...publishPaths], {
     cwd: rootDir,
@@ -185,13 +260,20 @@ if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
   });
   if (pushResult.stdout) process.stdout.write(pushResult.stdout);
   if (pushResult.stderr) process.stderr.write(pushResult.stderr);
-  if (pushResult.status !== 0) process.exit(pushResult.status ?? 1);
+  if (pushResult.status !== 0) {
+    if (shouldDedupe) {
+      runGit(["pull", "--rebase", "origin", "main"], { allowFailure: true });
+      if (existsSync(markerPath)) {
+        console.log(`Skipped HANHAN LINE push: ${date} was already pushed after remote sync.`);
+        process.exit(0);
+      }
+    }
+    process.exit(pushResult.status ?? 1);
+  }
 }
 
 if (process.env.PUSH_HANHAN_LINE === "1") {
   const textPath = resolve(rootDir, "out", "ig", date, `topik-post-${date}.txt`);
-  const markerPath = resolve(rootDir, "out", "ig", date, `hanhan-pushed-${date}.txt`);
-  const shouldDedupe = process.env.HANHAN_DEDUPE_GITHUB === "1" && isScheduledRun;
   if (shouldDedupe && existsSync(markerPath)) {
     console.log(`Skipped HANHAN LINE push: ${date} was already pushed.`);
     process.exit(0);
@@ -255,6 +337,13 @@ if (process.env.PUSH_HANHAN_LINE === "1") {
     });
     if (pushMarkerResult.stdout) process.stdout.write(pushMarkerResult.stdout);
     if (pushMarkerResult.stderr) process.stderr.write(pushMarkerResult.stderr);
-    if (pushMarkerResult.status !== 0) process.exit(pushMarkerResult.status ?? 1);
+    if (pushMarkerResult.status !== 0) {
+      runGit(["pull", "--rebase", "origin", "main"], { allowFailure: true });
+      if (existsSync(markerPath)) {
+        console.log(`Skipped HANHAN LINE marker push: ${date} was already marked after remote sync.`);
+        process.exit(0);
+      }
+      process.exit(pushMarkerResult.status ?? 1);
+    }
   }
 }

@@ -1378,6 +1378,8 @@ def fit_font(draw, text, font, max_width, min_size=15):
 
 def draw_fit_line(draw, x, y, text, font, fill, max_width, min_size=15):
     fitted = fit_font(draw, text, font, max_width, min_size)
+    if draw.textlength(text, font=fitted) > max_width:
+        text = ellipsize(draw, text, fitted, max_width)
     draw.text((x, y), text, font=fitted, fill=fill)
     bbox = draw.textbbox((x, y), text, font=fitted)
     return y + (bbox[3] - bbox[1])
