@@ -67,6 +67,76 @@ if (shouldRequireMorningWindow && taipeiMinutes < morningStart) {
   process.exit(0);
 }
 
+function runHanhanWordSeries() {
+  if (process.env.PUSH_HANHAN_WORD_SERIES === "0") return;
+  if (!process.env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN) {
+    console.warn("Skipped HANHAN word series: missing LINE_HANHAN_CHANNEL_ACCESS_TOKEN.");
+    return;
+  }
+
+  if (isScheduledRun) {
+    runGit(["pull", "--rebase", "origin", "main"], { allowFailure: true });
+  }
+
+  const stateRelativePath = "data/hanhan-word-series-state.json";
+  const pushResult = spawnSync(
+    process.execPath,
+    ["scripts/push-hanhan-word-series.mjs"],
+    {
+      cwd: rootDir,
+      env: {
+        ...process.env,
+        HANHAN_WORD_SERIES_REQUIRE_TAIPEI_MORNING: isScheduledRun ? "1" : "0"
+      },
+      encoding: "utf8"
+    }
+  );
+  if (pushResult.stdout) process.stdout.write(pushResult.stdout);
+  if (pushResult.stderr) process.stderr.write(pushResult.stderr);
+  if (pushResult.status !== 0) process.exit(pushResult.status ?? 1);
+
+  if (!isScheduledRun) return;
+
+  const addResult = spawnSync("git", ["add", stateRelativePath], {
+    cwd: rootDir,
+    encoding: "utf8"
+  });
+  if (addResult.status !== 0) {
+    if (addResult.stdout) process.stdout.write(addResult.stdout);
+    if (addResult.stderr) process.stderr.write(addResult.stderr);
+    process.exit(addResult.status ?? 1);
+  }
+
+  const diffResult = spawnSync("git", ["diff", "--cached", "--quiet", "--", stateRelativePath], {
+    cwd: rootDir,
+    encoding: "utf8"
+  });
+  if (diffResult.status === 0) return;
+  if (diffResult.status !== 1) {
+    if (diffResult.stdout) process.stdout.write(diffResult.stdout);
+    if (diffResult.stderr) process.stderr.write(diffResult.stderr);
+    process.exit(diffResult.status ?? 1);
+  }
+
+  const commitResult = spawnSync("git", ["commit", "-m", "Update HANHAN word series state", "--", stateRelativePath], {
+    cwd: rootDir,
+    encoding: "utf8"
+  });
+  if (commitResult.stdout) process.stdout.write(commitResult.stdout);
+  if (commitResult.stderr) process.stderr.write(commitResult.stderr);
+  if (commitResult.status !== 0) process.exit(commitResult.status ?? 1);
+
+  const gitPushResult = spawnSync("git", ["push", "origin", "main"], {
+    cwd: rootDir,
+    encoding: "utf8"
+  });
+  if (gitPushResult.stdout) process.stdout.write(gitPushResult.stdout);
+  if (gitPushResult.stderr) process.stderr.write(gitPushResult.stderr);
+  if (gitPushResult.status !== 0) process.exit(gitPushResult.status ?? 1);
+}
+
+runHanhanWordSeries();
+
 const markerPath = resolve(rootDir, "out", "ig", date, `hanhan-pushed-${date}.txt`);
 const shouldDedupe = process.env.HANHAN_DEDUPE_GITHUB === "1" && isScheduledRun;
 
