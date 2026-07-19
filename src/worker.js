@@ -587,7 +587,7 @@ export default {
         manualPushStatus: "hanhan-daily-enabled",
         hanhanTokenConfigured: Boolean(env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN),
         hanhanImageBaseConfigured: Boolean(env.HANHAN_IMAGE_BASE_URL),
-        schedules: ["30 23 * * *", "0 0 * * *"]
+        schedules: ["30 23 * * *"]
       });
     }
 
