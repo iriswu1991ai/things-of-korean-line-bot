@@ -69,6 +69,10 @@ function imageMessage(url) {
   };
 }
 
+function textMessage(text) {
+  return { type: "text", text: text.slice(0, 5000) };
+}
+
 function todayInTaipei() {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Taipei",
@@ -76,6 +80,12 @@ function todayInTaipei() {
     month: "2-digit",
     day: "2-digit"
   }).format(new Date());
+}
+
+function daysBetweenTaipeiDates(fromDate, toDate) {
+  const from = new Date(`${fromDate}T00:00:00Z`);
+  const to = new Date(`${toDate}T00:00:00Z`);
+  return Math.floor((to.getTime() - from.getTime()) / 86400000);
 }
 
 function taipeiMinutesNow() {
@@ -87,6 +97,175 @@ function taipeiMinutesNow() {
   }).formatToParts(new Date());
   const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
   return Number(values.hour) * 60 + Number(values.minute);
+}
+
+const hanhanWordGroups = [
+  {
+    key: "맛",
+    words: [
+      ["맛", "***", "味道"],
+      ["맛있다", "***", "好吃"],
+      ["맛없다", "***", "不好吃"],
+      ["맛보다", "**", "品嘗"],
+      ["맛집", "**", "美食店"],
+      ["맛보기", "**", "試吃、預覽"],
+      ["맛나다", "**", "好吃、有味道"],
+      ["맛내다", "**", "調味、做出味道"],
+      ["맛깔", "*", "風味、滋味"],
+      ["맛소금", "*", "調味鹽"]
+    ]
+  },
+  {
+    key: "입",
+    words: [
+      ["입", "***", "嘴巴"],
+      ["입구", "***", "入口"],
+      ["입다", "***", "穿"],
+      ["입장", "**", "入場、立場"],
+      ["입학", "**", "入學"],
+      ["입원", "**", "住院"],
+      ["입금", "**", "匯款、入帳"],
+      ["입맛", "**", "食慾、口味"],
+      ["입사", "*", "進公司、入社"],
+      ["입국", "*", "入境"]
+    ]
+  },
+  {
+    key: "눈",
+    words: [
+      ["눈", "***", "眼睛、雪"],
+      ["눈물", "***", "眼淚"],
+      ["눈사람", "***", "雪人"],
+      ["눈길", "**", "目光、雪路"],
+      ["눈빛", "**", "眼神"],
+      ["눈앞", "**", "眼前"],
+      ["눈치", "**", "眼色、察言觀色"],
+      ["눈병", "**", "眼疾"],
+      ["눈썹", "**", "眉毛"],
+      ["눈높이", "*", "眼光、標準"]
+    ]
+  },
+  {
+    key: "손",
+    words: [
+      ["손", "***", "手"],
+      ["손님", "***", "客人"],
+      ["손가락", "***", "手指"],
+      ["손목", "**", "手腕"],
+      ["손잡이", "**", "把手"],
+      ["손질", "**", "整理、修整"],
+      ["손해", "**", "損害、虧損"],
+      ["손수", "**", "親手"],
+      ["손발", "*", "手腳"],
+      ["손바닥", "*", "手掌"]
+    ]
+  },
+  {
+    key: "물",
+    words: [
+      ["물", "***", "水"],
+      ["물건", "***", "物品、東西"],
+      ["물고기", "***", "魚"],
+      ["물어보다", "***", "問看看"],
+      ["물론", "***", "當然"],
+      ["물가", "**", "物價"],
+      ["물질", "**", "物質"],
+      ["물약", "**", "藥水"],
+      ["물속", "*", "水中"],
+      ["물음", "*", "問題、提問"]
+    ]
+  },
+  {
+    key: "마",
+    words: [
+      ["마음", "***", "心、心情"],
+      ["마시다", "***", "喝"],
+      ["마지막", "***", "最後"],
+      ["마을", "***", "村子"],
+      ["마늘", "**", "大蒜"],
+      ["마치다", "**", "結束、完成"],
+      ["마중", "**", "迎接"],
+      ["마당", "**", "院子"],
+      ["마감", "*", "截止、收尾"],
+      ["마찰", "*", "摩擦"]
+    ]
+  },
+  {
+    key: "바",
+    words: [
+      ["바다", "***", "海"],
+      ["바지", "***", "褲子"],
+      ["바람", "***", "風"],
+      ["바로", "***", "馬上、正是"],
+      ["바쁘다", "***", "忙"],
+      ["바꾸다", "***", "更換、改變"],
+      ["바닥", "**", "地板、底部"],
+      ["바깥", "**", "外面"],
+      ["바탕", "*", "基礎、底子"],
+      ["바늘", "*", "針"]
+    ]
+  },
+  {
+    key: "주",
+    words: [
+      ["주다", "***", "給"],
+      ["주말", "***", "週末"],
+      ["주문", "***", "點餐、訂購"],
+      ["주소", "***", "地址"],
+      ["주로", "**", "主要地"],
+      ["주변", "**", "周邊"],
+      ["주의", "**", "注意"],
+      ["주제", "**", "主題"],
+      ["주인", "**", "主人、老闆"],
+      ["주차", "**", "停車"]
+    ]
+  },
+  {
+    key: "외",
+    words: [
+      ["외국", "***", "外國"],
+      ["외국인", "***", "外國人"],
+      ["외우다", "***", "背、記住"],
+      ["외출", "**", "外出"],
+      ["외롭다", "**", "孤單"],
+      ["외모", "**", "外貌"],
+      ["외식", "**", "外食、外出用餐"],
+      ["외부", "**", "外部"],
+      ["외과", "*", "外科"],
+      ["외교", "*", "外交"]
+    ]
+  },
+  {
+    key: "운",
+    words: [
+      ["운동", "***", "運動"],
+      ["운전", "***", "駕駛"],
+      ["운전사", "**", "司機"],
+      ["운동장", "**", "運動場"],
+      ["운영", "**", "營運、經營"],
+      ["운반", "**", "搬運"],
+      ["운명", "**", "命運"],
+      ["운세", "*", "運勢"],
+      ["운임", "*", "運費、車資"],
+      ["운하", "*", "運河"]
+    ]
+  }
+];
+
+function hanhanWordSeriesText(date = todayInTaipei()) {
+  const startDate = "2026-07-19";
+  const startDay = 33;
+  const offset = daysBetweenTaipeiDates(startDate, date);
+  if (offset < 0) throw new Error(`HANHAN word series date is before start date: ${date}`);
+  const group = hanhanWordGroups[offset % hanhanWordGroups.length];
+  const day = startDay + offset;
+
+  return [
+    `不專業的一起背韓文單字 Day ${day}`,
+    "（***韓文1-2급/**韓文3-4급/韓文5-6급）",
+    "",
+    ...group.words.map(([word, level, meaning]) => `${word} ${level} ${meaning}`)
+  ].join("\n");
 }
 
 async function pushHanhan(env, messages) {
@@ -135,6 +314,18 @@ async function pushHanhanDaily(env, { requireMorningWindow = false } = {}) {
   const messages = await hanhanDailyMessages(env, date);
   const result = await pushHanhan(env, messages);
   return { ok: true, date, ...result };
+}
+
+async function pushHanhanWordSeries(env, { requireMorningWindow = false } = {}) {
+  const minutes = taipeiMinutesNow();
+  if (requireMorningWindow && (minutes < 7 * 60 + 45 || minutes > 8 * 60 + 45)) {
+    return { ok: true, skipped: true, reason: "outside_taipei_word_series_window", minutes };
+  }
+
+  const date = todayInTaipei();
+  const text = hanhanWordSeriesText(date);
+  const result = await pushHanhan(env, [textMessage(text)]);
+  return { ok: true, date, kind: "hanhan-word-series", ...result };
 }
 
 function parseTranslationArray(value, expectedLength) {
@@ -396,7 +587,7 @@ export default {
         manualPushStatus: "hanhan-daily-enabled",
         hanhanTokenConfigured: Boolean(env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN),
         hanhanImageBaseConfigured: Boolean(env.HANHAN_IMAGE_BASE_URL),
-        schedules: ["30 23 * * *"]
+        schedules: ["30 23 * * *", "0 0 * * *"]
       });
     }
 
@@ -404,7 +595,9 @@ export default {
   },
 
   async scheduled(controller, env) {
-    const result = await pushHanhanDaily(env, { requireMorningWindow: true });
+    const result = controller.cron === "0 0 * * *"
+      ? await pushHanhanWordSeries(env, { requireMorningWindow: true })
+      : await pushHanhanDaily(env, { requireMorningWindow: true });
     console.log(`HANHAN scheduled ${controller.cron}: ${JSON.stringify(result)}`);
   }
 };

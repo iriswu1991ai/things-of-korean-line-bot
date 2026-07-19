@@ -3,7 +3,7 @@ main = "src/worker.js"
 compatibility_date = "2026-06-18"
 
 [triggers]
-crons = ["30 23 * * *"]
+crons = ["30 23 * * *", "0 0 * * *"]
 
 [ai]
 binding = "AI"
