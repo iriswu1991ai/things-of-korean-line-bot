@@ -393,7 +393,7 @@ const isScheduledRun = process.env.GITHUB_EVENT_NAME === "schedule";
 const requireMorning = process.env.HANHAN_WORD_SERIES_REQUIRE_TAIPEI_MORNING === "1" && isScheduledRun;
 const minutes = minutesInTaipei();
 
-if (requireMorning && (minutes < 8 * 60 || minutes > 8 * 60 + 45)) {
+if (requireMorning && minutes < 8 * 60) {
   console.log(`Skipped HANHAN word series: outside Taipei morning window at minute ${minutes}.`);
   process.exit(0);
 }

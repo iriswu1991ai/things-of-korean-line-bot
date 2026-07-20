@@ -318,7 +318,7 @@ async function pushHanhanDaily(env, { requireMorningWindow = false } = {}) {
 
 async function pushHanhanWordSeries(env, { requireMorningWindow = false } = {}) {
   const minutes = taipeiMinutesNow();
-  if (requireMorningWindow && (minutes < 8 * 60 || minutes > 8 * 60 + 45)) {
+  if (requireMorningWindow && minutes < 8 * 60) {
     return { ok: true, skipped: true, reason: "outside_taipei_word_series_window", minutes };
   }
 

@@ -47,6 +47,8 @@ const morningTarget = 7 * 60 + 30;
 const morningEnd = 8 * 60 + 30;
 const maxWaitMinutes = Number(process.env.HANHAN_MAX_WAIT_MINUTES || "300");
 
+runHanhanWordSeries();
+
 if (shouldRequireMorningWindow && taipeiMinutes < morningStart) {
   const waitMinutes = morningTarget - taipeiMinutes;
   if (waitMinutes > 0 && waitMinutes <= maxWaitMinutes) {
@@ -134,8 +136,6 @@ function runHanhanWordSeries() {
   if (gitPushResult.stderr) process.stderr.write(gitPushResult.stderr);
   if (gitPushResult.status !== 0) process.exit(gitPushResult.status ?? 1);
 }
-
-runHanhanWordSeries();
 
 const markerPath = resolve(rootDir, "out", "ig", date, `hanhan-pushed-${date}.txt`);
 const shouldDedupe = process.env.HANHAN_DEDUPE_GITHUB === "1" && isScheduledRun;
