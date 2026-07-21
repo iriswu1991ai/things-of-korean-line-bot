@@ -533,7 +533,10 @@ const CURATED_VOCAB_WORDS = new Set([
   "값있다", "눌러앉다", "악화되다", "값하다", "압도되다", "하루", "글쎄", "인간적", "악화하다", "꽃답다",
   "압도하다", "언제", "새사람", "에이", "죽어지내다", "타격하다", "여러분", "검정색", "관계있다", "위로",
   "하늘거리다", "특유하다", "신규", "염려", "연결", "연극", "연관", "연간", "도달하다", "애초",
-  "답", "연락처", "테니스", "관련되다", "검토되다", "큰아기", "업소", "운동하다", "삼촌", "질"
+  "답", "연락처", "테니스", "관련되다", "검토되다", "큰아기", "업소", "운동하다", "삼촌", "질",
+  "들다", "해", "나다", "것", "수", "청소", "현금", "들리다", "긴장", "북쪽", "선배",
+  "과", "게", "겨우", "결론", "굳이", "밟다", "북부", "응원", "절반",
+  "나들이", "이과", "지게", "해로", "나들이하다", "당해", "자국", "출력", "팀장", "혈액", "학위"
 ]);
 
 function excludedValues(name) {
@@ -591,14 +594,21 @@ function uniqueByItemKey(items) {
 
 function pickByDateAcrossLevels(items, count, levelKey, offset = 0) {
   const day = dayNumber(offset);
-  const groups = groupByLevel(items, levelKey);
+  const uniqueItems = uniqueByItemKey(items);
+  if (uniqueItems.length < count) {
+    throw new Error(`Need ${count} unique TOPIK item(s), only ${uniqueItems.length} available after exclusions.`);
+  }
+  const groups = groupByLevel(uniqueItems, levelKey);
   const pickedByLevel = new Map();
   const pickedKeys = new Set();
   const itemKey = (item) => item.w || item.pattern || JSON.stringify(item);
   return levelSlotsForDay(day, count).map((level) => {
     const group = (groups.get(level) || []).filter((item) => !pickedKeys.has(itemKey(item)));
-    const fallback = items.filter((item) => !pickedKeys.has(itemKey(item)));
-    const candidates = group.length ? group : fallback.length ? fallback : (groups.get(level) || items);
+    const fallback = uniqueItems.filter((item) => !pickedKeys.has(itemKey(item)));
+    const candidates = group.length ? group : fallback;
+    if (!candidates.length) {
+      throw new Error(`Unable to pick a unique TOPIK item for level ${level}.`);
+    }
     const pickedToday = pickedByLevel.get(level) || 0;
     const index = (countLevelSlotsBeforeDay(day, count, level) + pickedToday) % candidates.length;
     const item = candidates[index];
