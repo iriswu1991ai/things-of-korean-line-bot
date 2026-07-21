@@ -57,6 +57,66 @@ FONTS = {
 }
 
 VOCAB_OVERRIDES = {
+    "이": {
+        "translation": "牙齒",
+        "exampleKo": "점심시간에 이가 시려서 찬물을 천천히 마셨어요.",
+        "exampleZh": "午餐時間牙齒很敏感，所以我慢慢喝了冰水。",
+        "highlight": "이가",
+    },
+    "다": {
+        "translation": "全，都",
+        "exampleKo": "회의 자료를 다 확인한 뒤에 팀장님께 보냈어요.",
+        "exampleZh": "我把會議資料全部確認完後，傳給了組長。",
+        "highlight": "다",
+    },
+    "하다": {
+        "translation": "做，幹",
+        "exampleKo": "오늘은 보고서를 마무리하고 일찍 퇴근하려고 해요.",
+        "exampleZh": "我今天想把報告完成後早點下班。",
+        "highlight": "하려고 해요",
+    },
+    "한": {
+        "translation": "一",
+        "exampleKo": "점심시간에 한 시간 정도 회의실을 비워 두었어요.",
+        "exampleZh": "午餐時間我把會議室空出大約一小時。",
+        "highlight": "한 시간",
+    },
+    "도": {
+        "translation": "道理，道義",
+        "exampleKo": "선배는 힘들어도 도리를 지키는 태도가 중요하다고 했어요.",
+        "exampleZh": "前輩說即使辛苦，守住道義的態度也很重要。",
+        "highlight": "도리를",
+    },
+    "있다": {
+        "translation": "待著",
+        "exampleKo": "저는 오전 내내 사무실에 있다가 점심에 나갔어요.",
+        "exampleZh": "我整個上午都待在辦公室，中午才出去。",
+        "highlight": "있다가",
+    },
+    "어": {
+        "translation": "咦",
+        "exampleKo": "어, 회의 시작 시간이 앞당겨졌네요.",
+        "exampleZh": "咦，會議開始時間提前了。",
+        "highlight": "어,",
+    },
+    "일": {
+        "translation": "事情，工作",
+        "exampleKo": "오늘 일은 다 끝내고 나서 집에 가요.",
+        "exampleZh": "我把今天的工作都做完後再回家。",
+        "highlight": "일은",
+    },
+    "나": {
+        "translation": "我",
+        "exampleKo": "나는 오늘 발표 준비를 마치고 일찍 퇴근할 거예요.",
+        "exampleZh": "我今天會把簡報準備好，然後提早下班。",
+        "highlight": "나는",
+    },
+    "지": {
+        "translation": "從那時起，從那以後",
+        "exampleKo": "이사한 지 두 달이 지나서야 회사 근처 길이 익숙해졌어요.",
+        "exampleZh": "搬家兩個月後，我才終於熟悉公司附近的路。",
+        "highlight": "지",
+    },
     "학교": {
         "translation": "學校",
         "exampleKo": "학교 도서관에서 친구와 같이 시험공부를 했어요.",
@@ -104,6 +164,18 @@ VOCAB_OVERRIDES = {
         "exampleKo": "오늘 저녁에는 팀장님과 식사 약속이 있어요.",
         "exampleZh": "今天晚上我和組長有飯局約定。",
         "highlight": "약속이",
+    },
+    "답": {
+        "translation": "回答，答話",
+        "exampleKo": "회의에서 질문을 받았는데 바로 답을 하지 못했어요.",
+        "exampleZh": "在會議上被問了問題，但我沒能立刻回答。",
+        "highlight": "답을",
+    },
+    "화요일": {
+        "translation": "星期二，週二，禮拜二",
+        "exampleKo": "다음 주 화요일에 학교에서 학부모 회의가 있어요.",
+        "exampleZh": "下週二學校有家長會。",
+        "highlight": "화요일에",
     },
     "방법": {
         "translation": "方法，辦法",
@@ -212,6 +284,18 @@ VOCAB_OVERRIDES = {
         "exampleKo": "동료의 생일이라 작은 선물을 준비했어요.",
         "exampleZh": "因為同事生日，我準備了一份小禮物。",
         "highlight": "선물을",
+    },
+    "셋째": {
+        "translation": "第三次，第三個",
+        "exampleKo": "이번이 셋째 발표라서 전보다 훨씬 덜 긴장했어요.",
+        "exampleZh": "這是第三次發表，所以比之前沒那麼緊張。",
+        "highlight": "셋째",
+    },
+    "관계하다": {
+        "translation": "有關，涉足，參與",
+        "exampleKo": "이 규정은 직원 복지와 관계하는 내용이에요.",
+        "exampleZh": "這條規定和員工福利有關。",
+        "highlight": "관계하는",
     },
     "질문": {
         "translation": "問題，提問",
@@ -1278,6 +1362,66 @@ VOCAB_OVERRIDES = {
         "exampleKo": "이 원단은 가격은 조금 비싸도 질이 좋아요.",
         "exampleZh": "這種布料雖然價格高一點，但品質很好。",
         "highlight": "질이",
+    },
+    "청소": {
+        "translation": "打掃，清掃",
+        "exampleKo": "퇴근 전에 책상 주변 청소를 간단히 했어요.",
+        "exampleZh": "下班前我簡單打掃了書桌周圍。",
+        "highlight": "청소를",
+    },
+    "현금": {
+        "translation": "現金",
+        "exampleKo": "시장에 갈 때는 현금을 조금 챙겨 가요.",
+        "exampleZh": "去市場時我會帶一點現金。",
+        "highlight": "현금을",
+    },
+    "과": {
+        "translation": "科，部門",
+        "exampleKo": "새로 옮긴 과에서 업무를 다시 배우고 있어요.",
+        "exampleZh": "我在新調去的部門重新學習工作。",
+        "highlight": "과에서",
+    },
+    "게": {
+        "translation": "螃蟹",
+        "exampleKo": "주말 저녁에는 가족들과 게 요리를 먹었어요.",
+        "exampleZh": "週末晚上我和家人一起吃了螃蟹料理。",
+        "highlight": "게",
+    },
+    "겨우": {
+        "translation": "好不容易，勉強",
+        "exampleKo": "아침 회의 시간에 겨우 맞춰 도착했어요.",
+        "exampleZh": "我好不容易趕上了早上的會議時間。",
+        "highlight": "겨우",
+    },
+    "절반": {
+        "translation": "一半",
+        "exampleKo": "보고서 수정은 오늘 절반 정도 끝냈어요.",
+        "exampleZh": "報告修改今天大約完成了一半。",
+        "highlight": "절반",
+    },
+    "나들이": {
+        "translation": "出遊，外出走走",
+        "exampleKo": "날씨가 좋아서 점심 후에 짧게 나들이를 갔어요.",
+        "exampleZh": "天氣很好，所以午餐後短暫出去走走。",
+        "highlight": "나들이를",
+    },
+    "이과": {
+        "translation": "理科",
+        "exampleKo": "동생은 이과 과목을 좋아해서 공학을 전공하고 싶어 해요.",
+        "exampleZh": "弟弟喜歡理科科目，所以想主修工程。",
+        "highlight": "이과",
+    },
+    "팀장": {
+        "translation": "組長，主管",
+        "exampleKo": "팀장이 일정 변경 내용을 단체 채팅방에 올렸어요.",
+        "exampleZh": "組長把行程變更內容發到群組聊天室了。",
+        "highlight": "팀장이",
+    },
+    "혈액": {
+        "translation": "血液",
+        "exampleKo": "건강 검진에서 혈액 검사 결과를 확인했어요.",
+        "exampleZh": "健康檢查時我確認了血液檢查結果。",
+        "highlight": "혈액",
     },
 }
 

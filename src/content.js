@@ -579,6 +579,16 @@ function groupByLevel(items, levelKey) {
   }, new Map());
 }
 
+function uniqueByItemKey(items) {
+  const seen = new Set();
+  return items.filter((item) => {
+    const key = item.w || item.pattern || JSON.stringify(item);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 function pickByDateAcrossLevels(items, count, levelKey, offset = 0) {
   const day = dayNumber(offset);
   const groups = groupByLevel(items, levelKey);
@@ -820,12 +830,14 @@ export function koreanVocabRows() {
     "눌러앉다": "我只是去朋友家一下，結果一直待到晚上。"
   };
   const excludedWords = excludedValues("HANHAN_EXCLUDE_VOCAB_WORDS");
-  const curatedVocab = topikVocab.filter((item) =>
-    CURATED_VOCAB_WORDS.has(item.w) &&
+  const allowedWords = excludedValues("HANHAN_ALLOWED_VOCAB_WORDS");
+  const availableVocab = uniqueByItemKey(topikVocab).filter((item) =>
+    (!allowedWords.size || allowedWords.has(item.w)) &&
     !BLOCKED_VOCAB_WORDS.has(item.w) &&
     !excludedWords.has(item.w)
   );
-  return pickByDateAcrossLevels(curatedVocab.length ? curatedVocab : topikVocab, 10, "l").map((item) => ({
+  const curatedVocab = availableVocab.filter((item) => CURATED_VOCAB_WORDS.has(item.w));
+  return pickByDateAcrossLevels(curatedVocab.length >= 10 ? curatedVocab : availableVocab, 10, "l").map((item) => ({
     word: item.w,
     level: item.l,
     pos: item.p,
