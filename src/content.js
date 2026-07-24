@@ -632,7 +632,7 @@ const grammarBank = [
 ];
 
 const TOPIK_LEVELS = [1, 2, 3, 4, 5, 6];
-const BLOCKED_VOCAB_WORDS = new Set(["구도", "이", "다", "한", "도", "어", "나", "지", "무", "삼"]);
+const BLOCKED_VOCAB_WORDS = new Set(["구도", "이", "다", "한", "도", "어", "나", "지", "무", "삼", "질문"]);
 const CURATED_VOCAB_WORDS = new Set([
   "학교", "친구", "시간", "음식", "회의", "준비하다", "끝나다", "약속", "방법", "건강",
   "은행", "병원", "회사원", "직장", "점심", "저녁", "버스", "날씨", "옷", "커피",
@@ -715,7 +715,7 @@ function uniqueByItemKey(items) {
   });
 }
 
-function pickByDateAcrossLevels(items, count, levelKey, offset = 0) {
+function pickByDateAcrossLevels(items, count, levelKey, offset = 0, conflictKey = null) {
   const day = dayNumber(offset);
   const uniqueItems = uniqueByItemKey(items);
   if (uniqueItems.length < count) {
@@ -724,10 +724,20 @@ function pickByDateAcrossLevels(items, count, levelKey, offset = 0) {
   const groups = groupByLevel(uniqueItems, levelKey);
   const pickedByLevel = new Map();
   const pickedKeys = new Set();
+  const pickedConflictKeys = new Set();
   const itemKey = (item) => item.w || item.pattern || JSON.stringify(item);
+  const hasConflict = (item) => {
+    const key = conflictKey?.(item);
+    return key && pickedConflictKeys.has(key);
+  };
+  const markPicked = (item) => {
+    pickedKeys.add(itemKey(item));
+    const key = conflictKey?.(item);
+    if (key) pickedConflictKeys.add(key);
+  };
   return levelSlotsForDay(day, count).map((level) => {
-    const group = (groups.get(level) || []).filter((item) => !pickedKeys.has(itemKey(item)));
-    const fallback = uniqueItems.filter((item) => !pickedKeys.has(itemKey(item)));
+    const group = (groups.get(level) || []).filter((item) => !pickedKeys.has(itemKey(item)) && !hasConflict(item));
+    const fallback = uniqueItems.filter((item) => !pickedKeys.has(itemKey(item)) && !hasConflict(item));
     const candidates = group.length ? group : fallback;
     if (!candidates.length) {
       throw new Error(`Unable to pick a unique TOPIK item for level ${level}.`);
@@ -736,9 +746,16 @@ function pickByDateAcrossLevels(items, count, levelKey, offset = 0) {
     const index = (countLevelSlotsBeforeDay(day, count, level) + pickedToday) % candidates.length;
     const item = candidates[index];
     pickedByLevel.set(level, pickedToday + 1);
-    pickedKeys.add(itemKey(item));
+    markPicked(item);
     return item;
   });
+}
+
+function vocabMeaningKey(item) {
+  const text = String(item.t || item.d || "")
+    .replace(/[，,、。.\s]/g, "")
+    .replace(/的$/g, "");
+  return text || item.w;
 }
 
 async function fetchFinanceHeadlines() {
@@ -970,7 +987,7 @@ export function koreanVocabRows() {
     !excludedWords.has(item.w)
   );
   const curatedVocab = availableVocab.filter((item) => CURATED_VOCAB_WORDS.has(item.w));
-  return pickByDateAcrossLevels(curatedVocab.length >= 10 ? curatedVocab : availableVocab, 10, "l").map((item) => ({
+  return pickByDateAcrossLevels(curatedVocab.length >= 10 ? curatedVocab : availableVocab, 10, "l", 0, vocabMeaningKey).map((item) => ({
     word: item.w,
     level: item.l,
     pos: item.p,
