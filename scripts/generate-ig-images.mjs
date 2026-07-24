@@ -70,7 +70,7 @@ if (shouldRequireMorningWindow && taipeiMinutes < morningStart) {
 }
 
 function runHanhanWordSeries() {
-  if (process.env.PUSH_HANHAN_WORD_SERIES === "0") return;
+  if (process.env.PUSH_HANHAN_WORD_SERIES !== "1") return;
   if (!process.env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN) {
     console.warn("Skipped HANHAN word series: missing LINE_HANHAN_CHANNEL_ACCESS_TOKEN.");
     return;
@@ -347,14 +347,24 @@ if (process.env.PUBLISH_HANHAN_IMAGES_GITHUB === "1") {
   if (pushResult.stdout) process.stdout.write(pushResult.stdout);
   if (pushResult.stderr) process.stderr.write(pushResult.stderr);
   if (pushResult.status !== 0) {
-    if (shouldDedupe) {
-      runGit(["pull", "--rebase", "origin", "main"], { allowFailure: true });
+    runGit(["pull", "--rebase", "origin", "main"], { allowFailure: true });
+    const retryPushResult = spawnSync("git", ["push", "origin", "main"], {
+      cwd: rootDir,
+      encoding: "utf8"
+    });
+    if (retryPushResult.stdout) process.stdout.write(retryPushResult.stdout);
+    if (retryPushResult.stderr) process.stderr.write(retryPushResult.stderr);
+    if (retryPushResult.status === 0) {
+      console.log("HANHAN assets pushed to GitHub after remote sync.");
+    } else if (shouldDedupe) {
       if (existsSync(markerPath)) {
         console.log(`Skipped HANHAN LINE push: ${date} was already pushed after remote sync.`);
         process.exit(0);
       }
+      process.exit(retryPushResult.status ?? 1);
+    } else {
+      process.exit(retryPushResult.status ?? 1);
     }
-    process.exit(pushResult.status ?? 1);
   }
 }
 
