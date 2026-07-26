@@ -383,9 +383,8 @@ function formatPost(day, group) {
   return lines.join("\n");
 }
 
-function validateGroup(group, usedWords, usedKeys) {
+function validateGroup(group, usedWords) {
   if (group.words.length !== 10) return false;
-  if (usedKeys.has(group.key)) return false;
   return group.words.every(([word]) => word.startsWith(group.key) && !usedWords.has(word));
 }
 
@@ -406,11 +405,7 @@ if (state.sentDates?.[date]) {
 }
 
 const usedWords = new Set(state.usedWords || []);
-const usedKeys = new Set([
-  ...Object.values(state.sentDates || {}).map((entry) => entry.key).filter(Boolean),
-  ...[...usedWords].map((word) => word.slice(0, 1))
-]);
-const group = GROUPS.find((candidate) => validateGroup(candidate, usedWords, usedKeys));
+const group = GROUPS.find((candidate) => validateGroup(candidate, usedWords));
 
 if (!group) {
   throw new Error("No unused HANHAN word-series group is available.");
