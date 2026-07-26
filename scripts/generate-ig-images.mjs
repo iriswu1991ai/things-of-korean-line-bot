@@ -186,6 +186,17 @@ function parsePublishedPost(text) {
 
 function readPublishedHistory(currentDate) {
   const history = { vocab: new Set(), grammar: new Set() };
+  const everUsedPath = resolve(rootDir, "data", "hanhan-ever-used.json");
+  if (existsSync(everUsedPath)) {
+    try {
+      const parsed = JSON.parse(readFileSync(everUsedPath, "utf8"));
+      for (const word of parsed.vocab || []) history.vocab.add(word);
+      for (const pattern of parsed.grammar || []) history.grammar.add(pattern);
+    } catch (error) {
+      console.warn(`Unable to read HANHAN ever-used history: ${error.message}`);
+    }
+  }
+
   const historyPath = resolve(rootDir, "data", "hanhan-published-history.json");
   if (existsSync(historyPath)) {
     try {
@@ -253,7 +264,6 @@ function writePublishedHistory(currentDate, textPath) {
 const publishedHistory = readPublishedHistory(date);
 process.env.HANHAN_EXCLUDE_VOCAB_WORDS = [...publishedHistory.vocab].join("\n");
 process.env.HANHAN_EXCLUDE_GRAMMAR_PATTERNS = [...publishedHistory.grammar].join("\n");
-process.env.HANHAN_ALLOWED_VOCAB_WORDS = readRenderableVocabWords().join("\n");
 console.log(
   `Loaded HANHAN history: ${publishedHistory.vocab.size} vocab word(s), ${publishedHistory.grammar.size} grammar pattern(s) excluded before ${date}.`
 );
@@ -263,21 +273,6 @@ const payload = {
   vocab: koreanVocabRows(),
   grammar: koreanGrammarRows()
 };
-
-function readRenderableVocabWords() {
-  const rendererPath = resolve(rootDir, "scripts", "render-ig-images.py");
-  const renderer = readFileSync(rendererPath, "utf8");
-  const words = new Set();
-  const overridesStart = renderer.indexOf("VOCAB_OVERRIDES = {");
-  const overridesEnd = renderer.indexOf("\n}\n\n\ndef display_vocab_row", overridesStart);
-  const overridesBlock = overridesStart >= 0 && overridesEnd > overridesStart
-    ? renderer.slice(overridesStart, overridesEnd)
-    : renderer;
-  for (const match of overridesBlock.matchAll(/^\s{4}"([^"]+)":\s*\{/gm)) {
-    words.add(match[1]);
-  }
-  return [...words];
-}
 
 const python = process.env.PYTHON || "python3";
 const env = {
