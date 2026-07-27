@@ -665,7 +665,15 @@ const CURATED_VOCAB_WORDS = new Set([
   "옮다", "쌀", "끝내다", "남기다", "열리다",
   "없어지다", "더하기", "우리말", "많아지다", "가능하다", "방송", "권하다",
   "시간적", "입고되다", "날로", "함께하다", "두고두고", "볼만하다", "시간문제",
-  "입다", "생각", "받다", "좋아하다", "먹다", "만들다"
+  "입다", "생각", "받다", "좋아하다", "먹다", "만들다",
+  "오늘", "보다", "남자", "집", "함께", "차", "길",
+  "메일", "재료", "할인", "입구", "날짜", "칭찬하다",
+  "존중하다", "안심하다", "토론하다", "답변하다", "최신", "취향",
+  "원격", "맥락", "클라우드", "판매량", "일관성", "민감하다",
+  "또", "너무", "게임", "줄다", "같이",
+  "샤워하다", "빌리다", "농담하다", "새롭다", "멋있다", "한가하다",
+  "갈등", "열정", "확신", "우려하다", "용서하다", "봉사하다",
+  "정교하다", "완화하다", "출동하다", "탐지하다", "효력", "최우선", "운항하다"
 ]);
 
 function excludedValues(name) {
@@ -993,7 +1001,10 @@ export function koreanVocabRows() {
     !excludedWords.has(item.w)
   );
   const curatedVocab = availableVocab.filter((item) => CURATED_VOCAB_WORDS.has(item.w));
-  return pickByDateAcrossLevels(curatedVocab.length >= 10 ? curatedVocab : availableVocab, 10, "l", 0, vocabMeaningKey).map((item) => ({
+  if (curatedVocab.length < 10) {
+    throw new Error(`Need 10 curated TOPIK vocab item(s), only ${curatedVocab.length} available after exclusions. Add reviewed words to CURATED_VOCAB_WORDS and VOCAB_OVERRIDES.`);
+  }
+  return pickByDateAcrossLevels(curatedVocab, 10, "l", 0, vocabMeaningKey).map((item) => ({
     word: item.w,
     level: item.l,
     pos: item.p,
@@ -1024,7 +1035,16 @@ export function koreanGrammarRows() {
       item.examples.length >= 2 &&
       !excludedPatterns.has(item.pattern)
     );
-  return pickByDateAcrossLevels(completeGrammar, 2, "level", 1).map((item) => {
+  const selectableGrammar = completeGrammar.length >= 2 ? completeGrammar : grammarBank
+    .map((item) => ({ ...item, level: levelByPattern.get(item.pattern) || item.level }))
+    .filter((item) =>
+      item.level &&
+      item.attachment &&
+      item.meaning &&
+      Array.isArray(item.examples) &&
+      item.examples.length >= 2
+    );
+  return pickByDateAcrossLevels(selectableGrammar, 2, "level", 1).map((item) => {
     return {
       level: item.level,
       pattern: item.pattern,
