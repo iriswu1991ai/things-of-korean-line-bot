@@ -70,12 +70,11 @@ if (shouldRequireMorningWindow && taipeiMinutes < morningStart) {
 }
 
 function runHanhanWordSeries() {
-  if (process.env.PUSH_HANHAN_WORD_SERIES !== "1") return;
+  if (process.env.PUSH_HANHAN_WORD_SERIES === "0") return;
   if (!process.env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN) {
     console.warn("Skipped HANHAN word series: missing LINE_HANHAN_CHANNEL_ACCESS_TOKEN.");
     return;
   }
-
   if (isScheduledRun) {
     runGit(["pull", "--rebase", "origin", "main"], { allowFailure: true });
   }
