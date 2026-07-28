@@ -70,11 +70,12 @@ if (shouldRequireMorningWindow && taipeiMinutes < morningStart) {
 }
 
 function runHanhanWordSeries() {
-  if (process.env.PUSH_HANHAN_WORD_SERIES === "0") return;
+  if (process.env.PUSH_HANHAN_WORD_SERIES !== "1") return;
   if (!process.env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN) {
     console.warn("Skipped HANHAN word series: missing LINE_HANHAN_CHANNEL_ACCESS_TOKEN.");
     return;
   }
+
   if (isScheduledRun) {
     runGit(["pull", "--rebase", "origin", "main"], { allowFailure: true });
   }
@@ -196,6 +197,19 @@ function readPublishedHistory(currentDate) {
     }
   }
 
+  const wordSeriesStatePath = resolve(rootDir, "data", "hanhan-word-series-state.json");
+  if (existsSync(wordSeriesStatePath)) {
+    try {
+      const parsed = JSON.parse(readFileSync(wordSeriesStatePath, "utf8"));
+      for (const word of parsed.usedWords || []) history.vocab.add(word);
+      for (const item of Object.values(parsed.sentDates || {})) {
+        for (const word of item.words || []) history.vocab.add(word);
+      }
+    } catch (error) {
+      console.warn(`Unable to read HANHAN word series state: ${error.message}`);
+    }
+  }
+
   const historyPath = resolve(rootDir, "data", "hanhan-published-history.json");
   if (existsSync(historyPath)) {
     try {
@@ -229,6 +243,36 @@ function readPublishedHistory(currentDate) {
   }
 
   return history;
+}
+
+function findDuplicates(values) {
+  const seen = new Set();
+  const duplicates = new Set();
+  for (const value of values) {
+    if (seen.has(value)) duplicates.add(value);
+    seen.add(value);
+  }
+  return [...duplicates];
+}
+
+function validateFreshPayload(payload, history) {
+  const vocabWords = payload.vocab.map((item) => item.word);
+  const grammarPatterns = payload.grammar.map((item) => item.pattern);
+  const repeatedVocab = vocabWords.filter((word) => history.vocab.has(word));
+  const repeatedGrammar = grammarPatterns.filter((pattern) => history.grammar.has(pattern));
+  const duplicateVocab = findDuplicates(vocabWords);
+  const duplicateGrammar = findDuplicates(grammarPatterns);
+
+  const errors = [];
+  if (repeatedVocab.length) errors.push(`repeated vocab: ${[...new Set(repeatedVocab)].join(", ")}`);
+  if (repeatedGrammar.length) {
+    console.warn(`Allowing repeated grammar for ${date}: ${[...new Set(repeatedGrammar)].join(", ")}`);
+  }
+  if (duplicateVocab.length) errors.push(`duplicate vocab in today's set: ${duplicateVocab.join(", ")}`);
+  if (duplicateGrammar.length) errors.push(`duplicate grammar in today's set: ${duplicateGrammar.join(", ")}`);
+  if (errors.length) {
+    throw new Error(`Refusing to publish repeated HANHAN content for ${date}: ${errors.join("; ")}`);
+  }
 }
 
 function writePublishedHistory(currentDate, textPath) {
@@ -272,6 +316,7 @@ const payload = {
   vocab: koreanVocabRows(),
   grammar: koreanGrammarRows()
 };
+validateFreshPayload(payload, publishedHistory);
 
 const python = process.env.PYTHON || "python3";
 const env = {
