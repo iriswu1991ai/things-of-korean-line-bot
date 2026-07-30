@@ -54,6 +54,7 @@ jobs:
         env:
           PUBLISH_HANHAN_IMAGES_GITHUB: "1"
           PUSH_HANHAN_LINE: "1"
+          PUSH_HANHAN_WORD_SERIES: "1"
           PYTHON: "python"
           LINE_HANHAN_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_HANHAN_CHANNEL_ACCESS_TOKEN }}
           LINE_HANHAN_CHANNEL_SECRET: ${{ secrets.LINE_HANHAN_CHANNEL_SECRET }}
