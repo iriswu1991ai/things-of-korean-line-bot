@@ -265,9 +265,7 @@ function validateFreshPayload(payload, history) {
 
   const errors = [];
   if (repeatedVocab.length) errors.push(`repeated vocab: ${[...new Set(repeatedVocab)].join(", ")}`);
-  if (repeatedGrammar.length) {
-    console.warn(`Allowing repeated grammar for ${date}: ${[...new Set(repeatedGrammar)].join(", ")}`);
-  }
+  if (repeatedGrammar.length) errors.push(`repeated grammar: ${[...new Set(repeatedGrammar)].join(", ")}`);
   if (duplicateVocab.length) errors.push(`duplicate vocab in today's set: ${duplicateVocab.join(", ")}`);
   if (duplicateGrammar.length) errors.push(`duplicate grammar in today's set: ${duplicateGrammar.join(", ")}`);
   if (errors.length) {
