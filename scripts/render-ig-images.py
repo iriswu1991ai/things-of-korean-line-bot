@@ -3061,6 +3061,90 @@ VOCAB_OVERRIDES = {
         "exampleZh": "公司為了發掘新人才而舉辦了徵選。",
         "highlight": "발굴하기",
     },
+    "우리": {
+        "translation": "我們",
+        "exampleKo": "우리 팀은 매주 월요일에 업무 계획을 같이 확인해요.",
+        "exampleZh": "我們團隊每週一會一起確認工作計畫。",
+        "highlight": "우리",
+    },
+    "때": {
+        "translation": "時候",
+        "exampleKo": "회의할 때는 휴대폰 알림을 잠시 꺼 두는 편이에요.",
+        "exampleZh": "開會的時候，我通常會暫時關掉手機通知。",
+        "highlight": "때는",
+    },
+    "알다": {
+        "translation": "知道，明白",
+        "exampleKo": "일정을 정확히 알아야 준비를 빨리 시작할 수 있어요.",
+        "exampleZh": "要先清楚知道時程，才能快點開始準備。",
+        "highlight": "알아야",
+    },
+    "생각하다": {
+        "translation": "想，思考",
+        "exampleKo": "문제가 생기면 바로 답을 내기보다 원인을 먼저 생각해요.",
+        "exampleZh": "發生問題時，我會先思考原因，而不是立刻下結論。",
+        "highlight": "생각해요",
+    },
+    "청소하다": {
+        "translation": "打掃，清掃",
+        "exampleKo": "손님이 오기 전에 회의실을 간단히 청소했어요.",
+        "exampleZh": "客人來之前，我簡單打掃了會議室。",
+        "highlight": "청소했어요",
+    },
+    "긴장되다": {
+        "translation": "緊張",
+        "exampleKo": "첫 발표라서 긴장됐지만 준비한 대로 말했어요.",
+        "exampleZh": "因為是第一次發表，雖然很緊張，但我照準備的內容說完了。",
+        "highlight": "긴장됐지만",
+    },
+    "짜증": {
+        "translation": "煩躁，不耐煩",
+        "exampleKo": "파일이 계속 열리지 않아서 조금 짜증이 났어요.",
+        "exampleZh": "檔案一直打不開，所以我有點煩躁。",
+        "highlight": "짜증이",
+    },
+    "닦다": {
+        "translation": "擦，拭",
+        "exampleKo": "손님이 오기 전에 책상 위를 깨끗이 닦았어요.",
+        "exampleZh": "客人來之前，我把桌面擦乾淨了。",
+        "highlight": "닦았어요",
+    },
+    "속다": {
+        "translation": "上當，被騙",
+        "exampleKo": "너무 좋은 조건이라도 바로 믿으면 속을 수 있어요.",
+        "exampleZh": "就算條件看起來很好，馬上相信也可能會上當。",
+        "highlight": "속을",
+    },
+    "분명히": {
+        "translation": "明確地，清楚地",
+        "exampleKo": "마감 시간을 분명히 알려 주셔야 일정을 맞출 수 있어요.",
+        "exampleZh": "請明確告知截止時間，我才能配合時程。",
+        "highlight": "분명히",
+    },
+    "애도": {
+        "translation": "哀悼",
+        "exampleKo": "회사는 사고 소식을 듣고 애도의 뜻을 전했어요.",
+        "exampleZh": "公司聽到事故消息後，表達了哀悼之意。",
+        "highlight": "애도의",
+    },
+    "너무하다": {
+        "translation": "太過分",
+        "exampleKo": "마감 전날에 모든 자료를 다시 요청하는 건 조금 너무했어요.",
+        "exampleZh": "截止前一天才要求重做所有資料，實在有點太過分了。",
+        "highlight": "너무했어요",
+    },
+    "증언": {
+        "translation": "證言，作證",
+        "exampleKo": "회의 기록은 나중에 중요한 증언처럼 쓰일 수 있어요.",
+        "exampleZh": "會議紀錄之後可能會像重要證言一樣被使用。",
+        "highlight": "증언처럼",
+    },
+    "로고": {
+        "translation": "標誌，商標",
+        "exampleKo": "새 로고를 발표하기 전에 색상을 한 번 더 확인했어요.",
+        "exampleZh": "發表新標誌之前，我又確認了一次顏色。",
+        "highlight": "로고를",
+    },
 }
 
 
