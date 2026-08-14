@@ -3199,13 +3199,12 @@ VOCAB_OVERRIDES = {
         "exampleZh": "教授正在準備下個月的學術發表。",
         "highlight": "학술",
     },
-    "대결": {
+     "대결": {
         "translation": "對決，較量",
         "exampleKo": "두 팀의 대결은 생각보다 훨씬 치열했어요.",
         "exampleZh": "兩隊的對決比想像中激烈很多。",
         "highlight": "대결은",
     },
-    
 }
 
 def display_vocab_row(row):
