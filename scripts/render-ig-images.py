@@ -3206,8 +3206,7 @@ VOCAB_OVERRIDES = {
         "highlight": "대결은",
     },
 
-    }
-}
+ 
 
 
 def display_vocab_row(row):
