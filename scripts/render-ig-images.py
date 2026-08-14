@@ -3145,6 +3145,68 @@ VOCAB_OVERRIDES = {
         "exampleZh": "發表新標誌之前，我又確認了一次顏色。",
         "highlight": "로고를",
     },
+        "창작": {
+        "translation": "創作，創造",
+        "exampleKo": "이번 과제는 광고 문구를 직접 창작하는 일이었어요.",
+        "exampleZh": "這次作業是要自己創作廣告文案。",
+        "highlight": "창작하는",
+    },
+    "희생": {
+        "translation": "犧牲",
+        "exampleKo": "팀의 성공 뒤에는 많은 사람들의 희생이 있었어요.",
+        "exampleZh": "團隊成功的背後，有許多人的犧牲。",
+        "highlight": "희생이",
+    },
+    "탄핵": {
+        "translation": "彈劾",
+        "exampleKo": "뉴스에서는 대통령 탄핵 절차에 대해 자세히 설명했어요.",
+        "exampleZh": "新聞詳細說明了總統彈劾程序。",
+        "highlight": "탄핵",
+    },
+    "철수": {
+        "translation": "撤離，撤回",
+        "exampleKo": "비가 심해져서 행사 장비 철수가 먼저 진행됐어요.",
+        "exampleZh": "雨勢變大，所以先進行活動器材撤離。",
+        "highlight": "철수가",
+    },
+    "총괄": {
+        "translation": "總管，統籌",
+        "exampleKo": "이번 프로젝트의 총괄은 기획팀장이 맡았어요.",
+        "exampleZh": "這次專案的統籌由企劃組長負責。",
+        "highlight": "총괄은",
+    },
+    "최악": {
+        "translation": "最壞，最差",
+        "exampleKo": "최악의 상황을 피하려고 자료를 미리 백업했어요.",
+        "exampleZh": "為了避免最糟的情況，我事先備份了資料。",
+        "highlight": "최악의",
+    },
+    "특집": {
+        "translation": "特輯，專題",
+        "exampleKo": "이번 잡지는 한국 여행 특집으로 구성됐어요.",
+        "exampleZh": "這期雜誌以韓國旅行特輯構成。",
+        "highlight": "특집으로",
+    },
+    "폭풍": {
+        "translation": "暴風，風暴",
+        "exampleKo": "폭풍 때문에 오전 항공편이 모두 취소됐어요.",
+        "exampleZh": "因為暴風，上午的航班全部取消了。",
+        "highlight": "폭풍",
+    },
+    "학술": {
+        "translation": "學術",
+        "exampleKo": "교수님은 다음 달 학술 발표를 준비하고 계세요.",
+        "exampleZh": "教授正在準備下個月的學術發表。",
+        "highlight": "학술",
+    },
+    "대결": {
+        "translation": "對決，較量",
+        "exampleKo": "두 팀의 대결은 생각보다 훨씬 치열했어요.",
+        "exampleZh": "兩隊的對決比想像中激烈很多。",
+        "highlight": "대결은",
+    },
+
+    }
 }
 
 
