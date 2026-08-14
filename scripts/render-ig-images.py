@@ -3205,9 +3205,8 @@ VOCAB_OVERRIDES = {
         "exampleZh": "兩隊的對決比想像中激烈很多。",
         "highlight": "대결은",
     },
-
- 
-
+    
+}
 
 def display_vocab_row(row):
     override = VOCAB_OVERRIDES.get(row.get("word"))
