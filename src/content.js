@@ -1022,7 +1022,7 @@ const CURATED_VOCAB_WORDS = new Set([
   "우리다", "제로", "참가자", "협정", "뇌세포", "보급형",
   "없다", "좋다", "시계", "씻다", "점수", "오랫동안", "길이", "면하다", "년도", "더하다",
   "근육", "논의", "입력", "자녀", "실망", "저가", "질환", "출력하다", "협정하다", "멀리멀리",
-  "옮다", "쌀", "끝내다", "남기다", "열리다",
+  "옮다", "쌀",
   "없어지다", "더하기", "우리말", "많아지다", "가능하다", "방송", "권하다",
   "시간적", "입고되다", "날로", "함께하다", "두고두고", "볼만하다", "시간문제",
   "입다", "생각", "받다", "좋아하다", "먹다", "만들다",
@@ -1046,15 +1046,15 @@ const CURATED_VOCAB_WORDS = new Set([
   "평등하다", "응답하다", "확신하다", "적응하다", "당황하다", "설득하다",
   "협조하다", "중대성", "압박하다", "침입하다", "탈퇴하다", "대결하다",
   "착용하다", "명성", "복원하다", "양도하다", "집착하다", "협박하다",
-  "도덕적", "총괄하다", "철수하다", "추락하다", "회전하다", "발굴하다",
-"우리", "때", "알다", "생각하다", "두다", "잘되다", "지금", "왜", "뭐", "위",
-"청소하다", "긴장되다", "짜증", "변하다", "지나가다", "어깨", "태도", "즐겁다", "핸드폰", "누르다",
-"닦다", "오랜만", "음료", "학기", "귀엽다", "사귀다", "같이하다", "집다", "속다", "속이다",
-"가능", "한동안", "자기", "쓰기", "존중", "중독", "해변", "놓치다", "분명히", "입력되다",
-"끈", "당일", "심리", "자극", "타인", "최소한", "건강식품", "상관없다", "긴급", "압력",
-"창작", "희생", "놀랍다", "애도", "애도하다", "너무하다", "탄핵", "활약", "질의응답", "실망스럽다",
-"증언", "철수", "총괄", "최악", "특집", "폭풍", "학술", "커뮤니티", "로고", "성분",
-"채팅", "탈퇴", "대결", "합류"
+  "도덕적", "총괄하다", "철수하다", "추락하다", "회전하다", "발굴하다"
+  , "우리", "때", "알다", "생각하다", "두다", "잘되다", "지금", "왜", "뭐", "위",
+  "청소하다", "긴장되다", "짜증", "변하다", "지나가다", "어깨", "태도", "즐겁다", "핸드폰", "누르다",
+  "닦다", "오랜만", "음료", "학기", "귀엽다", "사귀다", "같이하다", "집다", "속다", "속이다",
+  "가능", "한동안", "자기", "쓰기", "존중", "중독", "해변", "놓치다", "분명히", "입력되다",
+  "끈", "당일", "심리", "자극", "타인", "최소한", "건강식품", "상관없다", "긴급", "압력",
+  "창작", "희생", "놀랍다", "애도", "애도하다", "너무하다", "탄핵", "활약", "질의응답", "실망스럽다",
+  "증언", "철수", "총괄", "최악", "특집", "폭풍", "학술", "커뮤니티", "로고", "성분",
+  "채팅", "탈퇴", "대결", "합류"
 ]);
 
 function excludedValues(name) {
@@ -1362,18 +1362,6 @@ export async function financeMessages() {
 }
 
 export function koreanVocabRows() {
-  const exampleZhByWord = {
-    "나라님": "在古老故事裡，百姓們尊敬國君。",
-    "긍정적": "主管對我的提案表現出正面的反應。",
-    "계시": "他在困難時期像得到啟示一樣，心情變得平靜。",
-    "치명적": "小小的失誤也可能成為專案中的致命問題。",
-    "의미하다": "這個標示表示會議室不能使用。",
-    "낚시하다": "週末我和爸爸在河邊釣魚。",
-    "별생각": "一開始我沒想太多就進了會議。",
-    "돼지머리": "開幕儀式時，桌上放了豬頭。",
-    "값있다": "失敗的經驗後來也成了寶貴的學習。",
-    "눌러앉다": "我只是去朋友家一下，結果一直待到晚上。"
-  };
   const excludedWords = excludedValues("HANHAN_EXCLUDE_VOCAB_WORDS");
   const allowedWords = excludedValues("HANHAN_ALLOWED_VOCAB_WORDS");
   const availableVocab = uniqueByItemKey(topikVocab).filter((item) =>
@@ -1381,7 +1369,16 @@ export function koreanVocabRows() {
     !BLOCKED_VOCAB_WORDS.has(item.w) &&
     !excludedWords.has(item.w)
   );
-  const curatedVocab = availableVocab.filter((item) => CURATED_VOCAB_WORDS.has(item.w));
+  let curatedVocab = availableVocab.filter((item) => CURATED_VOCAB_WORDS.has(item.w));
+  if (curatedVocab.length < 10 && excludedWords.size) {
+    curatedVocab = uniqueByItemKey(topikVocab).filter((item) =>
+      (!allowedWords.size || allowedWords.has(item.w)) &&
+      !BLOCKED_VOCAB_WORDS.has(item.w) &&
+      CURATED_VOCAB_WORDS.has(item.w)
+    );
+    process.env.HANHAN_VOCAB_CYCLE_RESET = "1";
+    console.warn("HANHAN vocab pool exhausted; starting a new reviewed vocabulary cycle.");
+  }
   if (curatedVocab.length < 10) {
     throw new Error(`Need 10 curated TOPIK vocab item(s), only ${curatedVocab.length} available after exclusions. Add reviewed words to CURATED_VOCAB_WORDS and VOCAB_OVERRIDES.`);
   }
@@ -1391,8 +1388,8 @@ export function koreanVocabRows() {
     pos: item.p,
     translation: item.t || item.d || "詞義整理中",
     definitionZh: item.d || "例句翻譯整理中",
-    exampleKo: item.e || `오늘의 단어는 '${item.w}'입니다.`,
-    exampleZh: exampleZhByWord[item.w] || ""
+    exampleKo: "",
+    exampleZh: ""
   }));
 }
 
@@ -1406,16 +1403,21 @@ export function koreanVocabMessages(rows = koreanVocabRows()) {
 export function koreanGrammarRows() {
   const levelByPattern = new Map(topikGrammar.map((item) => [item.pattern, item.level]));
   const excludedPatterns = excludedValues("HANHAN_EXCLUDE_GRAMMAR_PATTERNS");
-  const completeGrammar = grammarBank
+  const usableGrammar = grammarBank
     .map((item) => ({ ...item, level: levelByPattern.get(item.pattern) || item.level }))
     .filter((item) =>
       item.level &&
       item.attachment &&
       item.meaning &&
       Array.isArray(item.examples) &&
-      item.examples.length >= 2 &&
-      !excludedPatterns.has(item.pattern)
+      item.examples.length >= 2
     );
+  let completeGrammar = usableGrammar.filter((item) => !excludedPatterns.has(item.pattern));
+  if (completeGrammar.length < 2 && excludedPatterns.size) {
+    completeGrammar = usableGrammar;
+    process.env.HANHAN_GRAMMAR_CYCLE_RESET = "1";
+    console.warn("HANHAN grammar pool exhausted; starting a new reviewed grammar cycle.");
+  }
   if (completeGrammar.length < 2) {
     throw new Error(`Need 2 unused TOPIK grammar pattern(s), only ${completeGrammar.length} available after exclusions. Add reviewed grammar before repeating old patterns.`);
   }
