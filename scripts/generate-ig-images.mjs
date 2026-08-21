@@ -262,10 +262,12 @@ function validateFreshPayload(payload, history) {
   const repeatedGrammar = grammarPatterns.filter((pattern) => history.grammar.has(pattern));
   const duplicateVocab = findDuplicates(vocabWords);
   const duplicateGrammar = findDuplicates(grammarPatterns);
+  const vocabCycleReset = process.env.HANHAN_VOCAB_CYCLE_RESET === "1";
+  const grammarCycleReset = process.env.HANHAN_GRAMMAR_CYCLE_RESET === "1";
 
   const errors = [];
-  if (repeatedVocab.length) errors.push(`repeated vocab: ${[...new Set(repeatedVocab)].join(", ")}`);
-  if (repeatedGrammar.length) errors.push(`repeated grammar: ${[...new Set(repeatedGrammar)].join(", ")}`);
+  if (repeatedVocab.length && !vocabCycleReset) errors.push(`repeated vocab: ${[...new Set(repeatedVocab)].join(", ")}`);
+  if (repeatedGrammar.length && !grammarCycleReset) errors.push(`repeated grammar: ${[...new Set(repeatedGrammar)].join(", ")}`);
   if (duplicateVocab.length) errors.push(`duplicate vocab in today's set: ${duplicateVocab.join(", ")}`);
   if (duplicateGrammar.length) errors.push(`duplicate grammar in today's set: ${duplicateGrammar.join(", ")}`);
   if (errors.length) {
