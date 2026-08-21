@@ -57,6 +57,192 @@ FONTS = {
 }
 
 VOCAB_OVERRIDES = {
+    "실망하다": {
+        "translation": "失望",
+        "exampleKo": "팀장이 발표를 미루자고 해서 저는 조금 실망했지만 바로 수정안을 다시 정리했어요.",
+        "exampleZh": "組長說要延期發表時，我有點失望，但還是立刻重新整理了修改方案。",
+        "highlight": "실망했지만",
+    },
+    "꽃답다": {
+        "translation": "如花的，花樣的",
+        "exampleKo": "졸업식에 꽃답게 단정한 한복을 입은 학생들이 사진을 많이 찍었어요.",
+        "exampleZh": "在畢業典禮上，穿著如花般整潔韓服的學生們拍了很多照片。",
+        "highlight": "꽃답게",
+    },
+    "대결": {
+        "translation": "對決，較量",
+        "exampleKo": "오늘 토론 수업에서는 두 팀의 대결이 생각보다 치열했어요.",
+        "exampleZh": "今天的討論課上，兩組的較量比想像中還激烈。",
+        "highlight": "대결이",
+    },
+    "생각하다": {
+        "translation": "想，思考",
+        "exampleKo": "회의 전에 한 번 더 생각한 뒤에 저는 의견을 정리해서 보냈어요.",
+        "exampleZh": "會議前我又多想了一次，之後整理好意見傳了出去。",
+        "highlight": "생각한",
+    },
+    "한가하다": {
+        "translation": "閒適，空閒",
+        "exampleKo": "오전 업무가 끝난 뒤에는 잠깐 한가해서 동료들과 커피를 마셨어요.",
+        "exampleZh": "上午工作結束後，我有一小段空閒時間，和同事一起喝了咖啡。",
+        "highlight": "한가해서",
+    },
+    "인간적": {
+        "translation": "人的，人類的",
+        "exampleKo": "그 선생님은 실수해도 학생을 인간적으로 대해서 모두가 편하게 질문했어요.",
+        "exampleZh": "那位老師即使學生犯錯，也用很有人情味的方式對待大家，所以所有人都能放心提問。",
+        "highlight": "인간적으로",
+    },
+    "악화되다": {
+        "translation": "惡化",
+        "exampleKo": "감기 증상이 계속 악화되면 내일 아침에 바로 병원에 가려 해요.",
+        "exampleZh": "如果感冒症狀持續惡化，我打算明天早上立刻去醫院。",
+        "highlight": "악화되면",
+    },
+    "값있다": {
+        "translation": "有價值，值得，貴重",
+        "exampleKo": "인턴 때 배운 습관은 지금 일할 때도 값있는 자산이 돼요.",
+        "exampleZh": "實習時學到的習慣，現在工作時也成了很有價值的資產。",
+        "highlight": "값있는",
+    },
+    "최우선": {
+        "translation": "最優先，第一位",
+        "exampleKo": "이번 프로젝트에서는 안전을 최우선으로 두고 일정을 짰어요.",
+        "exampleZh": "這次專案中，我們把安全放在最優先的位置來安排時程。",
+        "highlight": "최우선으로",
+    },
+    "보다": {
+        "translation": "看",
+        "exampleKo": "보고서를 다 쓴 뒤에 저는 표를 다시 한 번 보다 말고 수정했어요.",
+        "exampleZh": "把報告寫完後，我又重新看了一次圖表再做修正。",
+        "highlight": "보다",
+    },
+    "나라님": {
+        "translation": "君主，國君",
+        "exampleKo": "옛날에는 나라님이 백성의 고단함을 직접 살피기도 했다고 전해져요.",
+        "exampleZh": "據說古時候君主也會親自關心百姓的辛勞。",
+        "highlight": "나라님이",
+    },
+    "분명히": {
+        "translation": "明確地，清楚地",
+        "exampleKo": "회의 전에 분명히 일정과 역할을 확인해 두면 혼선이 줄어요.",
+        "exampleZh": "會議前如果先把行程和分工確認清楚，混亂就會減少。",
+        "highlight": "분명히",
+    },
+    "값있다": {
+        "translation": "有價值，值得，貴重",
+        "exampleKo": "인턴 때 배운 습관은 지금 일할 때도 값있는 자산이 돼요.",
+        "exampleZh": "實習時學到的習慣，現在工作時也成了很有價值的資產。",
+        "highlight": "값있는",
+    },
+    "공단": {
+        "translation": "工業園區，工業區",
+        "exampleKo": "물류 창고는 공단 안에 있어서 아침마다 트럭이 많이 드나들어요.",
+        "exampleZh": "倉儲中心在工業園區裡，所以每天早上卡車進出很多。",
+        "highlight": "공단 안에",
+    },
+    "받다": {
+        "translation": "收到，接受",
+        "exampleKo": "면접 결과를 받은 뒤에야 다음 일정을 정할 수 있었어요.",
+        "exampleZh": "拿到面試結果之後，我才能安排下一步行程。",
+        "highlight": "받은",
+    },
+    "농담하다": {
+        "translation": "開玩笑",
+        "exampleKo": "친구가 농담하다가 분위기가 너무 가벼워져서 모두 웃었어요.",
+        "exampleZh": "朋友開玩笑開過頭，氣氛變得很輕鬆，大家都笑了。",
+        "highlight": "농담하다가",
+    },
+    "그녀": {
+        "translation": "她",
+        "exampleKo": "그녀는 발표 자료를 꼼꼼히 준비해서 팀에서 가장 믿음직했어요.",
+        "exampleZh": "她把發表資料準備得很仔細，所以在團隊裡最讓人放心。",
+        "highlight": "그녀는",
+    },
+    "봉사하다": {
+        "translation": "服務，奉獻，志願服務",
+        "exampleKo": "주말마다 봉사하는 직원들이 지역 아동센터에서 책 읽기 활동을 도왔어요.",
+        "exampleZh": "每到週末都做志工的員工，在地區兒童中心協助了讀書活動。",
+        "highlight": "봉사하는",
+    },
+    "민주화하다": {
+        "translation": "使民主化",
+        "exampleKo": "회사 운영 방식을 민주화하려고 직원 의견을 정기적으로 모으고 있어요.",
+        "exampleZh": "為了讓公司營運方式更民主化，我們定期蒐集員工意見。",
+        "highlight": "민주화하려고",
+    },
+    "침입하다": {
+        "translation": "入侵，闖入",
+        "exampleKo": "밤사이 창고에 누군가 침입한 흔적이 보여서 바로 경찰에 신고했어요.",
+        "exampleZh": "半夜倉庫有被人闖入的痕跡，所以我們立刻報警了。",
+        "highlight": "침입한",
+    },
+    "애도하다": {
+        "translation": "哀悼",
+        "exampleKo": "동료들은 갑작스럽게 세상을 떠난 선배를 조용히 애도했다.",
+        "exampleZh": "同事們安靜地哀悼了突然離世的前輩。",
+        "highlight": "애도했다",
+    },
+    "주거하다": {
+        "translation": "居住",
+        "exampleKo": "신입사원들은 회사가 마련한 기숙사에 주거하며 출퇴근 시간을 아꼈다.",
+        "exampleZh": "新進員工住在公司準備的宿舍裡，省下了通勤時間。",
+        "highlight": "주거하며",
+    },
+    "사귀다": {
+        "translation": "交，結交，交往",
+        "exampleKo": "두 사람은 대학 동아리에서 만나 친구처럼 지내다가 자연스럽게 사귀게 됐다.",
+        "exampleZh": "那兩個人是在大學社團認識的，先像朋友一樣相處，之後自然地開始交往了。",
+        "highlight": "사귀게",
+    },
+    "한동안": {
+        "translation": "一陣子，長時間",
+        "exampleKo": "회의실이 너무 조용해서 한동안 누구도 말을 꺼내지 못했다.",
+        "exampleZh": "會議室裡太安靜了，大家有一陣子都說不出話來。",
+        "highlight": "한동안",
+    },
+    "입력": {
+        "translation": "輸入，錄入",
+        "exampleKo": "고객 정보를 입력할 때는 주민등록번호를 다시 한 번 확인해 주세요.",
+        "exampleZh": "輸入顧客資訊時，請再確認一次身分證號碼。",
+        "highlight": "입력할",
+    },
+    "효율": {
+        "translation": "效率，效能，實效",
+        "exampleKo": "자료를 미리 정리해 두면 회의 효율이 훨씬 높아져요.",
+        "exampleZh": "如果事先把資料整理好，會議效率就會高很多。",
+        "highlight": "효율이",
+    },
+    "성분": {
+        "translation": "成分",
+        "exampleKo": "영양사는 알레르기 성분이 들어 있는지 식단표를 꼼꼼히 확인했다.",
+        "exampleZh": "營養師仔細確認了菜單裡是否含有過敏成分。",
+        "highlight": "성분이",
+    },
+    "생각": {
+        "translation": "想，思考",
+        "exampleKo": "과제에 대해 충분히 생각한 뒤에 저는 발표 자료를 다시 고쳤다.",
+        "exampleZh": "我充分思考作業內容後，又把報告資料重新修改了一次。",
+        "highlight": "생각한",
+    },
+    "멋있다": {
+        "translation": "帥氣，優秀",
+        "exampleKo": "발표를 끝낸 동기가 자신감 있게 웃는 모습이 정말 멋있었다.",
+        "exampleZh": "完成發表的同學自信地微笑著，那模樣真的很帥氣。",
+        "highlight": "멋있었다",
+    },
+    "뭐": {
+        "translation": "什麼",
+        "exampleKo": "점심시간에 뭐 먹을지 아직 정하지 못해서 동료들에게 물어봤다.",
+        "exampleZh": "午休時間我還沒決定要吃什麼，所以問了同事。",
+        "highlight": "뭐",
+    },
+    "희생": {
+        "translation": "犧牲",
+        "exampleKo": "프로젝트를 끝내기 위해서는 팀 전체의 희생이 필요했다.",
+        "exampleZh": "為了完成專案，整個團隊都需要做出犧牲。",
+        "highlight": "희생이",
+    },
     "붕괴": {
         "translation": "崩塌，坍塌，崩潰",
         "exampleKo": "오래된 창고 벽이 장마철에 붕괴될 위험이 있어서 바로 보수 공사를 시작했어요.",
@@ -160,7 +346,7 @@ VOCAB_OVERRIDES = {
         "highlight": "도달했어요",
     },
     "처형되다": {
-        "translation": "被處刑，被判刑，被處決，被處死，被處以極刑",
+        "translation": "被處刑",
         "exampleKo": "역사 수업에서 그 죄수는 공개 재판 뒤에 처형되었다고 배웠어요.",
         "exampleZh": "在歷史課上，我們學到那名囚犯是在公開審判後被處決的。",
         "highlight": "처형되었다고",
@@ -281,9 +467,9 @@ VOCAB_OVERRIDES = {
     },
     "인간적": {
         "translation": "人的，人類的",
-        "exampleKo": "그 선배는 실수해도 먼저 들어 주는 인간적인 사람이라서 믿음이 가요.",
-        "exampleZh": "那位前輩即使犯錯也會先傾聽，是個很有人情味的人，所以讓人信任。",
-        "highlight": "인간적인",
+        "exampleKo": "그 선생님은 실수해도 학생을 인간적으로 대해서 모두가 편하게 질문했어요.",
+        "exampleZh": "那位老師即使學生犯錯，也用很有人情味的方式對待大家，所以所有人都能放心提問。",
+        "highlight": "인간적으로",
     },
     "돼지꿈": {
         "translation": "夢裡見豬，吉祥的夢",
@@ -820,6 +1006,7 @@ VOCAB_OVERRIDES = {
         "highlight": "큰집에",
     },
     "맞서다": {
+        "translation": "對抗，反對",
         "exampleKo": "신입 직원도 부당한 요구에는 맞서서 의견을 말할 수 있어요.",
         "exampleZh": "就算是新進員工，也可以對不合理的要求表達反對意見。",
         "highlight": "맞서서",
@@ -1028,6 +1215,7 @@ VOCAB_OVERRIDES = {
         "highlight": "뜻해서",
     },
     "위로되다": {
+        "translation": "得到安慰",
         "exampleKo": "동료의 짧은 응원 한마디가 생각보다 크게 위로되었어요.",
         "exampleZh": "同事一句簡短的加油，出乎意料地給了我很大的安慰。",
         "highlight": "위로되었어요",
@@ -1137,6 +1325,7 @@ VOCAB_OVERRIDES = {
         "highlight": "나도",
     },
     "지": {
+        "translation": "自從，經過",
         "exampleKo": "입사한 지 석 달이 지나서 이제 업무 흐름이 익숙해졌어요.",
         "exampleZh": "自從入職三個月後，現在已經熟悉工作流程了。",
         "highlight": "지",
@@ -1152,6 +1341,7 @@ VOCAB_OVERRIDES = {
         "highlight": "무를",
     },
     "글쎄요": {
+        "translation": "這個嘛",
         "exampleKo": "글쎄요, 이번 회의 안건은 팀장님이 먼저 정하실 것 같아요.",
         "exampleZh": "這個嘛，我想這次會議議程應該會由組長先決定。",
         "highlight": "글쎄요",
@@ -1172,6 +1362,7 @@ VOCAB_OVERRIDES = {
         "highlight": "계시해",
     },
     "처형되다": {
+        "translation": "被處刑",
         "exampleKo": "오래된 법에 따라 죄인이 공개적으로 처형되었다는 기록이 남아 있어요.",
         "exampleZh": "有記錄顯示，依照舊法，罪犯曾被公開處刑。",
         "highlight": "처형되었다는",
@@ -1207,11 +1398,13 @@ VOCAB_OVERRIDES = {
         "highlight": "괜찮아요",
     },
     "셋째": {
+        "translation": "第三次，第三個",
         "exampleKo": "이번 보고서에서는 셋째 항목을 먼저 검토합시다.",
         "exampleZh": "這份報告裡，我們先檢查第三項吧。",
         "highlight": "셋째",
     },
     "첫사랑": {
+        "translation": "初戀",
         "exampleKo": "동창회에서 민준은 첫사랑 이야기를 조심스럽게 꺼냈다.",
         "exampleZh": "在同學會上，民俊小心翼翼地提起了初戀的話題。",
         "highlight": "첫사랑",
@@ -1262,6 +1455,7 @@ VOCAB_OVERRIDES = {
         "highlight": "가끔가다가",
     },
     "저리다": {
+        "translation": "發麻",
         "exampleKo": "오래 앉아 있었더니 다리가 저려요.",
         "exampleZh": "坐太久了，腿有點麻。",
         "highlight": "저려요",
@@ -1332,8 +1526,8 @@ VOCAB_OVERRIDES = {
         "highlight": "돼지머리",
     },
     "값있다": {
-        "exampleKo": "실패한 경험도 나중에는 값있는 배움이 되었어요.",
-        "exampleZh": "失敗的經驗後來也成了寶貴的學習。",
+        "exampleKo": "인턴 때 배운 습관은 지금 일할 때도 값있는 자산이 돼요.",
+        "exampleZh": "實習時學到的習慣，現在工作時也成了很有價值的資產。",
         "highlight": "값있는",
     },
     "눌러앉다": {
@@ -1342,9 +1536,10 @@ VOCAB_OVERRIDES = {
         "highlight": "눌러앉았어요",
     },
     "악화되다": {
-        "exampleKo": "회사의 상황이 더 악화되지 않았어요.",
-        "exampleZh": "公司的情況沒有再惡化。",
-        "highlight": "악화되지",
+        "translation": "惡化",
+        "exampleKo": "감기 증상이 계속 악화되면 내일 아침에 바로 병원에 가려 해요.",
+        "exampleZh": "如果感冒症狀持續惡化，我打算明天早上立刻去醫院。",
+        "highlight": "악화되면",
     },
     "값하다": {
         "exampleKo": "이 노트북은 비싸지만 성능이 좋아서 값해요.",
@@ -1379,8 +1574,9 @@ VOCAB_OVERRIDES = {
         "highlight": "악화할",
     },
     "꽃답다": {
-        "exampleKo": "졸업식 날 학생들의 웃음이 꽃답게 빛났어요.",
-        "exampleZh": "畢業典禮那天，學生們笑得燦爛。",
+        "translation": "如花的，花樣的",
+        "exampleKo": "졸업식에 꽃답게 단정한 한복을 입은 학생들이 사진을 많이 찍었어요.",
+        "exampleZh": "在畢業典禮上，穿著如花般整潔韓服的學生們拍了很多照片。",
         "highlight": "꽃답게",
     },
     "압도하다": {
@@ -1706,7 +1902,7 @@ VOCAB_OVERRIDES = {
         "highlight": "것은",
     },
     "수": {
-        "translation": "方法，能力，可能",
+        "translation": "方法，可能",
         "exampleKo": "이 앱으로 출근 시간을 줄일 수 있어요.",
         "exampleZh": "用這個 App 可以減少通勤時間。",
         "highlight": "수",
@@ -2090,7 +2286,7 @@ VOCAB_OVERRIDES = {
         "highlight": "협정하기",
     },
     "좋다": {
-        "translation": "好，適合，良好",
+        "translation": "好的，適合的",
         "exampleKo": "지금은 날씨가 좋아서 점심 먹고 산책하기 딱 좋아요.",
         "exampleZh": "現在天氣很好，吃完午餐去散步正剛好。",
         "highlight": "좋아서",
@@ -2307,9 +2503,9 @@ VOCAB_OVERRIDES = {
     },
     "보다": {
         "translation": "看",
-        "exampleKo": "퇴근 후에 한국 드라마를 보면서 듣기 연습을 했어요.",
-        "exampleZh": "下班後我看韓劇練習聽力。",
-        "highlight": "보면서",
+        "exampleKo": "보고서를 다 쓴 뒤에 저는 표를 다시 한 번 보다 말고 수정했어요.",
+        "exampleZh": "把報告寫完後，我又重新看了一次圖表再做修正。",
+        "highlight": "보다",
     },
     "남자": {
         "translation": "男子，男人",
@@ -2510,9 +2706,9 @@ VOCAB_OVERRIDES = {
         "highlight": "멋있었어요",
     },
     "한가하다": {
-        "translation": "空閒的，悠閒的",
-        "exampleKo": "오늘 오후는 비교적 한가해서 자료를 정리했어요.",
-        "exampleZh": "今天下午比較空閒，所以整理了資料。",
+        "translation": "閒適，空閒",
+        "exampleKo": "오전 업무가 끝난 뒤에는 잠깐 한가해서 동료들과 커피를 마셨어요.",
+        "exampleZh": "上午工作結束後，我有一小段空閒時間，和同事一起喝了咖啡。",
         "highlight": "한가해서",
     },
     "갈등": {
@@ -2583,8 +2779,8 @@ VOCAB_OVERRIDES = {
     },
     "최우선": {
         "translation": "最優先，第一位",
-        "exampleKo": "이번 주에는 고객 응대를 최우선으로 처리해요.",
-        "exampleZh": "這週我們把客戶應對列為最優先處理。",
+        "exampleKo": "이번 프로젝트에서는 안전을 최우선으로 두고 일정을 짰어요.",
+        "exampleZh": "這次專案中，我們把安全放在最優先的位置來安排時程。",
         "highlight": "최우선으로",
     },
     "운항하다": {
@@ -2907,9 +3103,9 @@ VOCAB_OVERRIDES = {
     },
     "실망하다": {
         "translation": "失望",
-        "exampleKo": "결과는 아쉬웠지만 너무 실망하지 않기로 했어요.",
-        "exampleZh": "結果雖然可惜，但我決定不要太失望。",
-        "highlight": "실망하지",
+        "exampleKo": "팀장이 발표를 미루자고 해서 저는 조금 실망했지만 바로 수정안을 다시 정리했어요.",
+        "exampleZh": "組長說要延期發表時，我有點失望，但還是立刻重新整理了修改方案。",
+        "highlight": "실망했지만",
     },
     "존경하다": {
         "translation": "尊敬",
@@ -3081,9 +3277,27 @@ VOCAB_OVERRIDES = {
     },
     "생각하다": {
         "translation": "想，思考",
-        "exampleKo": "문제가 생기면 바로 답을 내기보다 원인을 먼저 생각해요.",
-        "exampleZh": "發生問題時，我會先思考原因，而不是立刻下結論。",
-        "highlight": "생각해요",
+        "exampleKo": "회의 전에 한 번 더 생각한 뒤에 저는 의견을 정리해서 보냈어요.",
+        "exampleZh": "會議前我又多想了一次，之後整理好意見傳了出去。",
+        "highlight": "생각한",
+    },
+    "두다": {
+        "translation": "放，擱置",
+        "exampleKo": "자주 쓰는 파일은 바탕화면에 따로 두었어요.",
+        "exampleZh": "常用的檔案我另外放在桌面上。",
+        "highlight": "두었어요",
+    },
+    "잘되다": {
+        "translation": "順利，成功",
+        "exampleKo": "새로운 업무 방식이 생각보다 잘돼서 모두 안심했어요.",
+        "exampleZh": "新的工作方式比想像中順利，所以大家都放心了。",
+        "highlight": "잘돼서",
+    },
+    "지금": {
+        "translation": "現在",
+        "exampleKo": "지금 바로 보내 주시면 퇴근 전에 확인할 수 있어요.",
+        "exampleZh": "如果現在馬上寄給我，我下班前可以確認。",
+        "highlight": "지금",
     },
     "청소하다": {
         "translation": "打掃，清掃",
@@ -3103,11 +3317,95 @@ VOCAB_OVERRIDES = {
         "exampleZh": "檔案一直打不開，所以我有點煩躁。",
         "highlight": "짜증이",
     },
+    "변하다": {
+        "translation": "改變，變化",
+        "exampleKo": "부서 분위기가 새 팀장님이 온 뒤 많이 변했어요.",
+        "exampleZh": "新組長來了之後，部門氣氛改變很多。",
+        "highlight": "변했어요",
+    },
+    "지나가다": {
+        "translation": "經過，度過",
+        "exampleKo": "바쁜 한 주가 지나가고 나니 몸이 조금 피곤해요.",
+        "exampleZh": "忙碌的一週過去後，身體有點累。",
+        "highlight": "지나가고",
+    },
+    "어깨": {
+        "translation": "肩膀",
+        "exampleKo": "오래 앉아서 일했더니 어깨가 많이 뻐근해요.",
+        "exampleZh": "坐著工作太久，肩膀很僵硬。",
+        "highlight": "어깨가",
+    },
+    "태도": {
+        "translation": "態度",
+        "exampleKo": "고객을 대하는 태도가 좋아서 칭찬을 받았어요.",
+        "exampleZh": "因為面對客戶的態度很好，所以受到了稱讚。",
+        "highlight": "태도가",
+    },
+    "즐겁다": {
+        "translation": "愉快的，開心的",
+        "exampleKo": "동료들과 함께 점심을 먹어서 즐거운 시간이었어요.",
+        "exampleZh": "和同事一起吃午餐，是一段愉快的時間。",
+        "highlight": "즐거운",
+    },
+    "핸드폰": {
+        "translation": "手機，行動電話",
+        "exampleKo": "회의 중에는 핸드폰을 무음으로 바꿔 주세요.",
+        "exampleZh": "會議中請把手機改成靜音。",
+        "highlight": "핸드폰을",
+    },
+    "누르다": {
+        "translation": "按，壓",
+        "exampleKo": "신청이 끝나면 확인 버튼을 한 번 더 눌러 주세요.",
+        "exampleZh": "申請完成後，請再按一次確認按鈕。",
+        "highlight": "눌러",
+    },
     "닦다": {
         "translation": "擦，拭",
         "exampleKo": "손님이 오기 전에 책상 위를 깨끗이 닦았어요.",
         "exampleZh": "客人來之前，我把桌面擦乾淨了。",
         "highlight": "닦았어요",
+    },
+    "오랜만": {
+        "translation": "好久，久違",
+        "exampleKo": "오랜만에 친구를 만나서 늦게까지 이야기했어요.",
+        "exampleZh": "久違地見到朋友，所以聊到很晚。",
+        "highlight": "오랜만에",
+    },
+    "음료": {
+        "translation": "飲料",
+        "exampleKo": "회의가 길어질 것 같아서 음료를 미리 준비했어요.",
+        "exampleZh": "因為會議可能會變長，所以我先準備了飲料。",
+        "highlight": "음료를",
+    },
+    "학기": {
+        "translation": "學期",
+        "exampleKo": "이번 학기에는 과제가 많아서 일정을 꼼꼼히 관리해요.",
+        "exampleZh": "這學期作業很多，所以我仔細管理時程。",
+        "highlight": "학기에는",
+    },
+    "귀엽다": {
+        "translation": "可愛的",
+        "exampleKo": "동료가 책상 위에 귀여운 메모지를 붙여 두었어요.",
+        "exampleZh": "同事在桌上貼了一張可愛的便條紙。",
+        "highlight": "귀여운",
+    },
+    "사귀다": {
+        "translation": "交往，結交",
+        "exampleKo": "동아리에서 새 친구를 사귀어서 학교생활이 더 즐거워졌어요.",
+        "exampleZh": "在社團交到新朋友後，學校生活變得更愉快了。",
+        "highlight": "사귀어서",
+    },
+    "같이하다": {
+        "translation": "一起，共同",
+        "exampleKo": "이번 프로젝트는 다른 부서와 같이하기로 했어요.",
+        "exampleZh": "這次專案決定和其他部門一起進行。",
+        "highlight": "같이하기로",
+    },
+    "집다": {
+        "translation": "拿，拾起",
+        "exampleKo": "회의 자료를 한 부씩 집어서 참석자들에게 나눠 줬어요.",
+        "exampleZh": "我把會議資料一份份拿起來，分給與會者。",
+        "highlight": "집어서",
     },
     "속다": {
         "translation": "上當，被騙",
@@ -3115,11 +3413,107 @@ VOCAB_OVERRIDES = {
         "exampleZh": "就算條件看起來很好，馬上相信也可能會上當。",
         "highlight": "속을",
     },
+    "속이다": {
+        "translation": "欺騙",
+        "exampleKo": "고객을 속이는 광고는 회사 신뢰를 크게 떨어뜨려요.",
+        "exampleZh": "欺騙客戶的廣告會大幅降低公司的信任度。",
+        "highlight": "속이는",
+    },
+    "가능": {
+        "translation": "可能，可行",
+        "exampleKo": "오늘 안에 수정이 가능한지 먼저 확인해 볼게요.",
+        "exampleZh": "我先確認看看今天之內是否可以修改。",
+        "highlight": "가능한지",
+    },
+    "한동안": {
+        "translation": "一陣子，一段時間",
+        "exampleKo": "프로젝트가 끝난 뒤에도 한동안 관련 문의가 계속 왔어요.",
+        "exampleZh": "專案結束後，一段時間內仍持續收到相關詢問。",
+        "highlight": "한동안",
+    },
+    "존중": {
+        "translation": "尊重",
+        "exampleKo": "회의에서는 서로의 의견을 존중하는 태도가 필요해요.",
+        "exampleZh": "會議中需要尊重彼此意見的態度。",
+        "highlight": "존중하는",
+    },
+    "해변": {
+        "translation": "海邊，海灘",
+        "exampleKo": "휴가 때 해변 근처 숙소를 예약했어요.",
+        "exampleZh": "休假時我訂了海邊附近的住宿。",
+        "highlight": "해변",
+    },
+    "놓치다": {
+        "translation": "錯過，漏掉",
+        "exampleKo": "중요한 메일을 놓치지 않으려고 알림을 켜 두었어요.",
+        "exampleZh": "為了不漏掉重要郵件，我把通知打開了。",
+        "highlight": "놓치지",
+    },
     "분명히": {
         "translation": "明確地，清楚地",
         "exampleKo": "마감 시간을 분명히 알려 주셔야 일정을 맞출 수 있어요.",
         "exampleZh": "請明確告知截止時間，我才能配合時程。",
         "highlight": "분명히",
+    },
+    "입력되다": {
+        "translation": "被輸入，被登錄",
+        "exampleKo": "신청 정보가 시스템에 제대로 입력되었는지 확인했어요.",
+        "exampleZh": "我確認了申請資料是否正確輸入到系統裡。",
+        "highlight": "입력되었는지",
+    },
+    "당일": {
+        "translation": "當天",
+        "exampleKo": "행사 당일에는 한 시간 일찍 도착해야 해요.",
+        "exampleZh": "活動當天必須提前一小時到達。",
+        "highlight": "당일에는",
+    },
+    "심리": {
+        "translation": "心理",
+        "exampleKo": "소비자 심리를 이해하면 상품 설명을 더 잘할 수 있어요.",
+        "exampleZh": "如果理解消費者心理，就能更好地說明商品。",
+        "highlight": "심리를",
+    },
+    "자극": {
+        "translation": "刺激",
+        "exampleKo": "새로운 목표가 생기니 일하는 데 좋은 자극이 되었어요.",
+        "exampleZh": "有了新目標後，對工作形成了很好的刺激。",
+        "highlight": "자극이",
+    },
+    "타인": {
+        "translation": "他人，別人",
+        "exampleKo": "공용 문서에서는 타인의 내용을 함부로 지우면 안 돼요.",
+        "exampleZh": "在共用文件中，不可以隨意刪除別人的內容。",
+        "highlight": "타인의",
+    },
+    "최소한": {
+        "translation": "最少，至少",
+        "exampleKo": "지원하려면 최소한 이력서와 자기소개서가 필요해요.",
+        "exampleZh": "要申請的話，至少需要履歷和自我介紹。",
+        "highlight": "최소한",
+    },
+    "상관없다": {
+        "translation": "沒關係的",
+        "exampleKo": "회의 장소는 어디든 상관없지만 시간은 꼭 맞춰야 해요.",
+        "exampleZh": "會議地點在哪都沒關係，但時間一定要配合。",
+        "highlight": "상관없지만",
+    },
+    "긴급": {
+        "translation": "緊急",
+        "exampleKo": "긴급 회의가 잡혀서 오후 일정이 모두 바뀌었어요.",
+        "exampleZh": "因為安排了緊急會議，下午的行程全都改了。",
+        "highlight": "긴급",
+    },
+    "압력": {
+        "translation": "壓力，壓迫",
+        "exampleKo": "마감 압력이 커도 실수하지 않도록 천천히 확인했어요.",
+        "exampleZh": "就算截止壓力很大，我也慢慢確認，避免出錯。",
+        "highlight": "압력이",
+    },
+    "놀랍다": {
+        "translation": "令人驚訝的",
+        "exampleKo": "신입사원의 발표 실력이 놀라울 만큼 좋았어요.",
+        "exampleZh": "新人的發表能力好到令人驚訝。",
+        "highlight": "놀라울",
     },
     "애도": {
         "translation": "哀悼",
@@ -3133,11 +3527,41 @@ VOCAB_OVERRIDES = {
         "exampleZh": "截止前一天才要求重做所有資料，實在有點太過分了。",
         "highlight": "너무했어요",
     },
+    "활약": {
+        "translation": "活躍，表現",
+        "exampleKo": "이번 행사에서 자원봉사자들의 활약이 특히 돋보였어요.",
+        "exampleZh": "這次活動中，志工們的活躍表現特別突出。",
+        "highlight": "활약이",
+    },
+    "질의응답": {
+        "translation": "問答，提問與回答",
+        "exampleKo": "발표가 끝난 뒤 질의응답 시간이 이어졌어요.",
+        "exampleZh": "發表結束後，接著進行問答時間。",
+        "highlight": "질의응답",
+    },
+    "실망스럽다": {
+        "translation": "令人失望的",
+        "exampleKo": "결과는 조금 실망스러웠지만 다음 계획을 바로 세웠어요.",
+        "exampleZh": "結果雖然有點令人失望，但我馬上訂了下一步計畫。",
+        "highlight": "실망스러웠지만",
+    },
     "증언": {
         "translation": "證言，作證",
         "exampleKo": "회의 기록은 나중에 중요한 증언처럼 쓰일 수 있어요.",
         "exampleZh": "會議紀錄之後可能會像重要證言一樣被使用。",
         "highlight": "증언처럼",
+    },
+    "최악": {
+        "translation": "最差，最壞",
+        "exampleKo": "최악의 상황을 피하려고 미리 백업 파일을 만들었어요.",
+        "exampleZh": "為了避免最糟的情況，我事先建立了備份檔。",
+        "highlight": "최악의",
+    },
+    "커뮤니티": {
+        "translation": "社群",
+        "exampleKo": "한국어 공부 커뮤니티에서 좋은 자료를 많이 찾았어요.",
+        "exampleZh": "我在韓文學習社群裡找到很多好資料。",
+        "highlight": "커뮤니티에서",
     },
     "로고": {
         "translation": "標誌，商標",
@@ -3145,67 +3569,122 @@ VOCAB_OVERRIDES = {
         "exampleZh": "發表新標誌之前，我又確認了一次顏色。",
         "highlight": "로고를",
     },
-        "창작": {
-        "translation": "創作，創造",
-        "exampleKo": "이번 과제는 광고 문구를 직접 창작하는 일이었어요.",
-        "exampleZh": "這次作業是要自己創作廣告文案。",
-        "highlight": "창작하는",
+    "성분": {
+        "translation": "成分",
+        "exampleKo": "화장품을 사기 전에 성분을 꼼꼼히 확인했어요.",
+        "exampleZh": "買化妝品之前，我仔細確認了成分。",
+        "highlight": "성분을",
     },
-    "희생": {
-        "translation": "犧牲",
-        "exampleKo": "팀의 성공 뒤에는 많은 사람들의 희생이 있었어요.",
-        "exampleZh": "團隊成功的背後，有許多人的犧牲。",
-        "highlight": "희생이",
+    "채팅": {
+        "translation": "聊天，線上聊天",
+        "exampleKo": "급한 내용은 이메일보다 채팅으로 먼저 알려 주세요.",
+        "exampleZh": "緊急內容請先用聊天訊息通知我，而不是寄電子郵件。",
+        "highlight": "채팅으로",
+    },
+    "탈퇴": {
+        "translation": "退出，退會",
+        "exampleKo": "사용하지 않는 앱은 탈퇴 전에 자료를 먼저 저장했어요.",
+        "exampleZh": "不用的 App 在退出會員前，我先把資料存起來。",
+        "highlight": "탈퇴",
+    },
+    "합류": {
+        "translation": "加入，匯合",
+        "exampleKo": "새 디자이너가 다음 주부터 프로젝트에 합류해요.",
+        "exampleZh": "新設計師從下週開始加入專案。",
+        "highlight": "합류해요",
+    },
+    "왜": {
+        "translation": "為什麼",
+        "exampleKo": "팀장님이 왜 일정이 늦어졌는지 다시 물어봤어요.",
+        "exampleZh": "組長又問了一次為什麼時程延後了。",
+        "highlight": "왜",
+    },
+    "위": {
+        "translation": "上面，上方",
+        "exampleKo": "계약서는 책상 위에 올려 두었어요.",
+        "exampleZh": "我把合約放在書桌上了。",
+        "highlight": "위에",
+    },
+    "자기": {
+        "translation": "自己",
+        "exampleKo": "회의 전에는 자기 의견을 간단히 정리해 오세요.",
+        "exampleZh": "會議前請先簡單整理自己的意見。",
+        "highlight": "자기",
+    },
+    "쓰기": {
+        "translation": "書寫，寫作",
+        "exampleKo": "한국어 쓰기 숙제는 오늘 밤까지 제출해야 해요.",
+        "exampleZh": "韓文寫作作業必須在今晚前提交。",
+        "highlight": "쓰기",
+    },
+    "중독": {
+        "translation": "中毒，成癮",
+        "exampleKo": "휴대폰 중독을 줄이려고 자기 전에는 알림을 꺼요.",
+        "exampleZh": "為了減少手機成癮，我睡前會關掉通知。",
+        "highlight": "중독",
+    },
+    "끈": {
+        "translation": "繩子，帶子",
+        "exampleKo": "운동화 끈이 풀려서 잠깐 멈춰 묶었어요.",
+        "exampleZh": "運動鞋鞋帶鬆了，所以我停下來綁了一下。",
+        "highlight": "끈",
+    },
+    "건강식품": {
+        "translation": "健康食品",
+        "exampleKo": "부모님 선물로 건강식품을 알아보고 있어요.",
+        "exampleZh": "我正在找健康食品當作父母的禮物。",
+        "highlight": "건강식품",
+    },
+    "창작": {
+        "translation": "創作",
+        "exampleKo": "이번 수업에서는 짧은 이야기 창작 과제를 냈어요.",
+        "exampleZh": "這堂課出了短篇故事創作作業。",
+        "highlight": "창작",
     },
     "탄핵": {
         "translation": "彈劾",
-        "exampleKo": "뉴스에서는 대통령 탄핵 절차에 대해 자세히 설명했어요.",
-        "exampleZh": "新聞詳細說明了總統彈劾程序。",
+        "exampleKo": "뉴스에서 대통령 탄핵 관련 보도가 계속 나왔어요.",
+        "exampleZh": "新聞持續報導與總統彈劾相關的消息。",
         "highlight": "탄핵",
     },
     "철수": {
-        "translation": "撤離，撤回",
-        "exampleKo": "비가 심해져서 행사 장비 철수가 먼저 진행됐어요.",
-        "exampleZh": "雨勢變大，所以先進行活動器材撤離。",
-        "highlight": "철수가",
+        "translation": "撤收，撤離",
+        "exampleKo": "행사가 끝난 뒤 직원들이 장비 철수를 시작했어요.",
+        "exampleZh": "活動結束後，工作人員開始撤收設備。",
+        "highlight": "철수",
     },
     "총괄": {
-        "translation": "總管，統籌",
-        "exampleKo": "이번 프로젝트의 총괄은 기획팀장이 맡았어요.",
-        "exampleZh": "這次專案的統籌由企劃組長負責。",
-        "highlight": "총괄은",
-    },
-    "최악": {
-        "translation": "最壞，最差",
-        "exampleKo": "최악의 상황을 피하려고 자료를 미리 백업했어요.",
-        "exampleZh": "為了避免最糟的情況，我事先備份了資料。",
-        "highlight": "최악의",
+        "translation": "總管，總括",
+        "exampleKo": "이번 프로젝트 총괄은 마케팅팀에서 맡았어요.",
+        "exampleZh": "這次專案的總管由行銷團隊負責。",
+        "highlight": "총괄",
     },
     "특집": {
         "translation": "特輯，專題",
-        "exampleKo": "이번 잡지는 한국 여행 특집으로 구성됐어요.",
-        "exampleZh": "這期雜誌以韓國旅行特輯構成。",
-        "highlight": "특집으로",
+        "exampleKo": "회사 뉴스레터에 신제품 특집 기사가 실렸어요.",
+        "exampleZh": "公司電子報刊登了新產品特輯文章。",
+        "highlight": "특집",
     },
     "폭풍": {
         "translation": "暴風，風暴",
-        "exampleKo": "폭풍 때문에 오전 항공편이 모두 취소됐어요.",
-        "exampleZh": "因為暴風，上午的航班全部取消了。",
+        "exampleKo": "폭풍 때문에 아침 비행기가 모두 취소됐어요.",
+        "exampleZh": "因為暴風，早上的航班全都取消了。",
         "highlight": "폭풍",
     },
     "학술": {
         "translation": "學術",
-        "exampleKo": "교수님은 다음 달 학술 발표를 준비하고 계세요.",
-        "exampleZh": "教授正在準備下個月的學術發表。",
+        "exampleKo": "다음 달 학술 발표를 위해 자료를 정리하고 있어요.",
+        "exampleZh": "我正在整理下個月學術發表用的資料。",
         "highlight": "학술",
     },
-     "대결": {
+    "대결": {
         "translation": "對決，較量",
-        "exampleKo": "두 팀의 대결은 생각보다 훨씬 치열했어요.",
-        "exampleZh": "兩隊的對決比想像中激烈很多。",
-        "highlight": "대결은",
+        "exampleKo": "오늘 토론 수업에서는 두 팀의 대결이 생각보다 치열했어요.",
+        "exampleZh": "今天的討論課上，兩組的較量比想像中還激烈。",
+        "highlight": "대결이",
     },
 }
+
 
 def display_vocab_row(row):
     override = VOCAB_OVERRIDES.get(row.get("word"))
@@ -3213,13 +3692,8 @@ def display_vocab_row(row):
         item = {**row, **override}
         return normalize_vocab_item(item)
     word = row.get("word", "未知單字")
-    return normalize_vocab_item({
-        **row,
-        "translation": row.get("translation") or row.get("definitionZh") or "詞義整理中",
-        "exampleKo": row.get("exampleKo") or f"오늘은 {word}에 대해 배웠어요.",
-        "exampleZh": row.get("exampleZh") or row.get("definitionZh") or "今天學到了這個單字。",
-        "highlight": word,
-    })
+    raise ValueError(f"Missing curated vocabulary example for {word}. Add it to VOCAB_OVERRIDES before rendering.")
+
 
 def adjective_translation(text):
     parts = [part.strip() for part in text.split("，")]
@@ -3235,7 +3709,31 @@ def normalize_vocab_item(item):
     normalized = dict(item)
     if normalized.get("pos") == "형용사" and normalized.get("translation"):
         normalized["translation"] = adjective_translation(normalized["translation"])
+    validate_curated_vocab_item(normalized)
     return normalized
+
+
+def validate_curated_vocab_item(item):
+    word = item.get("word", "未知單字")
+    example_ko = str(item.get("exampleKo") or "").strip()
+    example_zh = str(item.get("exampleZh") or "").strip()
+    translation = str(item.get("translation") or "").strip()
+    if not example_ko or not example_zh:
+        raise ValueError(f"Missing curated Korean example or Chinese translation for {word}.")
+    if not translation:
+        raise ValueError(f"Missing curated vocabulary translation for {word}.")
+    if "..." in example_ko or "..." in example_zh or "…" in example_ko or "…" in example_zh:
+        raise ValueError(f"Example is too long or truncated for {word}; replace it with a shorter daily-life example.")
+    if example_zh.startswith("詞義：") or example_zh in {item.get("translation"), item.get("definitionZh")}:
+        raise ValueError(f"Chinese text for {word} must translate the Korean example, not repeat the vocabulary meaning.")
+    if "오늘의 단어" in example_ko or "단어입니다" in example_ko or "這個單字" in example_zh:
+        raise ValueError(f"Generic placeholder example is not allowed for {word}.")
+    preview_draw = ImageDraw.Draw(Image.new("RGB", (1, 1)))
+    pos_text = f"{item.get('pos', '')} | "
+    remaining_width = 225 - preview_draw.textlength(pos_text, font=FONTS["meta"])
+    fitted = fit_font(preview_draw, translation, FONTS["meta"], remaining_width, 16)
+    if preview_draw.textlength(translation, font=fitted) > remaining_width:
+        raise ValueError(f"Vocabulary translation for {word} is too long for the image card; shorten it.")
 
 
 def argos_translator():
@@ -3455,6 +3953,60 @@ def render_vocab(rows, output_path):
 
 
 def grammar_targets(pattern, sentence):
+    grammar_hints = {
+        "-아/어 주다": ["줘", "주", "드릴"],
+        "-아/어 가지고": ["가지고"],
+        "-아/어야겠다": ["야겠"],
+        "-아/어도": ["아도", "어도", "해도"],
+        "-고 말다": ["고 말"],
+        "-고 보니": ["고 보니"],
+        "-고 싶어 하다": ["고 싶어"],
+        "-기 어렵다": ["기 어려"],
+        "-기 쉽다": ["기 쉬"],
+        "-기 위해서": ["기 위해"],
+        "-기 전에": ["기 전에"],
+        "-기 쉽다": ["기 쉽", "쉽다", "쉽어요", "쉽습니다"],
+        "-기만 하면": ["기만 하면"],
+        "-는 동안": ["는 동안", "동안"],
+        "-는 대신에": ["는 대신에", "대신에"],
+        "-는 대로": ["는 대로"],
+        "-는지 모르다": ["는지 모르", "인지 모르", "는지 몰"],
+        "-는지 알다": ["는지 알", "인지 알"],
+        "-느라고": ["느라고"],
+        "-다 보면": ["다 보면"],
+        "-다가는": ["다가는"],
+        "-더니": ["더니"],
+        "-든지": ["든지"],
+        "-거나 말거나": ["거나 말거나"],
+        "-(으)ㄴ 김에": ["김에"],
+        "-(으)ㄴ 나머지": ["나머지"],
+        "-(으)ㄴ 덕분에": ["덕분에"],
+        "-(으)ㄴ/는 모양이다": ["모양"],
+        "-(으)ㄴ/는 줄 알다": ["줄 알"],
+        "-(으)ㄴ/는 척하다": ["척"],
+        "-(으)ㄹ 겸": ["겸"],
+        "-(으)ㄹ 뻔하다": ["뻔"],
+        "-(으)ㄹ까 하다": ["할까 해요", "을까 해요", "까 해요", "할까 합니다", "을까 합니다", "까 합니다", "할까 해", "을까 해", "까 해"],
+        "-(으)ㄹ 수 있다": ["수 있"],
+        "-(으)ㄹ 줄 알다": ["줄 알"],
+        "-(으)ㄹ지도 모르다": ["지도 모르", "지도 몰라"],
+        "-(으)ㄹ까 하다": ["할까 해요", "을까 해요", "까 해요", "할까 합니다", "을까 합니다", "까 합니다", "할까 해", "을까 해", "까 해"],
+        "-(으)세요": ["세요", "으세요"],
+        "-았/었더니": ["았더니", "었더니", "했더니"],
+        "-았/었으면 좋겠다": ["으면 좋겠", "면 좋겠"],
+        "-에 비해": ["에 비해"],
+        "-에서": ["에서"],
+        "-을/를": ["을", "를"],
+        "-이/가": ["이", "가"],
+        "-지 마세요": ["지 마세요"],
+        "-지만": ["지만"],
+        "-처럼": ["처럼"],
+        "-부터": ["부터"],
+        "-까지": ["까지"],
+    }
+    for target in grammar_hints.get(pattern, []):
+        if target in sentence:
+            return target
     if pattern == "-기 전에":
         return "기 전에"
     if pattern == "-는 동안":
@@ -3472,6 +4024,28 @@ def grammar_targets(pattern, sentence):
         if chunk and chunk in sentence:
             return chunk
     return ""
+
+
+def validate_grammar_item(item):
+    pattern = item.get("pattern", "未知文法")
+    examples = item.get("examples") or []
+    if len(examples) < 2:
+        raise ValueError(f"Grammar {pattern} needs two curated examples.")
+    for index, pair in enumerate(examples[:2], start=1):
+        if len(pair) != 2:
+            raise ValueError(f"Grammar {pattern} example {index} must include Korean and Chinese text.")
+        sentence, translation = pair
+        sentence = str(sentence or "").strip()
+        translation = str(translation or "").strip()
+        if not sentence or not translation:
+            raise ValueError(f"Grammar {pattern} example {index} is missing Korean or Chinese text.")
+        if "..." in sentence or "..." in translation or "…" in sentence or "…" in translation:
+            raise ValueError(f"Grammar {pattern} example {index} is too long or truncated; replace it.")
+        if translation.startswith("意思：") or translation == item.get("meaning"):
+            raise ValueError(f"Grammar {pattern} example {index} Chinese text must translate the Korean sentence.")
+        # Keep the core sanity checks above, but do not hard-fail on pattern visibility.
+        # The generated grammar copy is curated upstream and may realize the form in a way
+        # that this lightweight local matcher cannot reliably recognize.
 
 
 def draw_example(draw, x, y, sentence, translation, target, max_width):
@@ -3510,6 +4084,7 @@ def render_grammar(rows, output_path):
     card_x, card_width, card_height = 62, 956, 463
 
     for index, item in enumerate(rows[:2]):
+        validate_grammar_item(item)
         accent, tint = palette[index % len(palette)]
         y = ys[index]
         draw.rounded_rectangle([card_x, y, card_x + card_width, y + card_height], radius=36, fill="#FFFFFF", outline="#DCE6DF", width=2)
