@@ -54,12 +54,12 @@ jobs:
         env:
           PUBLISH_HANHAN_IMAGES_GITHUB: "1"
           PUSH_HANHAN_LINE: "1"
-          PUSH_HANHAN_WORD_SERIES: "1"
+          PUSH_HANHAN_WORD_SERIES: "0"
           PYTHON: "python"
           LINE_HANHAN_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_HANHAN_CHANNEL_ACCESS_TOKEN }}
           LINE_HANHAN_CHANNEL_SECRET: ${{ secrets.LINE_HANHAN_CHANNEL_SECRET }}
           LINE_HANHAN_TARGET_IDS: ${{ secrets.LINE_HANHAN_TARGET_IDS }}
           HANHAN_IMAGE_BASE_URL: https://raw.githubusercontent.com/iriswu1991ai/things-of-korean-line-bot/main/out/ig
-          HANHAN_REQUIRE_TAIPEI_MORNING: "1"
+          HANHAN_REQUIRE_TAIPEI_MORNING: "0"
           HANHAN_DEDUPE_GITHUB: "1"
         run: node scripts/generate-ig-images.mjs
