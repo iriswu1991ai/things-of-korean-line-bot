@@ -47,29 +47,7 @@ const morningTarget = 7 * 60 + 30;
 const morningEnd = 8 * 60 + 30;
 const maxWaitMinutes = Number(process.env.HANHAN_MAX_WAIT_MINUTES || "300");
 
-function runHanhanWordSeries() {
-  if (process.env.PUSH_HANHAN_WORD_SERIES !== "1") return;
-  if (!process.env.LINE_HANHAN_CHANNEL_ACCESS_TOKEN) {
-    console.warn("Skipped HANHAN word series: missing LINE_HANHAN_CHANNEL_ACCESS_TOKEN.");
-    return;
-  }
 
-  if (isScheduledRun) {
-    runGit(["pull", "--rebase", "origin", "main"], { allowFailure: true });
-  }
-
-  const stateRelativePath = "data/hanhan-word-series-state.json";
-  const pushResult = spawnSync(
-    process.execPath,
-    ["scripts/push-hanhan-word-series.mjs"],
-    {
-      cwd: rootDir,
-      env: {
-        ...process.env,
-        HANHAN_WORD_SERIES_REQUIRE_TAIPEI_MORNING: isScheduledRun ? "1" : "0"
-      },
-      encoding: "utf8"
-    }
   );
   if (pushResult.stdout) process.stdout.write(pushResult.stdout);
   if (pushResult.stderr) process.stderr.write(pushResult.stderr);
