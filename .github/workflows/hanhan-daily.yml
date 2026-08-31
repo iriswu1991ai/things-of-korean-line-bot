@@ -2,13 +2,9 @@ name: HANHAN daily TOPIK push
 
 on:
   schedule:
-    # Primary window: 07:20-08:20 Asia/Taipei, multiple attempts.
-    - cron: "20,30,40,50 23 * * *"
+    # 07:30-08:20 Asia/Taipei, multiple attempts in case GitHub delays or drops a run.
+    - cron: "30,40,50 23 * * *"
     - cron: "0,10,20 0 * * *"
-    # Fallback window for delayed GitHub schedule runs observed on 2026-07-14.
-    # The script still refuses to push unless the actual runtime is 07:20-08:30 Asia/Taipei.
-    - cron: "20,30,40,50 15 * * *"
-    - cron: "0,10,20 16 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -54,7 +50,7 @@ jobs:
         env:
           PUBLISH_HANHAN_IMAGES_GITHUB: "1"
           PUSH_HANHAN_LINE: "1"
-    
+          PUSH_HANHAN_WORD_SERIES: "0"
           PYTHON: "python"
           LINE_HANHAN_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_HANHAN_CHANNEL_ACCESS_TOKEN }}
           LINE_HANHAN_CHANNEL_SECRET: ${{ secrets.LINE_HANHAN_CHANNEL_SECRET }}
