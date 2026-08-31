@@ -1,5 +1,6 @@
 import topikVocab from "../data/topik-vocab.json" with { type: "json" };
 import topikGrammar from "../data/topik-grammar.json" with { type: "json" };
+import hanhanReviewedPlan from "../data/hanhan-reviewed-plan.json" with { type: "json" };
 
 export const TOPIK_VOCAB_COUNT = topikVocab.length;
 export const TOPIK_GRAMMAR_COUNT = topikGrammar.length;
@@ -1062,6 +1063,21 @@ function excludedValues(name) {
   return new Set(String(value).split(/\n|,/).map((item) => item.trim()).filter(Boolean));
 }
 
+function taipeiDateKey() {
+  const overrideDate = globalThis.process?.env?.HANHAN_DATE || globalThis.HANHAN_DATE;
+  if (overrideDate) return overrideDate;
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Taipei",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(new Date());
+}
+
+function reviewedPlanForToday() {
+  return hanhanReviewedPlan[taipeiDateKey()] || null;
+}
+
 function dayNumber(offset = 0) {
   const overrideDate = globalThis.process?.env?.HANHAN_DATE || globalThis.HANHAN_DATE;
   const values = overrideDate
@@ -1362,6 +1378,11 @@ export async function financeMessages() {
 }
 
 export function koreanVocabRows() {
+  const reviewedPlan = reviewedPlanForToday();
+  if (Array.isArray(reviewedPlan?.vocab) && reviewedPlan.vocab.length >= 10) {
+    return reviewedPlan.vocab.slice(0, 10);
+  }
+
   const excludedWords = excludedValues("HANHAN_EXCLUDE_VOCAB_WORDS");
   const allowedWords = excludedValues("HANHAN_ALLOWED_VOCAB_WORDS");
   const availableVocab = uniqueByItemKey(topikVocab).filter((item) =>
@@ -1371,13 +1392,7 @@ export function koreanVocabRows() {
   );
   let curatedVocab = availableVocab.filter((item) => CURATED_VOCAB_WORDS.has(item.w));
   if (curatedVocab.length < 10 && excludedWords.size) {
-    curatedVocab = uniqueByItemKey(topikVocab).filter((item) =>
-      (!allowedWords.size || allowedWords.has(item.w)) &&
-      !BLOCKED_VOCAB_WORDS.has(item.w) &&
-      CURATED_VOCAB_WORDS.has(item.w)
-    );
-    process.env.HANHAN_VOCAB_CYCLE_RESET = "1";
-    console.warn("HANHAN vocab pool exhausted; starting a new reviewed vocabulary cycle.");
+    throw new Error(`Need 10 unused curated TOPIK vocab item(s), only ${curatedVocab.length} available after exclusions. Repeating old HANHAN vocab is not allowed. Add reviewed future rows to data/hanhan-reviewed-plan.json.`);
   }
   if (curatedVocab.length < 10) {
     throw new Error(`Need 10 curated TOPIK vocab item(s), only ${curatedVocab.length} available after exclusions. Add reviewed words to CURATED_VOCAB_WORDS and VOCAB_OVERRIDES.`);
@@ -1401,6 +1416,11 @@ export function koreanVocabMessages(rows = koreanVocabRows()) {
 }
 
 export function koreanGrammarRows() {
+  const reviewedPlan = reviewedPlanForToday();
+  if (Array.isArray(reviewedPlan?.grammar) && reviewedPlan.grammar.length >= 2) {
+    return reviewedPlan.grammar.slice(0, 2);
+  }
+
   const levelByPattern = new Map(topikGrammar.map((item) => [item.pattern, item.level]));
   const excludedPatterns = excludedValues("HANHAN_EXCLUDE_GRAMMAR_PATTERNS");
   const usableGrammar = grammarBank
@@ -1414,9 +1434,7 @@ export function koreanGrammarRows() {
     );
   let completeGrammar = usableGrammar.filter((item) => !excludedPatterns.has(item.pattern));
   if (completeGrammar.length < 2 && excludedPatterns.size) {
-    completeGrammar = usableGrammar;
-    process.env.HANHAN_GRAMMAR_CYCLE_RESET = "1";
-    console.warn("HANHAN grammar pool exhausted; starting a new reviewed grammar cycle.");
+    throw new Error(`Need 2 unused TOPIK grammar pattern(s), only ${completeGrammar.length} available after exclusions. Repeating old HANHAN grammar is not allowed. Add reviewed future rows to data/hanhan-reviewed-plan.json.`);
   }
   if (completeGrammar.length < 2) {
     throw new Error(`Need 2 unused TOPIK grammar pattern(s), only ${completeGrammar.length} available after exclusions. Add reviewed grammar before repeating old patterns.`);

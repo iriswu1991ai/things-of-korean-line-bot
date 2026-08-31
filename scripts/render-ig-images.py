@@ -57,6 +57,126 @@ FONTS = {
 }
 
 VOCAB_OVERRIDES = {
+    "뭐": {
+        "translation": "什麼",
+        "exampleKo": "회의에서 뭐부터 정리할지 모르겠으면 제가 먼저 안건을 적어 둘게요.",
+        "exampleZh": "如果在會議上不知道要先整理什麼，我先把議程寫下來。",
+        "highlight": "뭐부터",
+    },
+    "글쎄": {
+        "translation": "也許吧，或許吧，難說",
+        "exampleKo": "점심 메뉴를 고르자는 말에 저는 글쎄, 아직 잘 모르겠다고 했어요.",
+        "exampleZh": "對於要不要選午餐菜單，我說「難說」，因為我還不太確定。",
+        "highlight": "글쎄,",
+    },
+    "막다": {
+        "translation": "堵住，阻擋",
+        "exampleKo": "비가 새지 않도록 창문 틈을 수건으로 막아 두었어요.",
+        "exampleZh": "為了不讓雨水滲進來，我先用毛巾把窗縫堵住了。",
+        "highlight": "막아",
+    },
+    "끈": {
+        "translation": "繩子，繩索，線",
+        "exampleKo": "운동회 준비를 하면서 박스를 끈으로 단단히 묶어 창고에 옮겼어요.",
+        "exampleZh": "準備運動會時，我們用繩子把箱子綁牢，搬到倉庫裡。",
+        "highlight": "끈으로",
+    },
+    "민주화되다": {
+        "translation": "變得民主化",
+        "exampleKo": "작은 회사라도 의사결정이 민주화되면 직원들이 더 적극적으로 의견을 내요.",
+        "exampleZh": "就算是小公司，只要決策變得民主化，員工也會更積極提出意見。",
+        "highlight": "민주화되면",
+    },
+    "항복": {
+        "translation": "降服，投降，歸順",
+        "exampleKo": "토론 시간에 상대 팀이 더 강하게 나오자 우리는 결국 항복 선언을 했어요.",
+        "exampleZh": "在討論時間裡，對方隊伍攻勢更強，我們最後只好宣布投降。",
+        "highlight": "항복 선언",
+    },
+    "집": {
+        "translation": "房子，家，住處",
+        "exampleKo": "퇴근길에 집 앞 편의점에서 저녁거리를 조금 사서 들어갔어요.",
+        "exampleZh": "下班路上，我在家門口的便利商店買了些晚餐食材再回家。",
+        "highlight": "집 앞",
+    },
+    "휴일": {
+        "translation": "休息日，假日",
+        "exampleKo": "휴일 오전에는 동네 도서관에서 책을 읽으며 조용히 쉬었어요.",
+        "exampleZh": "假日早上，我在社區圖書館安靜地看書休息。",
+        "highlight": "휴일",
+    },
+    "환경": {
+        "translation": "環境",
+        "exampleKo": "사무실 환경이 밝고 조용해서 오전 회의에 더 집중할 수 있었어요.",
+        "exampleZh": "辦公室環境明亮又安靜，所以早上的會議我更能專心。",
+        "highlight": "환경이",
+    },
+    "설득하다": {
+        "translation": "說服",
+        "exampleKo": "팀장은 일정을 다시 짜야 한다고 모두를 차분하게 설득했어요.",
+        "exampleZh": "組長冷靜地說服了大家，說行程必須重新安排。",
+        "highlight": "설득했어요",
+    },
+    "관계하다": {
+        "translation": "有關，涉足，參與",
+        "exampleKo": "이 업무는 고객 정보 관리와 관계해서 사전 확인이 필요해요.",
+        "exampleZh": "這項工作與顧客資料管理有關，所以需要先確認。",
+        "highlight": "관계해서",
+    },
+    "자극": {
+        "translation": "刺激",
+        "exampleKo": "아침에 찬바람이 얼굴에 자극이 돼서 정신이 확 들었어요.",
+        "exampleZh": "早上的冷風刺激了臉，讓我一下子清醒了。",
+        "highlight": "자극이",
+    },
+    "떼이다": {
+        "translation": "被賴賬",
+        "exampleKo": "거래처에 보낸 대금을 떼이지 않도록 계약서를 다시 확인했어요.",
+        "exampleZh": "為了避免被客戶賴掉款項，我又重新確認了合約書。",
+        "highlight": "떼이지",
+    },
+    "완화하다": {
+        "translation": "緩解，使緩和",
+        "exampleKo": "회의 전에 커피를 조금 줄이니 긴장이 완화되는 느낌이었어요.",
+        "exampleZh": "會議前少喝一點咖啡後，感覺緊張緩和了些。",
+        "highlight": "완화되는",
+    },
+    "차": {
+        "translation": "茶，茶水",
+        "exampleKo": "오후에 졸릴 때는 사무실에서 따뜻한 차 한 잔을 마셔요.",
+        "exampleZh": "下午想睡的時候，我會在辦公室喝一杯熱茶。",
+        "highlight": "차 한 잔",
+    },
+    "갚다": {
+        "translation": "還，償還",
+        "exampleKo": "월급을 받으면 먼저 친구에게 빌린 돈을 갚을 거예요.",
+        "exampleZh": "領到薪水後，我會先還朋友借給我的錢。",
+        "highlight": "갚을",
+    },
+    "증가하다": {
+        "translation": "增加",
+        "exampleKo": "최근에 출근 시간이 빨라지면서 교통비가 조금 증가했어요.",
+        "exampleZh": "最近因為上班時間變早，交通費稍微增加了。",
+        "highlight": "증가했어요",
+    },
+    "축소하다": {
+        "translation": "縮小，縮減",
+        "exampleKo": "예산이 줄어서 이번 달 회식 규모를 축소하기로 했어요.",
+        "exampleZh": "因為預算減少，我們決定縮小這個月聚餐的規模。",
+        "highlight": "축소하기로",
+    },
+    "죽어지내다": {
+        "translation": "忍氣吞聲，低聲下氣",
+        "exampleKo": "불만이 있어도 상사에게 죽어지내며 참고만 있지는 않으려고 해요.",
+        "exampleZh": "即使有不滿，我也不想對上司一直忍氣吞聲，只想忍著不說。",
+        "highlight": "죽어지내며",
+    },
+    "복구하다": {
+        "translation": "恢復，修復",
+        "exampleKo": "정전이 끝난 뒤 IT팀이 서버를 밤새 복구했어요.",
+        "exampleZh": "停電結束後，IT 團隊整晚都在修復伺服器。",
+        "highlight": "복구했어요",
+    },
     "실망하다": {
         "translation": "失望",
         "exampleKo": "팀장이 발표를 미루자고 해서 저는 조금 실망했지만 바로 수정안을 다시 정리했어요.",
@@ -338,6 +458,12 @@ VOCAB_OVERRIDES = {
         "exampleKo": "민수 씨는 새사람을 동료들에게 소개하면서 회사 생활을 잘 도와달라고 했어요.",
         "exampleZh": "民秀在把新婚妻子介紹給同事時，請大家多多幫助她適應公司生活。",
         "highlight": "새사람을",
+    },
+    "죽어지내다": {
+        "translation": "低調地過日子，委屈求生",
+        "exampleKo": "요즘은 일이 많아서 퇴근 후에는 집에서 조용히 죽어지내고 있어요.",
+        "exampleZh": "最近工作很多，所以我下班後都在家安靜地低調過日子。",
+        "highlight": "죽어지내고",
     },
     "도달하다": {
         "translation": "到達",
@@ -1466,6 +1592,7 @@ VOCAB_OVERRIDES = {
         "highlight": "안녕하셨어요",
     },
     "택배": {
+        "translation": "快遞",
         "exampleKo": "오늘 택배가 집에 도착했어요.",
         "exampleZh": "今天包裹送到家了。",
         "highlight": "택배",
@@ -1605,6 +1732,7 @@ VOCAB_OVERRIDES = {
         "highlight": "명단을",
     },
     "백팔십도": {
+        "translation": "一百八十度",
         "exampleKo": "프로젝트 방향이 바뀌면서 일정도 백팔십도로 달라졌어요.",
         "exampleZh": "因為專案方向改變，時程也完全變了。",
         "highlight": "백팔십도로",
@@ -3691,6 +3819,8 @@ def display_vocab_row(row):
     if override:
         item = {**row, **override}
         return normalize_vocab_item(item)
+    if row.get("exampleKo") and row.get("exampleZh") and row.get("translation"):
+        return normalize_vocab_item(row)
     word = row.get("word", "未知單字")
     raise ValueError(f"Missing curated vocabulary example for {word}. Add it to VOCAB_OVERRIDES before rendering.")
 

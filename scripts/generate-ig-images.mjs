@@ -169,14 +169,14 @@ function parsePublishedPost(text) {
     if (section === "vocab") {
       const normalized = line
         .replace(/^\d+\.\s*/, "")
-        .replace(/^TOPIK\s+\d+\s*｜\s*/, "");
-      const word = normalized.split("｜")[0]?.trim();
+        .replace(/^TOPIK\s+\d+\s*[｜|]\s*/, "");
+      const word = normalized.split(/[｜|]/)[0]?.trim();
       if (word) vocab.add(word);
     }
 
     if (section === "grammar") {
       const normalized = line.replace(/^\d+\.\s*/, "");
-      const match = normalized.match(/^TOPIK\s+\d+\s*｜\s*(.+)$/);
+      const match = normalized.match(/^TOPIK\s+\d+\s*[｜|]\s*(.+)$/);
       if (match?.[1]) grammar.add(match[1].trim());
     }
   }
@@ -186,16 +186,24 @@ function parsePublishedPost(text) {
 
 function readPublishedHistory(currentDate) {
   const history = { vocab: new Set(), grammar: new Set() };
-  const everUsedPath = resolve(rootDir, "data", "hanhan-ever-used.json");
-  if (existsSync(everUsedPath)) {
+  const addHistoryFile = (filePath, label) => {
+    if (!existsSync(filePath)) return;
     try {
-      const parsed = JSON.parse(readFileSync(everUsedPath, "utf8"));
+      const parsed = JSON.parse(readFileSync(filePath, "utf8"));
       for (const word of parsed.vocab || []) history.vocab.add(word);
       for (const pattern of parsed.grammar || []) history.grammar.add(pattern);
+      for (const [publishedDate, item] of Object.entries(parsed.byDate || {})) {
+        if (publishedDate >= currentDate) continue;
+        for (const word of item.vocab || []) history.vocab.add(word);
+        for (const pattern of item.grammar || []) history.grammar.add(pattern);
+      }
     } catch (error) {
-      console.warn(`Unable to read HANHAN ever-used history: ${error.message}`);
+      console.warn(`Unable to read ${label}: ${error.message}`);
     }
-  }
+  };
+
+  const everUsedPath = resolve(rootDir, "data", "hanhan-ever-used.json");
+  addHistoryFile(everUsedPath, "HANHAN ever-used history");
 
   const wordSeriesStatePath = resolve(rootDir, "data", "hanhan-word-series-state.json");
   if (existsSync(wordSeriesStatePath)) {
@@ -211,24 +219,7 @@ function readPublishedHistory(currentDate) {
   }
 
   const historyPath = resolve(rootDir, "data", "hanhan-published-history.json");
-  if (existsSync(historyPath)) {
-    try {
-      const parsed = JSON.parse(readFileSync(historyPath, "utf8"));
-      const byDateEntries = Object.entries(parsed.byDate || {});
-      if (byDateEntries.length) {
-        for (const [publishedDate, item] of byDateEntries) {
-          if (publishedDate >= currentDate) continue;
-          for (const word of item.vocab || []) history.vocab.add(word);
-          for (const pattern of item.grammar || []) history.grammar.add(pattern);
-        }
-      } else {
-        for (const word of parsed.vocab || []) history.vocab.add(word);
-        for (const pattern of parsed.grammar || []) history.grammar.add(pattern);
-      }
-    } catch (error) {
-      console.warn(`Unable to read HANHAN published history: ${error.message}`);
-    }
-  }
+  addHistoryFile(historyPath, "HANHAN published history");
 
   const igDir = resolve(rootDir, "out", "ig");
   if (!existsSync(igDir)) return history;
@@ -262,12 +253,9 @@ function validateFreshPayload(payload, history) {
   const repeatedGrammar = grammarPatterns.filter((pattern) => history.grammar.has(pattern));
   const duplicateVocab = findDuplicates(vocabWords);
   const duplicateGrammar = findDuplicates(grammarPatterns);
-  const vocabCycleReset = process.env.HANHAN_VOCAB_CYCLE_RESET === "1";
-  const grammarCycleReset = process.env.HANHAN_GRAMMAR_CYCLE_RESET === "1";
-
   const errors = [];
-  if (repeatedVocab.length && !vocabCycleReset) errors.push(`repeated vocab: ${[...new Set(repeatedVocab)].join(", ")}`);
-  if (repeatedGrammar.length && !grammarCycleReset) errors.push(`repeated grammar: ${[...new Set(repeatedGrammar)].join(", ")}`);
+  if (repeatedVocab.length) errors.push(`repeated vocab: ${[...new Set(repeatedVocab)].join(", ")}`);
+  if (repeatedGrammar.length) errors.push(`repeated grammar: ${[...new Set(repeatedGrammar)].join(", ")}`);
   if (duplicateVocab.length) errors.push(`duplicate vocab in today's set: ${duplicateVocab.join(", ")}`);
   if (duplicateGrammar.length) errors.push(`duplicate grammar in today's set: ${duplicateGrammar.join(", ")}`);
   if (errors.length) {
