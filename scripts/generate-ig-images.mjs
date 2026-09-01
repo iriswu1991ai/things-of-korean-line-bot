@@ -186,7 +186,7 @@ function parsePublishedPost(text) {
 
 function readPublishedHistory(currentDate) {
   const history = { vocab: new Set(), grammar: new Set() };
-  const addHistoryFile = (filePath, label) => {
+  const addEverUsedFile = (filePath, label) => {
     if (!existsSync(filePath)) return;
     try {
       const parsed = JSON.parse(readFileSync(filePath, "utf8"));
@@ -201,9 +201,22 @@ function readPublishedHistory(currentDate) {
       console.warn(`Unable to read ${label}: ${error.message}`);
     }
   };
+  const addPublishedByDateFile = (filePath, label) => {
+    if (!existsSync(filePath)) return;
+    try {
+      const parsed = JSON.parse(readFileSync(filePath, "utf8"));
+      for (const [publishedDate, item] of Object.entries(parsed.byDate || {})) {
+        if (publishedDate >= currentDate) continue;
+        for (const word of item.vocab || []) history.vocab.add(word);
+        for (const pattern of item.grammar || []) history.grammar.add(pattern);
+      }
+    } catch (error) {
+      console.warn(`Unable to read ${label}: ${error.message}`);
+    }
+  };
 
   const everUsedPath = resolve(rootDir, "data", "hanhan-ever-used.json");
-  addHistoryFile(everUsedPath, "HANHAN ever-used history");
+  addEverUsedFile(everUsedPath, "HANHAN ever-used history");
 
   const wordSeriesStatePath = resolve(rootDir, "data", "hanhan-word-series-state.json");
   if (existsSync(wordSeriesStatePath)) {
@@ -219,7 +232,7 @@ function readPublishedHistory(currentDate) {
   }
 
   const historyPath = resolve(rootDir, "data", "hanhan-published-history.json");
-  addHistoryFile(historyPath, "HANHAN published history");
+  addPublishedByDateFile(historyPath, "HANHAN published history");
 
   const igDir = resolve(rootDir, "out", "ig");
   if (!existsSync(igDir)) return history;
