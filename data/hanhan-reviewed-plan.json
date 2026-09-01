@@ -139,134 +139,126 @@
     "vocab": [
       {
         "level": 1,
-        "word": "아니다",
+        "word": "없다",
         "pos": "형용사",
-        "translation": "不是的",
-        "exampleKo": "이 파일은 최종본이 아니라서 다시 확인해야 해요.",
-        "exampleZh": "這個檔案不是最終版，所以要再確認。",
-        "highlight": "아니라서"
+        "translation": "沒有的",
+        "definitionZh": "人或事物等實際上不存在。",
+        "exampleKo": "오늘은 오후 회의가 없어서 일찍 퇴근했어요.",
+        "exampleZh": "今天下午沒有會議，所以我早點下班了。"
       },
       {
         "level": 2,
-        "word": "토요일",
+        "word": "엉덩이",
         "pos": "명사",
-        "translation": "星期六",
-        "exampleKo": "토요일에는 친구와 같이 공부해요.",
-        "exampleZh": "星期六我和朋友一起讀書。",
-        "highlight": "토요일에는"
+        "translation": "屁股，臀部",
+        "definitionZh": "當坐下來時與地面接觸的，腰和大腿之間肉多的身體部位。",
+        "exampleKo": "오래 앉아 있었더니 엉덩이가 아팠어요.",
+        "exampleZh": "坐太久了，所以屁股有點痛。"
       },
       {
         "level": 3,
-        "word": "끝없다",
-        "pos": "형용사",
-        "translation": "無止盡的",
-        "exampleKo": "끝없는 회의보다 짧은 정리가 더 필요해요.",
-        "exampleZh": "比起無止盡的會議，更需要簡短整理。",
-        "highlight": "끝없는"
+        "word": "개다",
+        "pos": "동사",
+        "translation": "放晴",
+        "definitionZh": "雪、雨、霧等停或散後原來的陰天變得晴朗。",
+        "exampleKo": "오후가 되자 비가 그치고 하늘이 갰어요.",
+        "exampleZh": "到了下午雨停了，天空放晴了。"
       },
       {
         "level": 4,
-        "word": "이기적",
-        "pos": "명사",
-        "translation": "自私的",
-        "exampleKo": "이기적인 태도는 팀 분위기를 나쁘게 만들어요.",
-        "exampleZh": "自私的態度會讓團隊氣氛變差。",
-        "highlight": "이기적인"
+        "word": "빚다",
+        "pos": "동사",
+        "translation": "揉捏，造成",
+        "definitionZh": "攪拌或揉搓泥土等而做成某種形態。",
+        "exampleKo": "작은 오해가 큰 문제를 빚을 수 있어요.",
+        "exampleZh": "小誤會可能會造成大問題。"
       },
       {
         "level": 5,
-        "word": "차고지",
-        "pos": "명사",
-        "translation": "車庫，停車場",
-        "exampleKo": "회사 차량은 퇴근 후 차고지에 세워 둡니다.",
-        "exampleZh": "公司車下班後會停在車庫。",
-        "highlight": "차고지에"
+        "word": "주되다",
+        "pos": "동사",
+        "translation": "主要，成為中心",
+        "definitionZh": "成為基本或中心。",
+        "exampleKo": "이번 보고서의 주된 내용은 고객 반응이에요.",
+        "exampleZh": "這份報告的主要內容是客戶反應。"
       },
       {
         "level": 6,
-        "word": "협조적",
+        "word": "패스",
         "pos": "명사",
-        "translation": "合作的，配合的",
-        "exampleKo": "상대 팀이 협조적이라 일정 조정이 쉬웠어요.",
-        "exampleZh": "對方團隊很配合，所以調整時程很順利。",
-        "highlight": "협조적이라"
+        "translation": "通過，票券",
+        "definitionZh": "指在考試、檢查等中合格。",
+        "exampleKo": "입장하려면 모바일 패스를 보여 주세요.",
+        "exampleZh": "入場時請出示手機通行證。"
       },
       {
         "level": 1,
-        "word": "전",
-        "pos": "명사",
-        "translation": "以前，之前",
-        "exampleKo": "회의 전에 자료를 한 번 더 읽었어요.",
-        "exampleZh": "開會前我又看了一次資料。",
-        "highlight": "전에"
+        "word": "아니",
+        "pos": "부사",
+        "translation": "不是，沒有",
+        "definitionZh": "用於表示否定或反對。",
+        "exampleKo": "저는 커피가 아니고 따뜻한 차를 주문했어요.",
+        "exampleZh": "我點的不是咖啡，而是熱茶。"
       },
       {
         "level": 2,
-        "word": "쌓다",
-        "pos": "동사",
-        "translation": "累積，堆放",
-        "exampleKo": "매일 조금씩 경험을 쌓고 있어요.",
-        "exampleZh": "我每天一點一點累積經驗。",
-        "highlight": "쌓고"
+        "word": "붉다",
+        "pos": "형용사",
+        "translation": "紅的",
+        "definitionZh": "顏色像鮮血或熟了的辣椒一樣。",
+        "exampleKo": "퇴근길 하늘이 붉어서 사진을 찍었어요.",
+        "exampleZh": "下班路上的天空很紅，所以我拍了照片。"
       },
       {
         "level": 3,
-        "word": "연구",
-        "pos": "명사",
-        "translation": "研究",
-        "exampleKo": "보고서 작성을 위해 시장 연구를 먼저 했어요.",
-        "exampleZh": "為了寫報告，我先做了市場研究。",
-        "highlight": "연구를"
+        "word": "대다",
+        "pos": "동사",
+        "translation": "靠近，供應",
+        "definitionZh": "趕上已經定好的時間。",
+        "exampleKo": "출입증을 기계에 대면 문이 열려요.",
+        "exampleZh": "把通行證靠近機器，門就會打開。"
       },
       {
         "level": 4,
-        "word": "논의되다",
-        "pos": "동사",
-        "translation": "被討論",
-        "exampleKo": "새 정책은 다음 회의에서 논의될 예정이에요.",
-        "exampleZh": "新政策預計在下次會議中討論。",
-        "highlight": "논의될"
+        "word": "판사",
+        "pos": "명사",
+        "translation": "法官",
+        "definitionZh": "指除大法院之外的，其它法院的審判員。",
+        "exampleKo": "그는 어릴 때부터 판사가 되고 싶어 했어요.",
+        "exampleZh": "他從小就想成為法官。"
       }
     ],
     "grammar": [
       {
-        "level": 1,
-        "pattern": "-와/과",
-        "attachment": "名詞 + 와/과；有收音用 과，無收音用 와。",
-        "meaning": "表示「和、與」。",
+        "level": 3,
+        "pattern": "-(으)ㄹ 예정이다",
+        "attachment": "動詞語幹 + (으)ㄹ 예정이다；有收音用 을 예정이다，無收音用 ㄹ 예정이다。",
+        "meaning": "表示預定或計畫，相當於「預計要做某事」。",
         "examples": [
           [
-            "동료와 점심을 먹었어요.",
-            "我和同事吃了午餐。"
+            "저는 다음 주에 새 프로젝트를 시작할 예정이에요.",
+            "我預計下週開始新專案。"
           ],
           [
-            "책과 노트를 가방에 넣었어요.",
-            "我把書和筆記本放進包包。"
+            "회의는 오후 세 시에 끝날 예정입니다.",
+            "會議預計下午三點結束。"
           ]
-        ],
-        "grammar_hints": [
-          "동료와",
-          "책과"
         ]
       },
       {
-        "level": 1,
-        "pattern": "-의",
-        "attachment": "名詞 + 의。",
-        "meaning": "表示所屬，相當於「...的」。",
+        "level": 3,
+        "pattern": "-다가",
+        "attachment": "動詞語幹 + 다가。",
+        "meaning": "表示動作進行中轉換或中斷，相當於「做著某事時」。",
         "examples": [
           [
-            "친구의 전화번호를 저장했어요.",
-            "我存了朋友的電話號碼。"
+            "퇴근하다가 편의점에 들렀어요.",
+            "下班途中我去了便利商店。"
           ],
           [
-            "회사의 새 공지를 읽었어요.",
-            "我讀了公司的新公告。"
+            "자료를 정리하다가 오류를 발견했어요.",
+            "整理資料時我發現了錯誤。"
           ]
-        ],
-        "grammar_hints": [
-          "친구의",
-          "회사의"
         ]
       }
     ]
@@ -274,135 +266,127 @@
   "2026-09-02": {
     "vocab": [
       {
-        "level": 1,
-        "word": "않다",
-        "pos": "보조 동사",
-        "translation": "不",
-        "exampleKo": "오늘은 비가 오지 않아서 걸어서 출근했어요.",
-        "exampleZh": "今天沒有下雨，所以我走路上班。",
-        "highlight": "않아서"
-      },
-      {
         "level": 2,
-        "word": "옳다",
-        "pos": "형용사",
-        "translation": "正確的，對的",
-        "exampleKo": "그 선택이 옳았는지 다시 생각해 봤어요.",
-        "exampleZh": "我重新想了那個選擇是否正確。",
-        "highlight": "옳았는지"
+        "word": "얼다",
+        "pos": "동사",
+        "translation": "結冰，凍住",
+        "definitionZh": "液體或有水氣的物體因冷而結成固體狀態。",
+        "exampleKo": "날씨가 추워서 길 위의 물이 얼었어요.",
+        "exampleZh": "天氣很冷，路上的水結冰了。"
       },
       {
         "level": 3,
-        "word": "필요성",
-        "pos": "명사",
-        "translation": "必要性",
-        "exampleKo": "팀장은 일정 조정의 필요성을 설명했어요.",
-        "exampleZh": "組長說明了調整時程的必要性。",
-        "highlight": "필요성을"
+        "word": "못되다",
+        "pos": "형용사",
+        "translation": "壞的，惡劣的",
+        "definitionZh": "從道德的角度上認為品行不佳。",
+        "exampleKo": "그런 못된 말은 동료에게 상처가 될 수 있어요.",
+        "exampleZh": "那種惡劣的話可能會傷害同事。"
       },
       {
         "level": 4,
-        "word": "존중되다",
-        "pos": "동사",
-        "translation": "被尊重",
-        "exampleKo": "회의에서는 서로의 의견이 존중되어야 해요.",
-        "exampleZh": "會議中彼此的意見應該被尊重。",
-        "highlight": "존중되어야"
+        "word": "정기적",
+        "pos": "명사",
+        "translation": "定期的",
+        "definitionZh": "規定一定的期限或時間的。",
+        "exampleKo": "정기적으로 자료를 백업하는 습관이 필요해요.",
+        "exampleZh": "需要養成定期備份資料的習慣。"
       },
       {
         "level": 5,
-        "word": "말끝",
-        "pos": "명사",
-        "translation": "話尾，語氣",
-        "exampleKo": "말끝이 부드러우면 부탁도 더 편하게 들려요.",
-        "exampleZh": "語氣柔和的話，請求聽起來也更舒服。",
-        "highlight": "말끝이"
+        "word": "더없다",
+        "pos": "형용사",
+        "translation": "無比的，極好的",
+        "definitionZh": "很滿足，再也沒有可期望的。",
+        "exampleKo": "조용한 카페는 공부하기에 더없이 좋아요.",
+        "exampleZh": "安靜的咖啡廳非常適合讀書。"
       },
       {
         "level": 6,
-        "word": "학술적",
-        "pos": "명사",
-        "translation": "學術的",
-        "exampleKo": "이 글은 학술적인 표현이 많아서 천천히 읽었어요.",
-        "exampleZh": "這篇文章有很多學術性表達，所以我慢慢讀。",
-        "highlight": "학술적인"
+        "word": "협정되다",
+        "pos": "동사",
+        "translation": "被協定",
+        "definitionZh": "相互議論後被決定。",
+        "exampleKo": "새 근무 조건이 노사 간에 협정되었어요.",
+        "exampleZh": "新的工作條件已在勞資之間達成協議。"
       },
       {
         "level": 1,
-        "word": "더",
-        "pos": "부사",
-        "translation": "更，再",
-        "exampleKo": "보고서를 더 쉽게 읽을 수 있게 고쳤어요.",
-        "exampleZh": "我把報告改得更容易閱讀。",
-        "highlight": "더"
+        "word": "보기",
+        "pos": "명사",
+        "translation": "例子，示例",
+        "definitionZh": "為了說明或證明某事而被呈現出來的代表。",
+        "exampleKo": "선생님이 보기 하나를 먼저 보여 주셨어요.",
+        "exampleZh": "老師先給我們看了一個例子。"
       },
       {
         "level": 2,
-        "word": "흐르다",
+        "word": "젖다",
         "pos": "동사",
-        "translation": "流逝，流動",
-        "exampleKo": "집중해서 일하다 보니 시간이 빨리 흘렀어요.",
-        "exampleZh": "專心工作後，時間過得很快。",
-        "highlight": "흘렀어요"
+        "translation": "濕掉",
+        "definitionZh": "液體滲入，變得潮溼。",
+        "exampleKo": "비를 맞아서 운동화가 다 젖었어요.",
+        "exampleZh": "淋到雨後，運動鞋全濕了。"
       },
       {
         "level": 3,
-        "word": "또한",
-        "pos": "부사",
-        "translation": "也，此外",
-        "exampleKo": "이 자료는 보기 쉽고 또한 내용도 정확해요.",
-        "exampleZh": "這份資料容易看，而且內容也正確。",
-        "highlight": "또한"
+        "word": "시간제",
+        "pos": "명사",
+        "translation": "計時，鐘點",
+        "definitionZh": "以小時為單位計算價格或幹活的制度。",
+        "exampleKo": "그 학생은 방학 동안 시간제 일을 했어요.",
+        "exampleZh": "那位學生放假期間做了計時工作。"
       },
       {
         "level": 4,
-        "word": "중독되다",
+        "word": "렌즈",
+        "pos": "명사",
+        "translation": "鏡頭，隱形眼鏡",
+        "definitionZh": "把玻璃或水晶切割成凹面或凸面製成的，能放大或縮小觀看物體的東西。",
+        "exampleKo": "카메라 렌즈를 닦고 사진을 찍었어요.",
+        "exampleZh": "我擦了相機鏡頭後拍照。"
+      },
+      {
+        "level": 1,
+        "word": "같아지다",
         "pos": "동사",
-        "translation": "上癮，中毒",
-        "exampleKo": "요즘은 짧은 영상에 중독되기 쉬워요.",
-        "exampleZh": "最近很容易對短影片上癮。",
-        "highlight": "중독되기"
+        "translation": "變得一樣",
+        "definitionZh": "變得相同。",
+        "exampleKo": "매일 연습하니 발음이 선생님과 조금 같아졌어요.",
+        "exampleZh": "每天練習後，發音稍微變得和老師一樣了。"
       }
     ],
     "grammar": [
       {
-        "level": 1,
-        "pattern": "-에게/한테",
-        "attachment": "人／動物名詞 + 에게/한테。",
-        "meaning": "表示動作對象，相當於「給、向」。",
+        "level": 3,
+        "pattern": "-아/어 두다",
+        "attachment": "動詞語幹 + 아/어 두다。",
+        "meaning": "表示先做好並保留狀態，相當於「先做好某事」。",
         "examples": [
           [
-            "선생님께 질문을 했어요.",
-            "我向老師提問了。"
+            "내일 회의 자료를 미리 출력해 두었어요.",
+            "我先把明天的會議資料印好了。"
           ],
           [
-            "친구한테 자료를 보냈어요.",
-            "我把資料傳給朋友了。"
+            "여행 전에 숙소 주소를 저장해 두세요.",
+            "旅行前請先把住宿地址存好。"
           ]
-        ],
-        "grammar_hints": [
-          "선생님께",
-          "친구한테"
         ]
       },
       {
-        "level": 1,
-        "pattern": "-(으)로",
-        "attachment": "名詞 + (으)로。",
-        "meaning": "表示方向、工具或方法，相當於「往、用」。",
+        "level": 3,
+        "pattern": "-아/어 버리다",
+        "attachment": "動詞語幹 + 아/어 버리다。",
+        "meaning": "表示動作完全做完，常帶遺憾或痛快感。",
         "examples": [
           [
-            "회사에는 지하철로 가요.",
-            "我搭捷運去公司。"
+            "실수로 중요한 메일을 지워 버렸어요.",
+            "我不小心把重要 email 刪掉了。"
           ],
           [
-            "이 문서는 PDF로 보내 주세요.",
-            "請把這份文件用 PDF 寄給我。"
+            "밀린 일을 오늘 다 끝내 버렸어요.",
+            "我今天把累積的工作全都做完了。"
           ]
-        ],
-        "grammar_hints": [
-          "회사에는",
-          "이"
         ]
       }
     ]
@@ -410,135 +394,127 @@
   "2026-09-03": {
     "vocab": [
       {
-        "level": 1,
-        "word": "같다",
-        "pos": "형용사",
-        "translation": "一樣的，相同的",
-        "exampleKo": "두 자료의 내용이 거의 같아서 하나만 보내도 돼요.",
-        "exampleZh": "兩份資料內容幾乎一樣，所以只寄一份也可以。",
-        "highlight": "같아서"
-      },
-      {
-        "level": 2,
-        "word": "쇼핑",
-        "pos": "명사",
-        "translation": "購物",
-        "exampleKo": "주말에는 친구와 쇼핑을 하러 갔어요.",
-        "exampleZh": "週末我和朋友去購物。",
-        "highlight": "쇼핑을"
-      },
-      {
         "level": 3,
-        "word": "선",
+        "word": "차로",
         "pos": "명사",
-        "translation": "線",
-        "exampleKo": "중요한 부분 아래에 선을 그었어요.",
-        "exampleZh": "我在重要部分下面畫了線。",
-        "highlight": "선을"
+        "translation": "車道",
+        "definitionZh": "汽車行駛的道路。",
+        "exampleKo": "출근 시간에는 버스 전용 차로가 더 빨라요.",
+        "exampleZh": "上班時間公車專用車道比較快。"
       },
       {
         "level": 4,
-        "word": "원리",
+        "word": "핑크",
         "pos": "명사",
-        "translation": "原理",
-        "exampleKo": "새 기능의 원리를 이해하니 사용이 쉬워졌어요.",
-        "exampleZh": "了解新功能的原理後，使用起來變容易了。",
-        "highlight": "원리를"
+        "translation": "粉紅色",
+        "definitionZh": "介於紅色與白色之間的顏色。",
+        "exampleKo": "새 노트북 케이스는 연한 핑크 색이에요.",
+        "exampleZh": "新的筆電保護殼是淡粉紅色。"
       },
       {
         "level": 5,
-        "word": "도록",
+        "word": "만개",
         "pos": "명사",
-        "translation": "圖錄，圖冊",
-        "exampleKo": "전시회 도록을 보며 작품 이름을 확인했어요.",
-        "exampleZh": "我看著展覽圖錄確認作品名稱。",
-        "highlight": "도록을"
+        "translation": "盛開",
+        "definitionZh": "花朵怒放。",
+        "exampleKo": "공원에는 벚꽃이 만개해서 사람이 많았어요.",
+        "exampleZh": "公園裡櫻花盛開，所以人很多。"
       },
       {
         "level": 6,
-        "word": "증언하다",
-        "pos": "동사",
-        "translation": "作證，證言",
-        "exampleKo": "회의 참석자는 당시 상황을 자세히 증언했어요.",
-        "exampleZh": "會議參加者詳細說明了當時情況。",
-        "highlight": "증언했어요"
+        "word": "교리",
+        "pos": "명사",
+        "translation": "教理，教義",
+        "definitionZh": "宗教的基本原理和教誨。",
+        "exampleKo": "그 수업에서는 종교의 기본 교리를 배웠어요.",
+        "exampleZh": "那堂課學了宗教的基本教義。"
       },
       {
         "level": 1,
-        "word": "잘",
-        "pos": "부사",
-        "translation": "好好地，順利地",
-        "exampleKo": "발표가 잘 끝나서 모두 안심했어요.",
-        "exampleZh": "發表順利結束，大家都放心了。",
-        "highlight": "잘"
+        "word": "날다",
+        "pos": "동사",
+        "translation": "飛",
+        "definitionZh": "在空中從某個位置移動到另一個位置。",
+        "exampleKo": "비행기가 창밖으로 높이 날아갔어요.",
+        "exampleZh": "飛機從窗外高高飛過去了。"
       },
       {
         "level": 2,
-        "word": "호수",
-        "pos": "명사",
-        "translation": "湖",
-        "exampleKo": "주말에 호수 근처를 산책했어요.",
-        "exampleZh": "週末我在湖邊散步了。",
-        "highlight": "호수"
+        "word": "돌리다",
+        "pos": "동사",
+        "translation": "轉，傳給",
+        "definitionZh": "使某物畫著圓圈移動。",
+        "exampleKo": "자료를 팀원들에게 먼저 돌렸어요.",
+        "exampleZh": "我先把資料傳給組員們了。"
       },
       {
         "level": 3,
-        "word": "활동",
-        "pos": "명사",
-        "translation": "活動",
-        "exampleKo": "동아리 활동 덕분에 친구가 많이 생겼어요.",
-        "exampleZh": "因為社團活動，我交到了很多朋友。",
-        "highlight": "활동"
+        "word": "데다",
+        "pos": "동사",
+        "translation": "燙傷",
+        "definitionZh": "皮肉接觸火源或滾燙的物體而受傷。",
+        "exampleKo": "뜨거운 컵을 잡다가 손을 데었어요.",
+        "exampleZh": "拿熱杯子時，我燙到手了。"
       },
       {
         "level": 4,
-        "word": "흔히",
-        "pos": "부사",
-        "translation": "常常，經常",
-        "exampleKo": "이 표현은 일상 대화에서 흔히 쓰여요.",
-        "exampleZh": "這個表達常用在日常對話中。",
-        "highlight": "흔히"
+        "word": "강도",
+        "pos": "명사",
+        "translation": "強度",
+        "definitionZh": "鐵塊等硬的程度。",
+        "exampleKo": "운동 강도를 조금 낮추는 게 좋겠어요.",
+        "exampleZh": "把運動強度稍微降低會比較好。"
+      },
+      {
+        "level": 1,
+        "word": "죽다",
+        "pos": "동사",
+        "translation": "死，熄滅",
+        "definitionZh": "生物失去生命。",
+        "exampleKo": "휴대폰 배터리가 죽어서 연락을 못 했어요.",
+        "exampleZh": "手機沒電了，所以沒辦法聯絡。"
+      },
+      {
+        "level": 2,
+        "word": "변하다",
+        "pos": "동사",
+        "translation": "改變",
+        "definitionZh": "成為其他東西或性質發生變動。",
+        "exampleKo": "새 팀장이 온 뒤 사무실 분위기가 변했어요.",
+        "exampleZh": "新組長來了之後，辦公室氣氛改變了。"
       }
     ],
     "grammar": [
       {
-        "level": 1,
-        "pattern": "-보다",
-        "attachment": "名詞 + 보다。",
-        "meaning": "表示比較基準，相當於「比...」。",
+        "level": 3,
+        "pattern": "-(으)ㄴ/는 편이다",
+        "attachment": "動詞/形容詞語幹 + (으)ㄴ/는 편이다。",
+        "meaning": "表示大致傾向，相當於「算是某種情況」。",
         "examples": [
           [
-            "오늘은 어제보다 덜 바빠요.",
-            "今天比昨天沒那麼忙。"
+            "저는 아침에 커피를 자주 마시는 편이에요.",
+            "我早上算是常喝咖啡。"
           ],
           [
-            "이 방법이 저 방법보다 쉬워요.",
-            "這個方法比那個方法簡單。"
+            "이 가게는 가격이 조금 비싼 편이에요.",
+            "這間店價格算是有點貴。"
           ]
-        ],
-        "grammar_hints": [
-          "오늘은",
-          "이"
         ]
       },
       {
-        "level": 1,
-        "pattern": "-고",
-        "attachment": "動詞／形容詞語幹 + 고。",
-        "meaning": "連接兩個動作或狀態，相當於「...又...」。",
+        "level": 3,
+        "pattern": "-(으)ㄴ/는 데",
+        "attachment": "動詞/形容詞語幹 + (으)ㄴ/는 데。",
+        "meaning": "表示背景、情況或轉折，相當於「在某情況下，但是」。",
         "examples": [
           [
-            "자료를 확인하고 메일을 보냈어요.",
-            "我確認資料後寄了郵件。"
+            "자료는 준비했는데 아직 확인을 못 했어요.",
+            "資料準備好了，但還沒確認。"
           ],
           [
-            "방은 조용하고 깨끗해요.",
-            "房間安靜又乾淨。"
+            "비가 오는데 우산을 안 가져왔어요.",
+            "下雨了，但我沒帶傘。"
           ]
-        ],
-        "grammar_hints": [
-          "자료를",
-          "방은"
         ]
       }
     ]
@@ -547,134 +523,126 @@
     "vocab": [
       {
         "level": 1,
-        "word": "잘하다",
-        "pos": "동사",
-        "translation": "做得好，擅長",
-        "exampleKo": "민수 씨는 자료 정리를 정말 잘해요.",
-        "exampleZh": "民秀真的很擅長整理資料。",
-        "highlight": "잘해요"
+        "word": "달다",
+        "pos": "형용사",
+        "translation": "甜的",
+        "definitionZh": "與蜂蜜或糖的味道相似。",
+        "exampleKo": "이 케이크는 너무 달아서 커피와 같이 먹었어요.",
+        "exampleZh": "這個蛋糕太甜了，所以我配咖啡一起吃。"
       },
       {
         "level": 2,
-        "word": "찾아가다",
-        "pos": "동사",
-        "translation": "去找，拜訪",
-        "exampleKo": "문제가 생겨서 담당 부서를 찾아갔어요.",
-        "exampleZh": "出了問題，所以我去找負責部門。",
-        "highlight": "찾아갔어요"
+        "word": "며칠",
+        "pos": "명사",
+        "translation": "幾天",
+        "definitionZh": "那個月的第幾天。",
+        "exampleKo": "며칠 뒤에 다시 연락드리겠습니다.",
+        "exampleZh": "幾天後我會再聯絡您。"
       },
       {
         "level": 3,
-        "word": "가능성",
-        "pos": "명사",
-        "translation": "可能性",
-        "exampleKo": "일정이 바뀔 가능성이 있어서 미리 연락했어요.",
-        "exampleZh": "因為行程有可能改變，所以我先聯絡了。",
-        "highlight": "가능성이"
+        "word": "잘살다",
+        "pos": "동사",
+        "translation": "過得好",
+        "definitionZh": "財產多，生活富足。",
+        "exampleKo": "친구는 새 직장에 적응해서 잘살고 있어요.",
+        "exampleZh": "朋友適應了新工作，過得很好。"
       },
       {
         "level": 4,
-        "word": "놀이터",
-        "pos": "명사",
-        "translation": "遊樂場",
-        "exampleKo": "퇴근길에 놀이터에서 아이들이 노는 모습을 봤어요.",
-        "exampleZh": "下班路上我看到孩子們在遊樂場玩。",
-        "highlight": "놀이터에서"
+        "word": "엿보다",
+        "pos": "동사",
+        "translation": "偷看，窺見",
+        "definitionZh": "暗地裡偷偷看。",
+        "exampleKo": "짧은 대화에서 그의 생각을 조금 엿볼 수 있었어요.",
+        "exampleZh": "從簡短對話中可以稍微看出他的想法。"
       },
       {
         "level": 5,
-        "word": "집성",
-        "pos": "명사",
-        "translation": "集成，整合",
-        "exampleKo": "여러 자료의 집성이 끝나면 보고서를 만들 거예요.",
-        "exampleZh": "多份資料整合完成後，我會製作報告。",
-        "highlight": "집성이"
+        "word": "해보다",
+        "pos": "동사",
+        "translation": "試試看",
+        "definitionZh": "相對而決出勝負或打架。",
+        "exampleKo": "새로운 방법으로 다시 해보면 좋겠어요.",
+        "exampleZh": "用新的方法再試試看會比較好。"
       },
       {
         "level": 6,
-        "word": "침입",
+        "word": "폭풍",
         "pos": "명사",
-        "translation": "入侵",
-        "exampleKo": "보안팀은 외부 침입 가능성을 점검했어요.",
-        "exampleZh": "資安團隊檢查了外部入侵的可能性。",
-        "highlight": "침입"
+        "translation": "暴風，風暴",
+        "definitionZh": "颳得非常猛烈的風。",
+        "exampleKo": "폭풍 때문에 오후 일정이 모두 취소되었어요.",
+        "exampleZh": "因為暴風，下午行程全都取消了。"
       },
       {
         "level": 1,
-        "word": "못하다",
+        "word": "남다",
         "pos": "동사",
-        "translation": "做不好，不會",
-        "exampleKo": "어제는 너무 바빠서 답장을 못했어요.",
-        "exampleZh": "昨天太忙，所以沒能回覆。",
-        "highlight": "못했어요"
+        "translation": "剩下",
+        "definitionZh": "沒用完，留下了一部分。",
+        "exampleKo": "회의가 끝난 뒤 자료가 세 부 남았어요.",
+        "exampleZh": "會議結束後還剩下三份資料。"
       },
       {
         "level": 2,
-        "word": "감상",
+        "word": "둘째",
         "pos": "명사",
-        "translation": "感想，欣賞",
-        "exampleKo": "영화를 본 뒤 감상을 짧게 적었어요.",
-        "exampleZh": "看完電影後，我簡短寫下感想。",
-        "highlight": "감상을"
+        "translation": "第二",
+        "definitionZh": "從一數起，一共是兩個。",
+        "exampleKo": "첫째 문제는 끝났고 둘째 문제를 확인하고 있어요.",
+        "exampleZh": "第一個問題結束了，我正在確認第二個問題。"
       },
       {
         "level": 3,
-        "word": "참여하다",
+        "word": "못살다",
         "pos": "동사",
-        "translation": "參與，參加",
-        "exampleKo": "이번 설문에 모든 직원이 참여했어요.",
-        "exampleZh": "所有員工都參加了這次問卷。",
-        "highlight": "참여했어요"
+        "translation": "生活困難，貧窮",
+        "definitionZh": "日子過得貧乏。",
+        "exampleKo": "그 시절에는 많은 사람들이 어렵게 못살았어요.",
+        "exampleZh": "那個時期很多人生活困難。"
       },
       {
         "level": 4,
-        "word": "식재료",
-        "pos": "명사",
-        "translation": "食材",
-        "exampleKo": "저녁을 만들려고 식재료를 미리 사 두었어요.",
-        "exampleZh": "為了做晚餐，我先買好了食材。",
-        "highlight": "식재료를"
+        "word": "짜증스럽다",
+        "pos": "형용사",
+        "translation": "煩人的",
+        "definitionZh": "讓人厭煩生厭。",
+        "exampleKo": "인터넷이 계속 끊겨서 짜증스러웠어요.",
+        "exampleZh": "網路一直斷線，讓人很煩。"
       }
     ],
     "grammar": [
       {
-        "level": 1,
-        "pattern": "-아/어요",
-        "attachment": "動詞／形容詞語幹 + 아/어요。",
-        "meaning": "表示禮貌敘述或提問。",
+        "level": 3,
+        "pattern": "-(으)ㄹ수록",
+        "attachment": "動詞/形容詞語幹 + (으)ㄹ수록。",
+        "meaning": "表示程度逐漸加深，相當於「越做某事越如此」。",
         "examples": [
           [
-            "저는 매일 아침 커피를 마셔요.",
-            "我每天早上喝咖啡。"
+            "연습할수록 발음이 자연스러워져요.",
+            "越練習，發音越自然。"
           ],
           [
-            "오늘 일정은 어디에서 확인해요?",
-            "今天的行程在哪裡確認？"
+            "생각할수록 좋은 방법인 것 같아요.",
+            "越想越覺得是好方法。"
           ]
-        ],
-        "grammar_hints": [
-          "저는",
-          "오늘"
         ]
       },
       {
-        "level": 1,
-        "pattern": "-았/었어요",
-        "attachment": "動詞／形容詞語幹 + 았/었어요。",
-        "meaning": "表示過去，相當於「...了」。",
+        "level": 3,
+        "pattern": "-(으)ㄹ 뿐만 아니라",
+        "attachment": "動詞/形容詞語幹 + (으)ㄹ 뿐만 아니라。",
+        "meaning": "表示不只前項，後項也成立，相當於「不僅前項，而且後項也成立」。",
         "examples": [
           [
-            "어제 보고서를 제출했어요.",
-            "我昨天提交了報告。"
+            "그 직원은 친절할 뿐만 아니라 일도 빨라요.",
+            "那位員工不僅親切，而且工作也快。"
           ],
           [
-            "회의가 생각보다 빨리 끝났어요.",
-            "會議比想像中早結束了。"
+            "이 앱은 편리할 뿐만 아니라 디자인도 깔끔해요.",
+            "這個 App 不僅方便，設計也乾淨。"
           ]
-        ],
-        "grammar_hints": [
-          "어제",
-          "회의가"
         ]
       }
     ]
@@ -682,135 +650,127 @@
   "2026-09-05": {
     "vocab": [
       {
-        "level": 1,
-        "word": "싶다",
-        "pos": "보조 형용사",
-        "translation": "想要的",
-        "exampleKo": "퇴근 후에는 조용한 카페에 가고 싶어요.",
-        "exampleZh": "下班後我想去安靜的咖啡廳。",
-        "highlight": "싶어요"
-      },
-      {
         "level": 2,
-        "word": "남쪽",
-        "pos": "명사",
-        "translation": "南邊，南方",
-        "exampleKo": "사무실 남쪽 창가가 제일 밝아요.",
-        "exampleZh": "辦公室南邊窗邊最明亮。",
-        "highlight": "남쪽"
+        "word": "깜짝",
+        "pos": "부사",
+        "translation": "嚇一跳",
+        "definitionZh": "突然間受驚的樣子。",
+        "exampleKo": "갑자기 알림이 울려서 깜짝 놀랐어요.",
+        "exampleZh": "通知突然響起，我嚇了一跳。"
       },
       {
         "level": 3,
-        "word": "세계화",
+        "word": "이다음",
         "pos": "명사",
-        "translation": "全球化",
-        "exampleKo": "세계화 때문에 외국어 능력이 더 중요해졌어요.",
-        "exampleZh": "因為全球化，外語能力變得更重要。",
-        "highlight": "세계화"
+        "translation": "下次，以後",
+        "definitionZh": "這次後面緊接著的時間或順序。",
+        "exampleKo": "이다음에는 더 일찍 준비하겠습니다.",
+        "exampleZh": "下次我會更早準備。"
       },
       {
         "level": 4,
-        "word": "심리적",
+        "word": "천재적",
         "pos": "명사",
-        "translation": "心理上的",
-        "exampleKo": "큰 발표 전에는 심리적인 부담이 생길 수 있어요.",
-        "exampleZh": "大型發表前可能會產生心理上的負擔。",
-        "highlight": "심리적인"
+        "translation": "天才般的",
+        "definitionZh": "生來具有的超凡才能。",
+        "exampleKo": "그 디자이너는 천재적인 아이디어를 냈어요.",
+        "exampleZh": "那位設計師提出了天才般的點子。"
       },
       {
         "level": 5,
-        "word": "뒤적이다",
-        "pos": "동사",
-        "translation": "翻找",
-        "exampleKo": "오래된 메모를 뒤적이다가 필요한 번호를 찾았어요.",
-        "exampleZh": "我翻找舊筆記時找到了需要的號碼。",
-        "highlight": "뒤적이다가"
+        "word": "길하다",
+        "pos": "형용사",
+        "translation": "吉利的",
+        "definitionZh": "運氣好或要發生好事似的。",
+        "exampleKo": "어른들은 좋은 소식을 길한 징조로 여겼어요.",
+        "exampleZh": "長輩們把好消息視為吉利的徵兆。"
       },
       {
         "level": 6,
-        "word": "유기적",
+        "word": "사기꾼",
         "pos": "명사",
-        "translation": "有機的，緊密連結的",
-        "exampleKo": "팀 업무는 서로 유기적으로 연결되어 있어요.",
-        "exampleZh": "團隊工作彼此緊密連結。",
-        "highlight": "유기적으로"
+        "translation": "詐騙者",
+        "definitionZh": "為了自己的利益而欺騙他人的人。",
+        "exampleKo": "낯선 링크를 보낸 사람이 사기꾼일 수도 있어요.",
+        "exampleZh": "傳陌生連結的人也可能是詐騙者。"
       },
       {
         "level": 1,
-        "word": "많이",
-        "pos": "부사",
-        "translation": "很多，多",
-        "exampleKo": "이번 주에는 회의가 많이 잡혀 있어요.",
-        "exampleZh": "這週安排了很多會議。",
-        "highlight": "많이"
+        "word": "잡다",
+        "pos": "동사",
+        "translation": "抓，訂",
+        "definitionZh": "用手握住不放。",
+        "exampleKo": "이번 주 금요일로 회의 시간을 잡았어요.",
+        "exampleZh": "我把會議時間訂在這週五。"
       },
       {
         "level": 2,
-        "word": "좁다",
-        "pos": "형용사",
-        "translation": "狹窄的",
-        "exampleKo": "회의실이 좁아서 의자를 조금 치웠어요.",
-        "exampleZh": "會議室太窄，所以我移走了一些椅子。",
-        "highlight": "좁아서"
+        "word": "남녀",
+        "pos": "명사",
+        "translation": "男女",
+        "definitionZh": "男性與女性。",
+        "exampleKo": "이 행사는 남녀 모두 참여할 수 있어요.",
+        "exampleZh": "這個活動男女都可以參加。"
       },
       {
         "level": 3,
-        "word": "법",
+        "word": "세계적",
         "pos": "명사",
-        "translation": "方法，法律",
-        "exampleKo": "새 프로그램을 쓰는 법을 배웠어요.",
-        "exampleZh": "我學會了使用新程式的方法。",
-        "highlight": "법을"
+        "translation": "全球性的",
+        "definitionZh": "規模或影響等波及全世界或是全世界最傑出的。",
+        "exampleKo": "그 브랜드는 세계적으로 유명해졌어요.",
+        "exampleZh": "那個品牌變得全球知名。"
       },
       {
         "level": 4,
-        "word": "움직임",
-        "pos": "명사",
-        "translation": "動作，動向",
-        "exampleKo": "시장 움직임을 보고 회의 자료를 수정했어요.",
-        "exampleZh": "我看了市場動向後修改了會議資料。",
-        "highlight": "움직임을"
+        "word": "창작되다",
+        "pos": "동사",
+        "translation": "被創作",
+        "definitionZh": "什麼東西被首次做出。",
+        "exampleKo": "이 광고 문구는 팀 회의에서 창작되었어요.",
+        "exampleZh": "這句廣告文案是在團隊會議中創作出來的。"
+      },
+      {
+        "level": 1,
+        "word": "그냥",
+        "pos": "부사",
+        "translation": "就那樣，乾脆",
+        "definitionZh": "什麼都不做而原封不動地。",
+        "exampleKo": "오늘은 피곤해서 그냥 집에서 쉬었어요.",
+        "exampleZh": "今天很累，所以就待在家休息了。"
       }
     ],
     "grammar": [
       {
-        "level": 1,
-        "pattern": "-(으)ㄹ까요?",
-        "attachment": "動詞語幹 + (으)ㄹ까요?",
-        "meaning": "表示提議或詢問意見，相當於「要不要...？」。",
+        "level": 3,
+        "pattern": "-(으)ㄴ/는 탓에",
+        "attachment": "動詞/形容詞語幹 + (으)ㄴ/는 탓에。",
+        "meaning": "表示負面原因，相當於「因為前項而出現後項」。",
         "examples": [
           [
-            "점심을 같이 먹을까요?",
-            "要不要一起吃午餐？"
+            "준비가 늦어진 탓에 발표 시간이 줄었어요.",
+            "因為準備延遲，發表時間縮短了。"
           ],
           [
-            "회의 자료를 먼저 볼까요?",
-            "要不要先看會議資料？"
+            "비가 많이 오는 탓에 길이 많이 막혀요.",
+            "因為雨下很大，路很塞。"
           ]
-        ],
-        "grammar_hints": [
-          "점심을",
-          "회의"
         ]
       },
       {
-        "level": 1,
-        "pattern": "-(으)ㅂ시다",
-        "attachment": "動詞語幹 + (으)ㅂ시다。",
-        "meaning": "表示共同行動的提議，相當於「一起...吧」。",
+        "level": 3,
+        "pattern": "-(으)ㄴ/는 반면에",
+        "attachment": "動詞/形容詞語幹 + (으)ㄴ/는 반면에。",
+        "meaning": "表示對比，相當於「相反地、另一方面」。",
         "examples": [
           [
-            "오늘 안에 이 일을 끝냅시다.",
-            "我們今天內把這件事完成吧。"
+            "재택근무는 편한 반면에 집중하기 어려울 때도 있어요.",
+            "遠距工作雖然方便，但有時也難以集中。"
           ],
           [
-            "회의 전에 자료를 확인합시다.",
-            "開會前一起確認資料吧。"
+            "이 제품은 가벼운 반면에 가격이 조금 비싸요.",
+            "這個產品雖然輕，但價格有點貴。"
           ]
-        ],
-        "grammar_hints": [
-          "오늘",
-          "회의"
         ]
       }
     ]
@@ -818,135 +778,127 @@
   "2026-09-06": {
     "vocab": [
       {
-        "level": 1,
-        "word": "생각나다",
-        "pos": "동사",
-        "translation": "想起",
-        "exampleKo": "집에 가는 길에 해야 할 일이 생각났어요.",
-        "exampleZh": "回家的路上我想起要做的事。",
-        "highlight": "생각났어요"
-      },
-      {
-        "level": 2,
-        "word": "극장",
-        "pos": "명사",
-        "translation": "劇場，電影院",
-        "exampleKo": "퇴근 후에 극장에서 영화를 봤어요.",
-        "exampleZh": "下班後我在電影院看了電影。",
-        "highlight": "극장에서"
-      },
-      {
         "level": 3,
-        "word": "한마음",
-        "pos": "명사",
-        "translation": "一條心，同心",
-        "exampleKo": "팀원들이 한마음으로 마감을 준비했어요.",
-        "exampleZh": "組員們同心協力準備截止工作。",
-        "highlight": "한마음으로"
+        "word": "그러다",
+        "pos": "동사",
+        "translation": "那樣做",
+        "definitionZh": "像前面發生過的事或說過的話一樣地做。",
+        "exampleKo": "계속 그러다 보면 실수가 생길 수 있어요.",
+        "exampleZh": "一直那樣做的話，可能會出錯。"
       },
       {
         "level": 4,
-        "word": "차라리",
-        "pos": "부사",
-        "translation": "不如，乾脆",
-        "exampleKo": "시간이 부족하면 차라리 내일 다시 이야기해요.",
-        "exampleZh": "如果時間不夠，不如明天再談。",
-        "highlight": "차라리"
+        "word": "기기",
+        "pos": "명사",
+        "translation": "機器，設備",
+        "definitionZh": "機械、器具等的總稱。",
+        "exampleKo": "사무실 기기를 정기적으로 점검해야 해요.",
+        "exampleZh": "辦公室設備需要定期檢查。"
       },
       {
         "level": 5,
-        "word": "점하다",
-        "pos": "동사",
-        "translation": "佔據，佔有",
-        "exampleKo": "온라인 판매가 전체 매출의 큰 비중을 점하고 있어요.",
-        "exampleZh": "線上銷售佔了整體營收很大的比重。",
-        "highlight": "점하고"
+        "word": "하나같다",
+        "pos": "형용사",
+        "translation": "一致的",
+        "definitionZh": "所有都毫無差別，完全一樣。",
+        "exampleKo": "팀원들의 의견이 하나같아서 결정이 빨랐어요.",
+        "exampleZh": "組員們的意見都一樣，所以很快就做出決定。"
       },
       {
         "level": 6,
-        "word": "영리",
+        "word": "총괄적",
         "pos": "명사",
-        "translation": "營利",
-        "exampleKo": "이 모임은 영리 목적이 아니라 공부 모임이에요.",
-        "exampleZh": "這個聚會不是營利目的，而是讀書會。",
-        "highlight": "영리"
+        "translation": "總括的",
+        "definitionZh": "將各自分開的全都彙集在一起的。",
+        "exampleKo": "회의 전에 총괄적인 진행 상황을 공유했어요.",
+        "exampleZh": "會議前分享了整體進度狀況。"
       },
       {
         "level": 1,
-        "word": "생각되다",
-        "pos": "동사",
-        "translation": "被認為，覺得",
-        "exampleKo": "이 방법이 가장 현실적이라고 생각돼요.",
-        "exampleZh": "我覺得這個方法最實際。",
-        "highlight": "생각돼요"
+        "word": "그다음",
+        "pos": "명사",
+        "translation": "接下來，之後",
+        "definitionZh": "接著某個東西而來的時間、場所或順序。",
+        "exampleKo": "이메일을 보낸 그다음에 고객에게 전화했어요.",
+        "exampleZh": "寄出 email 之後，我打電話給客戶。"
       },
       {
         "level": 2,
-        "word": "금방",
-        "pos": "부사",
-        "translation": "馬上，很快",
-        "exampleKo": "자료는 금방 보내 드릴게요.",
-        "exampleZh": "資料我馬上寄給你。",
-        "highlight": "금방"
+        "word": "저렇다",
+        "pos": "형용사",
+        "translation": "那樣的",
+        "definitionZh": "性質、模樣、狀態等與那個一樣。",
+        "exampleKo": "저렇게 설명하면 누구나 쉽게 이해할 거예요.",
+        "exampleZh": "那樣說明的話，誰都能容易理解。"
       },
       {
         "level": 3,
-        "word": "여기다",
-        "pos": "동사",
-        "translation": "認為，看作",
-        "exampleKo": "저는 약속 시간을 중요하게 여겨요.",
-        "exampleZh": "我很重視約定時間。",
-        "highlight": "여겨요"
+        "word": "또다시",
+        "pos": "부사",
+        "translation": "再次，又一次",
+        "definitionZh": "總是重複。",
+        "exampleKo": "같은 문제가 또다시 발생했어요.",
+        "exampleZh": "同樣的問題又再次發生了。"
       },
       {
         "level": 4,
-        "word": "갈등하다",
+        "word": "대가",
+        "pos": "명사",
+        "translation": "代價，費用",
+        "definitionZh": "作為貨款支付的錢。",
+        "exampleKo": "빠른 배송에는 추가 대가가 필요했어요.",
+        "exampleZh": "快速配送需要額外費用。"
+      },
+      {
+        "level": 1,
+        "word": "쓰다",
         "pos": "동사",
-        "translation": "衝突，產生矛盾",
-        "exampleKo": "두 부서는 예산 문제로 잠시 갈등했어요.",
-        "exampleZh": "兩個部門因預算問題短暫產生矛盾。",
-        "highlight": "갈등했어요"
+        "translation": "寫，使用",
+        "definitionZh": "用鉛筆或其它筆等書寫工具在紙張等上劃線而書寫一定的字。",
+        "exampleKo": "보고서 첫 문장을 다시 써 봤어요.",
+        "exampleZh": "我試著重寫了報告的第一句。"
+      },
+      {
+        "level": 2,
+        "word": "녹색",
+        "pos": "명사",
+        "translation": "綠色",
+        "definitionZh": "一種介於黃色與藍色之間的顏色，類似深草的顏色。",
+        "exampleKo": "수정한 부분은 녹색으로 표시해 주세요.",
+        "exampleZh": "請把修改的部分用綠色標示。"
       }
     ],
     "grammar": [
       {
-        "level": 1,
-        "pattern": "-아/어 주세요",
-        "attachment": "動詞語幹 + 아/어 주세요。",
-        "meaning": "表示請求，相當於「請幫我...」。",
+        "level": 4,
+        "pattern": "-는 바람에",
+        "attachment": "動詞現在形 + 는 바람에。",
+        "meaning": "表示突發原因造成不好的結果，相當於「因為前項而導致結果」。",
         "examples": [
           [
-            "문서를 이메일로 보내 주세요.",
-            "請把文件用電子郵件寄給我。"
+            "갑자기 비가 오는 바람에 약속에 늦었어요.",
+            "因為突然下雨，結果我約會遲到了。"
           ],
           [
-            "이 문장을 다시 설명해 주세요.",
-            "請再說明一次這個句子。"
+            "컴퓨터가 꺼지는 바람에 파일을 다시 만들었어요.",
+            "因為電腦關機了，結果我重新做了檔案。"
           ]
-        ],
-        "grammar_hints": [
-          "문서를",
-          "이"
         ]
       },
       {
-        "level": 1,
-        "pattern": "-못",
-        "attachment": "못 + 動詞。",
-        "meaning": "表示能力或情況上不能做某事。",
+        "level": 4,
+        "pattern": "-다 보니",
+        "attachment": "動詞語幹 + 다 보니。",
+        "meaning": "表示持續做某事後自然產生結果，相當於「持續做後自然形成結果」。",
         "examples": [
           [
-            "어제는 바빠서 운동을 못 했어요.",
-            "昨天太忙，所以沒能運動。"
+            "매일 쓰다 보니 한국어 문장이 자연스러워졌어요.",
+            "每天寫著寫著，韓文句子變自然了。"
           ],
           [
-            "소리가 작아서 잘 못 들었어요.",
-            "聲音太小，所以沒聽清楚。"
+            "같이 일하다 보니 동료와 많이 친해졌어요.",
+            "一起工作久了，和同事變熟了。"
           ]
-        ],
-        "grammar_hints": [
-          "어제는",
-          "소리가"
         ]
       }
     ]
@@ -955,134 +907,126 @@
     "vocab": [
       {
         "level": 1,
-        "word": "많다",
-        "pos": "형용사",
-        "translation": "多的",
-        "exampleKo": "오늘은 처리해야 할 메일이 많아요.",
-        "exampleZh": "今天要處理的郵件很多。",
-        "highlight": "많아요"
+        "word": "타다",
+        "pos": "동사",
+        "translation": "搭乘",
+        "definitionZh": "因火苗或高溫而燃氣火焰或火勢蔓延。",
+        "exampleKo": "아침에는 버스보다 지하철을 타는 편이에요.",
+        "exampleZh": "早上我比較常搭捷運，不太搭公車。"
       },
       {
         "level": 2,
-        "word": "체육관",
-        "pos": "명사",
-        "translation": "體育館",
-        "exampleKo": "수업이 끝난 뒤 체육관에서 운동했어요.",
-        "exampleZh": "下課後我在體育館運動。",
-        "highlight": "체육관에서"
+        "word": "좁아지다",
+        "pos": "동사",
+        "translation": "變窄",
+        "definitionZh": "變得狹窄。",
+        "exampleKo": "공사 때문에 출근길 도로가 좁아졌어요.",
+        "exampleZh": "因為施工，上班路上的道路變窄了。"
       },
       {
         "level": 3,
-        "word": "타고나다",
-        "pos": "동사",
-        "translation": "天生具有",
-        "exampleKo": "그는 사람을 편하게 하는 능력을 타고났어요.",
-        "exampleZh": "他天生有讓人放鬆的能力。",
-        "highlight": "타고났어요"
+        "word": "활동적",
+        "pos": "명사",
+        "translation": "活躍的",
+        "definitionZh": "活動身體的。",
+        "exampleKo": "그 학생은 수업 시간에 매우 활동적이에요.",
+        "exampleZh": "那位學生上課時非常活躍。"
       },
       {
         "level": 4,
-        "word": "안심되다",
-        "pos": "동사",
-        "translation": "安心，放心",
-        "exampleKo": "검사 결과가 괜찮다고 해서 안심됐어요.",
-        "exampleZh": "聽說檢查結果沒問題，我就放心了。",
-        "highlight": "안심됐어요"
+        "word": "임시",
+        "pos": "명사",
+        "translation": "臨時",
+        "definitionZh": "沒有提前確定，根據當時的需求而定。",
+        "exampleKo": "임시 비밀번호를 이메일로 받았어요.",
+        "exampleZh": "我透過 email 收到了臨時密碼。"
       },
       {
         "level": 5,
-        "word": "용하다",
-        "pos": "형용사",
-        "translation": "有本事的，高明的",
-        "exampleKo": "그 선배는 문제를 빨리 해결해서 정말 용해요.",
-        "exampleZh": "那位前輩很快解決問題，真的很有本事。",
-        "highlight": "용해요"
+        "word": "죽어나다",
+        "pos": "동사",
+        "translation": "受苦，累壞",
+        "definitionZh": "事情非常苦繁重且費力。",
+        "exampleKo": "마감 전에는 모두가 야근 때문에 죽어났어요.",
+        "exampleZh": "截止日前大家都因加班累壞了。"
       },
       {
         "level": 6,
-        "word": "착용",
-        "pos": "명사",
-        "translation": "穿戴，佩戴",
-        "exampleKo": "회의장에서는 직원증 착용이 필요해요.",
-        "exampleZh": "在會議場需要佩戴員工證。",
-        "highlight": "착용이"
+        "word": "철수되다",
+        "pos": "동사",
+        "translation": "被撤離",
+        "definitionZh": "設施或裝備等被從原來所在的地方撤走。",
+        "exampleKo": "행사 부스는 비 때문에 일찍 철수되었어요.",
+        "exampleZh": "活動攤位因為下雨提早撤離了。"
       },
       {
         "level": 1,
-        "word": "살다",
+        "word": "치다",
         "pos": "동사",
-        "translation": "生活，居住",
-        "exampleKo": "저는 회사 근처에 살아서 출근이 편해요.",
-        "exampleZh": "我住在公司附近，所以上班很方便。",
-        "highlight": "살아서"
+        "translation": "打，輸入",
+        "definitionZh": "用手或其他物品用力碰撞到某物上。",
+        "exampleKo": "주소를 잘못 쳐서 다시 검색했어요.",
+        "exampleZh": "我把地址輸入錯了，所以重新搜尋。"
       },
       {
         "level": 2,
-        "word": "끄다",
-        "pos": "동사",
-        "translation": "關掉",
-        "exampleKo": "회의가 끝나고 화면을 껐어요.",
-        "exampleZh": "會議結束後我關掉了螢幕。",
-        "highlight": "껐어요"
+        "word": "고개",
+        "pos": "명사",
+        "translation": "頭，頭部",
+        "definitionZh": "包括脖子在內的頭部。",
+        "exampleKo": "그는 설명을 듣고 고개를 끄덕였어요.",
+        "exampleZh": "他聽完說明後點了點頭。"
       },
       {
         "level": 3,
-        "word": "되도록",
-        "pos": "부사",
-        "translation": "盡量",
-        "exampleKo": "되도록 오늘 안에 답장을 주세요.",
-        "exampleZh": "請盡量今天內回覆。",
-        "highlight": "되도록"
+        "word": "확인",
+        "pos": "명사",
+        "translation": "確認",
+        "definitionZh": "打聽或認定是否確實是那樣。",
+        "exampleKo": "보내기 전에 파일 이름을 한 번 더 확인했어요.",
+        "exampleZh": "寄出前我又確認了一次檔名。"
       },
       {
         "level": 4,
-        "word": "자극하다",
-        "pos": "동사",
-        "translation": "刺激",
-        "exampleKo": "새 목표가 팀원들의 의욕을 자극했어요.",
-        "exampleZh": "新目標刺激了組員們的意願。",
-        "highlight": "자극했어요"
+        "word": "크림",
+        "pos": "명사",
+        "translation": "奶油，乳霜",
+        "definitionZh": "用於作制黃油、冰淇淋等的原料或烹飪中的，從牛奶中提取的白色油。",
+        "exampleKo": "손이 건조해서 크림을 발랐어요.",
+        "exampleZh": "手很乾，所以我擦了乳霜。"
       }
     ],
     "grammar": [
       {
-        "level": 1,
-        "pattern": "-안",
-        "attachment": "안 + 動詞／形容詞。",
-        "meaning": "表示否定，相當於「不...」。",
+        "level": 4,
+        "pattern": "-는 셈이다",
+        "attachment": "動詞現在形 + 는 셈이다。",
+        "meaning": "表示可視為某種結果，相當於「算是某種情況」。",
         "examples": [
           [
-            "오늘은 카페에 안 가요.",
-            "今天不去咖啡廳。"
+            "교통비를 아꼈으니 점심값을 번 셈이에요.",
+            "省下交通費，算是賺到了午餐錢。"
           ],
           [
-            "이 자료는 아직 안 읽었어요.",
-            "這份資料我還沒看。"
+            "매일 복습했으니 시험 준비를 꾸준히 한 셈이에요.",
+            "每天複習，算是持續準備了考試。"
           ]
-        ],
-        "grammar_hints": [
-          "오늘은",
-          "이"
         ]
       },
       {
-        "level": 3,
-        "pattern": "-뿐이다",
-        "attachment": "動詞／形容詞語幹 + (으)ㄹ 뿐이다；名詞 + 뿐이다。",
-        "meaning": "表示只有某種狀態或動作，相當於「只是...而已」。",
+        "level": 4,
+        "pattern": "-기 마련이다",
+        "attachment": "動詞/形容詞語幹 + 기 마련이다。",
+        "meaning": "表示通常自然會如此，相當於「自然會如此、難免如此」。",
         "examples": [
           [
-            "저는 제 의견을 말했을 뿐이에요.",
-            "我只是說了自己的意見而已。"
+            "처음 하는 일은 실수하기 마련이에요.",
+            "第一次做的事難免會出錯。"
           ],
           [
-            "오늘은 자료를 정리했을 뿐 아직 보내지 않았어요.",
-            "今天只是整理了資料，還沒有寄出。"
+            "꾸준히 연습하면 실력이 늘기 마련이에요.",
+            "持續練習的話，實力自然會進步。"
           ]
-        ],
-        "grammar_hints": [
-          "말했을 뿐이에요",
-          "정리했을 뿐"
         ]
       }
     ]
@@ -1090,135 +1034,127 @@
   "2026-09-08": {
     "vocab": [
       {
-        "level": 1,
-        "word": "때문",
-        "pos": "의존 명사",
-        "translation": "原因，因為",
-        "exampleKo": "비 때문에 약속 시간을 조금 늦췄어요.",
-        "exampleZh": "因為下雨，我把約定時間延後了一點。",
-        "highlight": "때문에"
-      },
-      {
         "level": 2,
-        "word": "열차",
-        "pos": "명사",
-        "translation": "列車",
-        "exampleKo": "출장 갈 때 아침 열차를 탔어요.",
-        "exampleZh": "出差時我搭了早上的列車。",
-        "highlight": "열차를"
+        "word": "할인하다",
+        "pos": "동사",
+        "translation": "打折",
+        "definitionZh": "從定好的價格中減掉一些。",
+        "exampleKo": "이 가게는 점심시간에 음료를 할인해요.",
+        "exampleZh": "這間店午餐時間飲料會打折。"
       },
       {
         "level": 3,
-        "word": "이같이",
-        "pos": "부사",
-        "translation": "如此，像這樣",
-        "exampleKo": "이같이 정리하면 훨씬 보기 쉬워요.",
-        "exampleZh": "像這樣整理的話會更容易看。",
-        "highlight": "이같이"
+        "word": "새다",
+        "pos": "동사",
+        "translation": "漏",
+        "definitionZh": "氣體或液體從縫或洞裡洩出去。",
+        "exampleKo": "창문 틈으로 찬바람이 새어 들어왔어요.",
+        "exampleZh": "冷風從窗縫漏了進來。"
       },
       {
         "level": 4,
-        "word": "겁",
+        "word": "평등",
         "pos": "명사",
-        "translation": "害怕，膽怯",
-        "exampleKo": "처음 발표할 때는 겁이 났지만 잘 끝냈어요.",
-        "exampleZh": "第一次發表時雖然害怕，但順利完成了。",
-        "highlight": "겁이"
+        "translation": "平等",
+        "definitionZh": "權利、義務、資格等完全相同，沒有差別。",
+        "exampleKo": "회사는 모든 직원에게 평등한 기회를 줘야 해요.",
+        "exampleZh": "公司應該給所有員工平等的機會。"
       },
       {
         "level": 5,
-        "word": "봐주다",
-        "pos": "동사",
-        "translation": "通融，放一馬",
-        "exampleKo": "이번 실수는 처음이라 한 번만 봐주세요.",
-        "exampleZh": "這次是第一次犯錯，請通融一次。",
-        "highlight": "봐주세요"
+        "word": "속되다",
+        "pos": "형용사",
+        "translation": "低俗的",
+        "definitionZh": "不高尚，很低賤。",
+        "exampleKo": "공식 발표에서는 속된 표현을 쓰지 않는 게 좋아요.",
+        "exampleZh": "正式發表時最好不要使用低俗的表達。"
       },
       {
         "level": 6,
-        "word": "추구",
+        "word": "병력",
         "pos": "명사",
-        "translation": "追求",
-        "exampleKo": "우리 팀은 속도보다 정확성 추구를 중요하게 봐요.",
-        "exampleZh": "我們團隊比起速度，更重視追求準確性。",
-        "highlight": "추구를"
+        "translation": "兵力，人力",
+        "definitionZh": "軍人的數量；或指由此決定的軍隊的力量。",
+        "exampleKo": "현장에는 충분한 지원 병력이 배치되었어요.",
+        "exampleZh": "現場配置了足夠的支援人力。"
       },
       {
         "level": 1,
-        "word": "좀",
-        "pos": "부사",
-        "translation": "一點，稍微",
-        "exampleKo": "자료를 좀 더 크게 보여 주세요.",
-        "exampleZh": "請把資料顯示得再大一點。",
-        "highlight": "좀"
+        "word": "놓다",
+        "pos": "동사",
+        "translation": "放",
+        "definitionZh": "攤開手或不用力，使抓著或摁住的東西從手裡掉出來。",
+        "exampleKo": "회의 자료를 책상 위에 놓았어요.",
+        "exampleZh": "我把會議資料放在桌上了。"
       },
       {
         "level": 2,
-        "word": "칭찬",
+        "word": "트럭",
         "pos": "명사",
-        "translation": "稱讚",
-        "exampleKo": "팀장님의 칭찬을 듣고 힘이 났어요.",
-        "exampleZh": "聽到組長的稱讚後，我有了精神。",
-        "highlight": "칭찬을"
+        "translation": "卡車",
+        "definitionZh": "運輸物品的汽車。",
+        "exampleKo": "이삿짐 트럭이 아침 일찍 도착했어요.",
+        "exampleZh": "搬家卡車一大早就到了。"
       },
       {
         "level": 3,
-        "word": "한곳",
-        "pos": "명사",
-        "translation": "一個地方",
-        "exampleKo": "파일을 한곳에 모아 두었어요.",
-        "exampleZh": "我把檔案集中放在一個地方。",
-        "highlight": "한곳에"
+        "word": "재다",
+        "pos": "동사",
+        "translation": "量，測量",
+        "definitionZh": "使用工具或方法來瞭解長度、大小、量等的程度。",
+        "exampleKo": "책상 크기를 먼저 재고 주문했어요.",
+        "exampleZh": "我先量了桌子尺寸再下單。"
       },
       {
         "level": 4,
-        "word": "감각",
+        "word": "향하다",
+        "pos": "동사",
+        "translation": "朝向，前往",
+        "definitionZh": "使某個方向成為正面，面對著。",
+        "exampleKo": "퇴근 후 곧바로 집으로 향했어요.",
+        "exampleZh": "下班後我直接往家裡去了。"
+      },
+      {
+        "level": 1,
+        "word": "처음",
         "pos": "명사",
-        "translation": "感覺，感官",
-        "exampleKo": "그 디자이너는 색감 감각이 뛰어나요.",
-        "exampleZh": "那位設計師的色彩感覺很出色。",
-        "highlight": "감각이"
+        "translation": "第一次，起初",
+        "definitionZh": "在順序或時間上排在最前面。",
+        "exampleKo": "처음에는 어렵지만 금방 익숙해질 거예요.",
+        "exampleZh": "一開始會很難，但很快就會習慣。"
       }
     ],
     "grammar": [
       {
-        "level": 3,
-        "pattern": "-덕분에",
-        "attachment": "名詞 + 덕분에；動詞／形容詞語幹 + (으)ㄴ 덕분에。",
-        "meaning": "表示正面原因，相當於「多虧...」。",
+        "level": 4,
+        "pattern": "-(으)ㄹ 리가 없다",
+        "attachment": "動詞/形容詞語幹 + (으)ㄹ 리가 없다。",
+        "meaning": "表示強烈否定可能性，相當於「不可能發生某事」。",
         "examples": [
           [
-            "동료가 도와준 덕분에 일을 빨리 끝냈어요.",
-            "多虧同事幫忙，我很快完成了工作。"
+            "그렇게 꼼꼼한 사람이 실수했을 리가 없어요.",
+            "那麼仔細的人不可能出錯。"
           ],
           [
-            "알림을 설정한 덕분에 회의 시간을 잊지 않았어요.",
-            "多虧設定了提醒，我沒有忘記會議時間。"
+            "아직 출발도 안 했는데 도착했을 리가 없어요.",
+            "都還沒出發，不可能已經到了。"
           ]
-        ],
-        "grammar_hints": [
-          "도와준 덕분에",
-          "설정한 덕분에"
         ]
       },
       {
-        "level": 2,
-        "pattern": "-(으)ㄹ 거예요",
-        "attachment": "動詞／形容詞語幹 + (으)ㄹ 거예요。",
-        "meaning": "表示未來計畫或推測。",
+        "level": 4,
+        "pattern": "-(으)ㄹ 텐데",
+        "attachment": "動詞/形容詞語幹 + (으)ㄹ 텐데。",
+        "meaning": "表示推測並連接後句，相當於「推測前項並接續後項」。",
         "examples": [
           [
-            "퇴근 후에 장을 볼 거예요.",
-            "下班後我要去買菜。"
+            "퇴근 시간이면 길이 막힐 텐데 일찍 출발하세요.",
+            "下班時間路應該會塞，所以請早點出發。"
           ],
           [
-            "내일은 비가 올 거예요.",
-            "明天應該會下雨。"
+            "자료가 많을 텐데 제가 같이 정리할게요.",
+            "資料應該很多，我來一起整理。"
           ]
-        ],
-        "grammar_hints": [
-          "퇴근",
-          "내일은"
         ]
       }
     ]
@@ -1226,135 +1162,127 @@
   "2026-09-09": {
     "vocab": [
       {
-        "level": 1,
-        "word": "하나",
-        "pos": "명사",
-        "translation": "一個",
-        "exampleKo": "질문이 하나 있어서 메시지를 보냈어요.",
-        "exampleZh": "我有一個問題，所以傳了訊息。",
-        "highlight": "하나"
-      },
-      {
-        "level": 2,
-        "word": "멈추다",
-        "pos": "동사",
-        "translation": "停止",
-        "exampleKo": "프린터가 갑자기 멈춰서 다시 켰어요.",
-        "exampleZh": "印表機突然停住，所以我重新開機。",
-        "highlight": "멈춰서"
-      },
-      {
         "level": 3,
-        "word": "다다음",
-        "pos": "관형사",
-        "translation": "下下個的",
-        "exampleKo": "다다음 주에 시험 일정이 있어요.",
-        "exampleZh": "下下週有考試行程。",
-        "highlight": "다다음"
+        "word": "관련하다",
+        "pos": "동사",
+        "translation": "有關，相關",
+        "definitionZh": "兩個以上的人、事物、現象等建立聯絡，互相影響。",
+        "exampleKo": "이 자료는 새 프로젝트와 관련해요.",
+        "exampleZh": "這份資料和新專案有關。"
       },
       {
         "level": 4,
-        "word": "고급",
-        "pos": "명사",
-        "translation": "高級，高階",
-        "exampleKo": "이번 수업은 고급 표현을 많이 다뤄요.",
-        "exampleZh": "這堂課會學很多高階表達。",
-        "highlight": "고급"
+        "word": "내려받다",
+        "pos": "동사",
+        "translation": "下載",
+        "definitionZh": "在計算機等裝置上接收檔案或資料。",
+        "exampleKo": "회의 자료를 미리 내려받아 두었어요.",
+        "exampleZh": "我事先下載好了會議資料。"
       },
       {
         "level": 5,
-        "word": "애먹다",
+        "word": "물들이다",
         "pos": "동사",
-        "translation": "吃苦，費心",
-        "exampleKo": "새 프로그램에 익숙해지느라 며칠 애먹었어요.",
-        "exampleZh": "為了熟悉新程式，我費心了好幾天。",
-        "highlight": "애먹었어요"
+        "translation": "染色，感染",
+        "definitionZh": "使色彩慢慢擴散或沾染而著色。",
+        "exampleKo": "저녁노을이 사무실 창문을 붉게 물들였어요.",
+        "exampleZh": "晚霞把辦公室窗戶染成紅色。"
       },
       {
         "level": 6,
-        "word": "태그",
+        "word": "야당",
         "pos": "명사",
-        "translation": "標籤",
-        "exampleKo": "사진을 올리기 전에 관련 태그를 정리했어요.",
-        "exampleZh": "上傳照片前，我整理了相關標籤。",
-        "highlight": "태그를"
+        "translation": "在野黨",
+        "definitionZh": "沒有執掌現政權的政黨。",
+        "exampleKo": "야당은 새 정책에 대해 비판적인 입장을 냈어요.",
+        "exampleZh": "在野黨對新政策提出了批判立場。"
       },
       {
         "level": 1,
-        "word": "날",
+        "word": "감사",
         "pos": "명사",
-        "translation": "日子，天",
-        "exampleKo": "쉬는 날에는 집에서 한국 드라마를 봐요.",
-        "exampleZh": "休假日我會在家看韓劇。",
-        "highlight": "날에는"
+        "translation": "感謝",
+        "definitionZh": "心存感激；或指那種心情。",
+        "exampleKo": "도움을 받은 뒤 감사 인사를 전했어요.",
+        "exampleZh": "受到幫助後，我表達了感謝。"
       },
       {
         "level": 2,
-        "word": "포장",
-        "pos": "명사",
-        "translation": "包裝",
-        "exampleKo": "선물 포장이 깔끔해서 마음에 들었어요.",
-        "exampleZh": "禮物包裝很整齊，我很喜歡。",
-        "highlight": "포장이"
+        "word": "깊이",
+        "pos": "부사",
+        "translation": "深深地",
+        "definitionZh": "上面到底面或表面到內部的距離遠地。",
+        "exampleKo": "그 문제에 대해 깊이 생각해 봤어요.",
+        "exampleZh": "我深入思考了那個問題。"
       },
       {
         "level": 3,
-        "word": "뿐",
-        "pos": "의존 명사",
-        "translation": "只是，只有",
-        "exampleKo": "오늘은 확인만 했을 뿐 아직 수정하지 않았어요.",
-        "exampleZh": "今天只是確認，還沒有修改。",
-        "highlight": "뿐"
+        "word": "읽기",
+        "pos": "명사",
+        "translation": "閱讀",
+        "definitionZh": "正確讀、理解文字；或指該方法。",
+        "exampleKo": "읽기 시험 전에 지문을 천천히 확인했어요.",
+        "exampleZh": "閱讀考試前，我慢慢確認了文章。"
       },
       {
         "level": 4,
-        "word": "존경",
+        "word": "예고되다",
+        "pos": "동사",
+        "translation": "被預告",
+        "definitionZh": "某事發生之前預先被告知。",
+        "exampleKo": "시스템 점검이 내일로 예고되었어요.",
+        "exampleZh": "系統維修被預告在明天進行。"
+      },
+      {
+        "level": 1,
+        "word": "열다",
+        "pos": "동사",
+        "translation": "打開，召開",
+        "definitionZh": "打通或掀開關著或閉著的東西。",
+        "exampleKo": "팀장은 아침마다 짧은 회의를 열어요.",
+        "exampleZh": "組長每天早上都召開簡短會議。"
+      },
+      {
+        "level": 2,
+        "word": "무게",
         "pos": "명사",
-        "translation": "尊敬",
-        "exampleKo": "저는 끝까지 책임지는 사람에게 존경을 느껴요.",
-        "exampleZh": "我對負責到底的人感到尊敬。",
-        "highlight": "존경을"
+        "translation": "重量",
+        "definitionZh": "物體所受重力的大小程度。",
+        "exampleKo": "가방 무게가 생각보다 많이 나가요.",
+        "exampleZh": "包包重量比想像中重。"
       }
     ],
     "grammar": [
       {
-        "level": 2,
-        "pattern": "-것 같다",
-        "attachment": "動詞／形容詞語幹 + 것 같다。",
-        "meaning": "表示推測，相當於「好像...」。",
+        "level": 4,
+        "pattern": "-나 보다",
+        "attachment": "動詞/形容詞語幹 + 나 보다。",
+        "meaning": "表示根據情況推測，相當於「看來是某種情況」。",
         "examples": [
           [
-            "오늘 회의는 길어질 것 같아요.",
-            "今天會議好像會變長。"
+            "불이 꺼진 걸 보니 모두 퇴근했나 봐요.",
+            "看到燈關了，看來大家都下班了。"
           ],
           [
-            "이 식당은 사람이 많은 것 같아요.",
-            "這間餐廳好像很多人。"
+            "전화가 안 되는 걸 보니 회의 중인가 봐요.",
+            "電話打不通，看來正在開會。"
           ]
-        ],
-        "grammar_hints": [
-          "오늘",
-          "이"
         ]
       },
       {
-        "level": 2,
-        "pattern": "-(으)ㄹ게요",
-        "attachment": "動詞語幹 + (으)ㄹ게요。",
-        "meaning": "表示說話者承諾或意志，相當於「我會...」。",
+        "level": 4,
+        "pattern": "-는 듯하다",
+        "attachment": "動詞現在形 + 는 듯하다。",
+        "meaning": "表示推測或感覺，相當於「似乎是某種情況」。",
         "examples": [
           [
-            "자료는 오후에 보내 드릴게요.",
-            "資料我下午會寄給你。"
+            "팀 분위기가 조금 좋아지는 듯해요.",
+            "團隊氣氛似乎正在變好。"
           ],
           [
-            "제가 먼저 확인할게요.",
-            "我會先確認。"
+            "고객이 아직 결정하지 못하는 듯합니다.",
+            "客戶似乎還沒能決定。"
           ]
-        ],
-        "grammar_hints": [
-          "자료는",
-          "제가"
         ]
       }
     ]
@@ -1363,134 +1291,126 @@
     "vocab": [
       {
         "level": 1,
-        "word": "맞다",
-        "pos": "동사",
-        "translation": "正確，對",
-        "exampleKo": "주소가 맞는지 보내기 전에 확인했어요.",
-        "exampleZh": "寄出前我確認了地址是否正確。",
-        "highlight": "맞는지"
+        "word": "현재",
+        "pos": "명사",
+        "translation": "現在，目前",
+        "definitionZh": "現在這個時候。",
+        "exampleKo": "현재 상황을 먼저 확인하고 결정하겠습니다.",
+        "exampleZh": "我會先確認目前狀況再決定。"
       },
       {
         "level": 2,
-        "word": "붙이다",
-        "pos": "동사",
-        "translation": "貼上",
-        "exampleKo": "책상 앞에 일정표를 붙였어요.",
-        "exampleZh": "我把行程表貼在書桌前。",
-        "highlight": "붙였어요"
+        "word": "샤워",
+        "pos": "명사",
+        "translation": "淋浴",
+        "definitionZh": "用像下雨一樣噴水的器具清洗身體。",
+        "exampleKo": "운동 후에 바로 샤워를 했어요.",
+        "exampleZh": "運動後我馬上洗了澡。"
       },
       {
         "level": 3,
-        "word": "부",
+        "word": "속마음",
         "pos": "명사",
-        "translation": "部門",
-        "exampleKo": "자료는 마케팅 부에 먼저 보냈어요.",
-        "exampleZh": "資料先寄給了行銷部。",
-        "highlight": "부에"
+        "translation": "內心，心意",
+        "definitionZh": "不外露的實際的心意。",
+        "exampleKo": "그는 속마음을 쉽게 말하지 않는 편이에요.",
+        "exampleZh": "他不太容易說出內心想法。"
       },
       {
         "level": 4,
-        "word": "천재",
+        "word": "균형",
         "pos": "명사",
-        "translation": "天才",
-        "exampleKo": "그는 천재라기보다 꾸준히 노력하는 사람이에요.",
-        "exampleZh": "與其說他是天才，不如說他是持續努力的人。",
-        "highlight": "천재라기보다"
+        "translation": "平衡",
+        "definitionZh": "不傾向或不偏重任何一方的狀態。",
+        "exampleKo": "일과 휴식의 균형을 맞추려고 해요.",
+        "exampleZh": "我想要取得工作與休息的平衡。"
       },
       {
         "level": 5,
-        "word": "법하다",
-        "pos": "형용사",
-        "translation": "像是的",
-        "exampleKo": "이 정도 설명이면 모두 이해할 법해요.",
-        "exampleZh": "說明到這個程度，大家應該有可能理解。",
-        "highlight": "법해요"
+        "word": "하나같이",
+        "pos": "부사",
+        "translation": "全都，一律",
+        "definitionZh": "全部都毫無差別，完全一樣。",
+        "exampleKo": "참석자들은 하나같이 자료가 보기 쉽다고 했어요.",
+        "exampleZh": "與會者都說資料很好閱讀。"
       },
       {
         "level": 6,
-        "word": "특이",
+        "word": "분기",
         "pos": "명사",
-        "translation": "特殊，特異",
-        "exampleKo": "그 카페는 특이한 메뉴로 유명해요.",
-        "exampleZh": "那間咖啡廳以特殊菜單聞名。",
-        "highlight": "특이한"
+        "translation": "季度",
+        "definitionZh": "將一年的時間四等分時，每一等份的三個月時間。",
+        "exampleKo": "이번 분기 매출은 예상보다 높았어요.",
+        "exampleZh": "這一季營收比預期高。"
       },
       {
         "level": 1,
-        "word": "앞",
+        "word": "계속",
         "pos": "명사",
-        "translation": "前面",
-        "exampleKo": "건물 앞에서 동료를 잠깐 만났어요.",
-        "exampleZh": "我在大樓前面短暫見了同事。",
-        "highlight": "앞에서"
+        "translation": "繼續，持續",
+        "definitionZh": "連續不間斷。",
+        "exampleKo": "비가 계속 와서 약속 장소를 바꿨어요.",
+        "exampleZh": "雨一直下，所以我們改了約會地點。"
       },
       {
         "level": 2,
-        "word": "흘리다",
+        "word": "쳐다보다",
         "pos": "동사",
-        "translation": "灑出，流出",
-        "exampleKo": "커피를 흘려서 책상을 닦았어요.",
-        "exampleZh": "咖啡灑出來，所以我擦了桌子。",
-        "highlight": "흘려서"
+        "translation": "抬頭看，盯著看",
+        "definitionZh": "從下往上看。",
+        "exampleKo": "사람들이 발표 화면을 조용히 쳐다봤어요.",
+        "exampleZh": "大家安靜地看著發表畫面。"
       },
       {
         "level": 3,
-        "word": "말소리",
-        "pos": "명사",
-        "translation": "說話聲",
-        "exampleKo": "옆 회의실의 말소리가 조금 들렸어요.",
-        "exampleZh": "隔壁會議室的說話聲稍微聽得到。",
-        "highlight": "말소리가"
+        "word": "공개되다",
+        "pos": "동사",
+        "translation": "被公開",
+        "definitionZh": "某事、事物或內容等被暴露於大眾。",
+        "exampleKo": "새 일정은 내일 오전에 공개될 예정이에요.",
+        "exampleZh": "新時程預計明天上午公開。"
       },
       {
         "level": 4,
-        "word": "철도",
-        "pos": "명사",
-        "translation": "鐵路",
-        "exampleKo": "출장지는 철도로 이동하는 편이 더 편해요.",
-        "exampleZh": "出差地點搭鐵路過去比較方便。",
-        "highlight": "철도로"
+        "word": "안심시키다",
+        "pos": "동사",
+        "translation": "使安心",
+        "definitionZh": "使不擔心而內心平靜。",
+        "exampleKo": "팀장은 자세한 설명으로 고객을 안심시켰어요.",
+        "exampleZh": "組長用詳細說明讓客戶安心。"
       }
     ],
     "grammar": [
       {
-        "level": 2,
-        "pattern": "-네요",
-        "attachment": "動詞／形容詞語幹 + 네요。",
-        "meaning": "表示新發現或感嘆。",
+        "level": 4,
+        "pattern": "-아/어 가다",
+        "attachment": "動詞語幹 + 아/어 가다。",
+        "meaning": "表示動作或狀態朝某方向持續發展。",
         "examples": [
           [
-            "오늘 사무실이 조용하네요.",
-            "今天辦公室很安靜呢。"
+            "새 시스템에 조금씩 익숙해져 가고 있어요.",
+            "我正在一點一點習慣新系統。"
           ],
           [
-            "생각보다 일이 빨리 끝나네요.",
-            "事情比想像中早結束呢。"
+            "프로젝트가 계획대로 진행되어 가요.",
+            "專案正按照計畫進行。"
           ]
-        ],
-        "grammar_hints": [
-          "오늘",
-          "생각보다"
         ]
       },
       {
-        "level": 2,
-        "pattern": "-군요",
-        "attachment": "動詞／形容詞語幹 + 군요。",
-        "meaning": "表示理解或感嘆，相當於「原來...啊」。",
+        "level": 4,
+        "pattern": "-아/어 오다",
+        "attachment": "動詞語幹 + 아/어 오다。",
+        "meaning": "表示某狀態從過去持續到現在。",
         "examples": [
           [
-            "이 자료가 최종본이군요.",
-            "原來這份資料是最終版啊。"
+            "우리는 이 문제를 오래 논의해 왔어요.",
+            "我們長期以來一直討論這個問題。"
           ],
           [
-            "오늘 일정이 많군요.",
-            "原來今天行程很多啊。"
+            "그 회사는 품질을 꾸준히 관리해 왔어요.",
+            "那家公司一直持續管理品質。"
           ]
-        ],
-        "grammar_hints": [
-          "이",
-          "오늘"
         ]
       }
     ]
@@ -1498,135 +1418,127 @@
   "2026-09-11": {
     "vocab": [
       {
-        "level": 1,
-        "word": "모든",
-        "pos": "관형사",
-        "translation": "所有的",
-        "exampleKo": "모든 직원이 새 공지를 읽어야 해요.",
-        "exampleZh": "所有員工都要看新的公告。",
-        "highlight": "모든"
-      },
-      {
         "level": 2,
-        "word": "색깔",
-        "pos": "명사",
-        "translation": "顏色",
-        "exampleKo": "표지의 색깔을 더 밝게 바꿨어요.",
-        "exampleZh": "我把封面的顏色改得更亮。",
-        "highlight": "색깔을"
+        "word": "포장되다",
+        "pos": "동사",
+        "translation": "被包裝",
+        "definitionZh": "物品被包裹或捆紮。",
+        "exampleKo": "선물은 예쁜 종이로 포장되어 있었어요.",
+        "exampleZh": "禮物被漂亮的紙包裝好了。"
       },
       {
         "level": 3,
-        "word": "방송되다",
+        "word": "발견하다",
         "pos": "동사",
-        "translation": "被播放，播出",
-        "exampleKo": "인터뷰는 다음 주에 방송될 예정이에요.",
-        "exampleZh": "訪談預計下週播出。",
-        "highlight": "방송될"
+        "translation": "發現",
+        "definitionZh": "首次找到之前還沒被找到過或尚不為世人所知的東西。",
+        "exampleKo": "자료에서 작은 오류를 발견했어요.",
+        "exampleZh": "我在資料中發現了一個小錯誤。"
       },
       {
         "level": 4,
-        "word": "주관적",
+        "word": "답변",
         "pos": "명사",
-        "translation": "主觀的",
-        "exampleKo": "평가는 너무 주관적이지 않게 기준을 정했어요.",
-        "exampleZh": "為了不讓評價太主觀，我們訂了標準。",
-        "highlight": "주관적이지"
+        "translation": "回答，回覆",
+        "definitionZh": "對問題作出回答；或指那種回答。",
+        "exampleKo": "고객의 질문에 빠르게 답변을 보냈어요.",
+        "exampleZh": "我快速回覆了客戶的問題。"
       },
       {
         "level": 5,
-        "word": "불같다",
-        "pos": "형용사",
-        "translation": "火熱的，激烈的",
-        "exampleKo": "마감 전에는 팀 분위기가 불같이 뜨거웠어요.",
-        "exampleZh": "截止日前團隊氣氛非常火熱。",
-        "highlight": "불같이"
+        "word": "배가하다",
+        "pos": "동사",
+        "translation": "加倍",
+        "definitionZh": "增加為兩倍或幾倍；或指那樣增加。",
+        "exampleKo": "좋은 피드백이 팀의 자신감을 배가했어요.",
+        "exampleZh": "好的回饋讓團隊的信心加倍。"
       },
       {
         "level": 6,
-        "word": "폭행",
+        "word": "상무",
         "pos": "명사",
-        "translation": "暴力，施暴",
-        "exampleKo": "회사는 직장 내 폭행 문제를 엄격히 다룹니다.",
-        "exampleZh": "公司嚴格處理職場暴力問題。",
-        "highlight": "폭행"
+        "translation": "常務理事",
+        "definitionZh": "基金會或公司的董事之一，負責日常運作。",
+        "exampleKo": "상무가 직접 회의에 참석해 의견을 냈어요.",
+        "exampleZh": "常務理事親自出席會議並提出意見。"
       },
       {
         "level": 1,
-        "word": "찾다",
+        "word": "불다",
         "pos": "동사",
-        "translation": "找，尋找",
-        "exampleKo": "필요한 자료를 공유 폴더에서 찾았어요.",
-        "exampleZh": "我在共享資料夾找到了需要的資料。",
-        "highlight": "찾았어요"
+        "translation": "吹",
+        "definitionZh": "風起而向某個方向移動。",
+        "exampleKo": "창문을 여니 시원한 바람이 불었어요.",
+        "exampleZh": "打開窗戶後，涼風吹了進來。"
       },
       {
         "level": 2,
-        "word": "알바",
+        "word": "여동생",
         "pos": "명사",
-        "translation": "打工",
-        "exampleKo": "방학 동안 카페에서 알바를 했어요.",
-        "exampleZh": "放假期間我在咖啡廳打工。",
-        "highlight": "알바를"
+        "translation": "妹妹",
+        "definitionZh": "比自己小的女子。",
+        "exampleKo": "여동생이 새 회사에 합격했어요.",
+        "exampleZh": "妹妹錄取了新公司。"
       },
       {
         "level": 3,
-        "word": "계속적",
+        "word": "인간성",
         "pos": "명사",
-        "translation": "持續性的",
-        "exampleKo": "계속적인 연습이 실력을 만듭니다.",
-        "exampleZh": "持續練習會培養實力。",
-        "highlight": "계속적인"
+        "translation": "人性，人品",
+        "definitionZh": "人的本性。",
+        "exampleKo": "어려운 상황에서 그 사람의 인간성이 보였어요.",
+        "exampleZh": "在困難情況下，看出了那個人的人品。"
       },
       {
         "level": 4,
-        "word": "긴급하다",
-        "pos": "형용사",
-        "translation": "緊急的",
-        "exampleKo": "긴급한 일이 생겨서 회의를 미뤘어요.",
-        "exampleZh": "因為有緊急的事，所以延後了會議。",
-        "highlight": "긴급한"
+        "word": "띄다",
+        "pos": "동사",
+        "translation": "顯眼，被看見",
+        "definitionZh": "顯在眼界中。",
+        "exampleKo": "중요한 문장은 빨간색으로 띄게 표시했어요.",
+        "exampleZh": "重要句子用紅色標得很顯眼。"
+      },
+      {
+        "level": 1,
+        "word": "감사하다",
+        "pos": "동사",
+        "translation": "感謝",
+        "definitionZh": "覺得感恩。",
+        "exampleKo": "빠르게 답장해 주셔서 감사합니다.",
+        "exampleZh": "謝謝您快速回覆。"
       }
     ],
     "grammar": [
       {
-        "level": 2,
-        "pattern": "-지요",
-        "attachment": "動詞／形容詞語幹 + 지요。",
-        "meaning": "表示確認或共識，相當於「...對吧」。",
+        "level": 4,
+        "pattern": "-아/어 대다",
+        "attachment": "動詞語幹 + 아/어 대다。",
+        "meaning": "表示反覆或持續做某動作，常帶負面語氣。",
         "examples": [
           [
-            "내일 회의가 있지요?",
-            "明天有會議，對吧？"
+            "알림이 계속 울려 대서 집중하기 어려웠어요.",
+            "通知一直響個不停，所以很難集中。"
           ],
           [
-            "이 표현은 자주 쓰지요.",
-            "這個表達很常用，對吧。"
+            "옆자리 사람이 계속 물어 대서 일을 못 했어요.",
+            "旁邊的人一直問個不停，害我沒辦法工作。"
           ]
-        ],
-        "grammar_hints": [
-          "내일",
-          "이"
         ]
       },
       {
-        "level": 2,
-        "pattern": "-마다",
-        "attachment": "名詞 + 마다。",
-        "meaning": "表示每一個，相當於「每...」。",
+        "level": 4,
+        "pattern": "-는 김에",
+        "attachment": "動詞現在形 + 는 김에。",
+        "meaning": "表示趁著做某事順便做另一事。",
         "examples": [
           [
-            "아침마다 뉴스를 확인해요.",
-            "我每天早上確認新聞。"
+            "은행에 가는 김에 서류도 제출했어요.",
+            "趁著去銀行，我也順便交了文件。"
           ],
           [
-            "수업마다 새로운 단어를 배워요.",
-            "每堂課都學新的單字。"
+            "메일을 보내는 김에 일정도 다시 확인했어요.",
+            "趁著寄 email，我也重新確認了時程。"
           ]
-        ],
-        "grammar_hints": [
-          "아침마다",
-          "수업마다"
         ]
       }
     ]
@@ -1634,135 +1546,127 @@
   "2026-09-12": {
     "vocab": [
       {
-        "level": 1,
-        "word": "곳",
-        "pos": "명사",
-        "translation": "地方",
-        "exampleKo": "조용히 통화할 곳을 찾고 있어요.",
-        "exampleZh": "我正在找可以安靜講電話的地方。",
-        "highlight": "곳을"
-      },
-      {
-        "level": 2,
-        "word": "건너다",
-        "pos": "동사",
-        "translation": "過，穿越",
-        "exampleKo": "회사 앞 횡단보도를 건너면 편의점이 있어요.",
-        "exampleZh": "穿過公司前面的斑馬線就有便利商店。",
-        "highlight": "건너면"
-      },
-      {
         "level": 3,
-        "word": "온",
-        "pos": "관형사",
-        "translation": "整個的，全部的",
-        "exampleKo": "온 가족이 주말에 같이 식사했어요.",
-        "exampleZh": "全家週末一起吃飯了。",
-        "highlight": "온"
+        "word": "갖다주다",
+        "pos": "동사",
+        "translation": "拿給",
+        "definitionZh": "把某物帶來並交給他人。",
+        "exampleKo": "동료가 회의 자료를 제 자리로 갖다줬어요.",
+        "exampleZh": "同事把會議資料拿到我的座位給我。"
       },
       {
         "level": 4,
-        "word": "창작하다",
-        "pos": "동사",
-        "translation": "創作，創造",
-        "exampleKo": "학생들이 직접 이야기를 창작했어요.",
-        "exampleZh": "學生們親自創作了故事。",
-        "highlight": "창작했어요"
+        "word": "우려",
+        "pos": "명사",
+        "translation": "憂慮，擔心",
+        "definitionZh": "操心或擔心；或指那操心或擔心。",
+        "exampleKo": "일정 지연에 대한 우려가 커지고 있어요.",
+        "exampleZh": "對時程延誤的擔憂正在增加。"
       },
       {
         "level": 5,
-        "word": "약다",
+        "word": "참되다",
         "pos": "형용사",
-        "translation": "機靈的，精明的",
-        "exampleKo": "그 친구는 약아서 할인 정보를 절대 놓치지 않아요.",
-        "exampleZh": "那個朋友很精明，絕不會錯過折扣資訊。",
-        "highlight": "약아서"
+        "translation": "真誠的",
+        "definitionZh": "真實正直，沒有任何虛假或修飾。",
+        "exampleKo": "참된 사과는 행동으로 이어져야 해요.",
+        "exampleZh": "真正的道歉應該連同行動一起表現。"
       },
       {
         "level": 6,
-        "word": "근대적",
+        "word": "다국어",
         "pos": "명사",
-        "translation": "近代的，現代化的",
-        "exampleKo": "이 건물은 근대적인 분위기가 남아 있어요.",
-        "exampleZh": "這棟建築仍保有近代風格。",
-        "highlight": "근대적인"
+        "translation": "多國語言",
+        "definitionZh": "多個國家的語言。",
+        "exampleKo": "새 앱은 다국어 서비스를 지원해요.",
+        "exampleZh": "新的 App 支援多國語言服務。"
       },
       {
         "level": 1,
-        "word": "세계",
-        "pos": "명사",
-        "translation": "世界",
-        "exampleKo": "아침마다 세계 뉴스를 확인해요.",
-        "exampleZh": "我每天早上都會確認世界新聞。",
-        "highlight": "세계"
+        "word": "계속하다",
+        "pos": "동사",
+        "translation": "繼續",
+        "definitionZh": "連續不中斷。",
+        "exampleKo": "이 방법으로 공부를 계속해 보려고 해요.",
+        "exampleZh": "我打算用這個方法繼續學習。"
       },
       {
         "level": 2,
-        "word": "테이블",
+        "word": "계단",
         "pos": "명사",
-        "translation": "桌子",
-        "exampleKo": "회의 전에 테이블 위를 정리했어요.",
-        "exampleZh": "開會前我整理了桌面。",
-        "highlight": "테이블"
+        "translation": "樓梯",
+        "definitionZh": "為了上下走動而按順序把小臺階傾斜連線起來的設施。",
+        "exampleKo": "엘리베이터가 고장 나서 계단으로 올라갔어요.",
+        "exampleZh": "電梯壞了，所以我走樓梯上去。"
       },
       {
         "level": 3,
-        "word": "점",
-        "pos": "명사",
-        "translation": "點，部分",
-        "exampleKo": "좋았던 점과 아쉬운 점을 정리했어요.",
-        "exampleZh": "我整理了好的地方和可惜的地方。",
-        "highlight": "점"
+        "word": "발견되다",
+        "pos": "동사",
+        "translation": "被發現",
+        "definitionZh": "之前還沒被找到過或尚不為世人所知的東西首次被找到。",
+        "exampleKo": "결제 오류가 점검 중에 발견되었어요.",
+        "exampleZh": "付款錯誤在檢查時被發現了。"
       },
       {
         "level": 4,
-        "word": "희생하다",
-        "pos": "동사",
-        "translation": "犧牲",
-        "exampleKo": "성과를 위해 건강을 희생하면 안 돼요.",
-        "exampleZh": "不能為了成果而犧牲健康。",
-        "highlight": "희생하면"
+        "word": "토론",
+        "pos": "명사",
+        "translation": "討論",
+        "definitionZh": "對某個問題的是非對錯，多人共同進行研究探討。",
+        "exampleKo": "회의에서는 예산 문제를 중심으로 토론했어요.",
+        "exampleZh": "會議中以預算問題為中心進行討論。"
+      },
+      {
+        "level": 1,
+        "word": "최고",
+        "pos": "명사",
+        "translation": "最高，最好",
+        "definitionZh": "表示程度已達極限。",
+        "exampleKo": "오늘 먹은 김밥이 정말 최고였어요.",
+        "exampleZh": "今天吃的飯捲真的最好吃。"
+      },
+      {
+        "level": 2,
+        "word": "농담",
+        "pos": "명사",
+        "translation": "玩笑",
+        "definitionZh": "開別人玩笑的話或搞笑的話。",
+        "exampleKo": "회의 중에는 가벼운 농담도 분위기를 좋게 해요.",
+        "exampleZh": "會議中輕鬆的玩笑也能讓氣氛變好。"
       }
     ],
     "grammar": [
       {
-        "level": 2,
-        "pattern": "-밖에",
-        "attachment": "名詞 + 밖에 + 否定。",
-        "meaning": "表示「只有...」。",
+        "level": 4,
+        "pattern": "-는 길에",
+        "attachment": "動詞現在形 + 는 길에。",
+        "meaning": "表示在去或來的路上順便做某事。",
         "examples": [
           [
-            "지금은 만 원밖에 없어요.",
-            "我現在只有一萬韓元。"
+            "출근하는 길에 커피를 샀어요.",
+            "上班路上我買了咖啡。"
           ],
           [
-            "회의까지 10분밖에 안 남았어요.",
-            "離會議只剩十分鐘。"
+            "집에 가는 길에 약국에 들렀어요.",
+            "回家路上我去了藥局。"
           ]
-        ],
-        "grammar_hints": [
-          "지금은",
-          "회의까지"
         ]
       },
       {
-        "level": 3,
-        "pattern": "-는데/-(으)ㄴ데",
-        "attachment": "動詞用 는데，形容詞用 (으)ㄴ데。",
-        "meaning": "表示背景、轉折或提示後文。",
+        "level": 4,
+        "pattern": "-는 데다가",
+        "attachment": "動詞/形容詞語幹 + 는 데다가。",
+        "meaning": "表示再加上一個理由，相當於「除此之外還有後項」。",
         "examples": [
           [
-            "자료를 찾고 있는데 아직 안 보여요.",
-            "我正在找資料，但還沒看到。"
+            "이 카페는 조용한 데다가 콘센트도 많아요.",
+            "這間咖啡廳安靜，而且插座也很多。"
           ],
           [
-            "날씨가 추운데 따뜻하게 입으세요.",
-            "天氣很冷，請穿暖一點。"
+            "그 직원은 성실한 데다가 설명도 잘해요.",
+            "那位員工誠實，而且也很會說明。"
           ]
-        ],
-        "grammar_hints": [
-          "자료를",
-          "날씨가"
         ]
       }
     ]
@@ -1771,134 +1675,126 @@
     "vocab": [
       {
         "level": 1,
-        "word": "권",
-        "pos": "의존 명사",
-        "translation": "本，冊",
-        "exampleKo": "이번 달에는 한국어 책을 두 권 읽었어요.",
-        "exampleZh": "這個月我讀了兩本韓文書。",
-        "highlight": "권"
+        "word": "준비",
+        "pos": "명사",
+        "translation": "準備",
+        "definitionZh": "事先籌備。",
+        "exampleKo": "발표 준비 때문에 어제 늦게 잤어요.",
+        "exampleZh": "因為準備發表，我昨天很晚睡。"
       },
       {
         "level": 2,
-        "word": "피아노",
+        "word": "빌딩",
         "pos": "명사",
-        "translation": "鋼琴",
-        "exampleKo": "저녁에는 피아노 연습을 조금 했어요.",
-        "exampleZh": "晚上我稍微練了鋼琴。",
-        "highlight": "피아노"
+        "translation": "大樓",
+        "definitionZh": "主要作為辦公場所使用的西式高層建築物。",
+        "exampleKo": "우리 회사는 역 앞 큰 빌딩에 있어요.",
+        "exampleZh": "我們公司在車站前的大樓裡。"
       },
       {
         "level": 3,
-        "word": "먹고살다",
+        "word": "갈다",
         "pos": "동사",
-        "translation": "謀生，維持生活",
-        "exampleKo": "처음 서울에 왔을 때는 먹고살기가 쉽지 않았어요.",
-        "exampleZh": "剛來首爾時，維持生活並不容易。",
-        "highlight": "먹고살기가"
+        "translation": "更換",
+        "definitionZh": "收起原來的東西，在那個位置放上別的東西作為替代。",
+        "exampleKo": "프린터 잉크를 새것으로 갈았어요.",
+        "exampleZh": "我把印表機墨水換成新的。"
       },
       {
         "level": 4,
-        "word": "예고",
+        "word": "후반",
         "pos": "명사",
-        "translation": "預告",
-        "exampleKo": "점검 예고를 보고 미리 자료를 저장했어요.",
-        "exampleZh": "看到維護預告後，我先儲存了資料。",
-        "highlight": "예고를"
+        "translation": "後半段",
+        "definitionZh": "把整體分成兩半，其中後面的那一半。",
+        "exampleKo": "프로젝트 후반에는 확인 작업이 많아졌어요.",
+        "exampleZh": "專案後半段確認工作變多了。"
       },
       {
         "level": 5,
-        "word": "점등",
+        "word": "국가적",
         "pos": "명사",
-        "translation": "點燈，亮燈",
-        "exampleKo": "행사 시작 전에 무대 조명 점등을 확인했어요.",
-        "exampleZh": "活動開始前確認了舞台燈光點燈。",
-        "highlight": "점등을"
+        "translation": "國家的",
+        "definitionZh": "與國家有關的。",
+        "exampleKo": "이 문제는 국가적인 관심을 받고 있어요.",
+        "exampleZh": "這個問題受到國家層面的關注。"
       },
       {
         "level": 6,
-        "word": "발굴",
+        "word": "무게감",
         "pos": "명사",
-        "translation": "發掘",
-        "exampleKo": "팀은 새로운 고객층 발굴에 집중하고 있어요.",
-        "exampleZh": "團隊正專注於發掘新的客群。",
-        "highlight": "발굴에"
+        "translation": "重量感，分量",
+        "definitionZh": "物體的沉重感。",
+        "exampleKo": "그의 발표에는 책임자의 무게감이 느껴졌어요.",
+        "exampleZh": "他的發表讓人感受到負責人的分量。"
       },
       {
         "level": 1,
-        "word": "달",
-        "pos": "명사",
-        "translation": "月，月份",
-        "exampleKo": "다음 달부터 새 프로젝트가 시작돼요.",
-        "exampleZh": "下個月開始新專案。",
-        "highlight": "달부터"
+        "word": "보내다",
+        "pos": "동사",
+        "translation": "寄，送，度過",
+        "definitionZh": "把人或東西等弄到別的地方去。",
+        "exampleKo": "퇴근 전에 확인 메일을 보냈어요.",
+        "exampleZh": "下班前我寄出了確認 email。"
       },
       {
         "level": 2,
-        "word": "취미",
-        "pos": "명사",
-        "translation": "興趣，嗜好",
-        "exampleKo": "제 취미는 퇴근 후에 한국어 영상을 보는 거예요.",
-        "exampleZh": "我的興趣是下班後看韓文影片。",
-        "highlight": "취미는"
+        "word": "맑다",
+        "pos": "형용사",
+        "translation": "晴朗的，清澈的",
+        "definitionZh": "由於沒有摻雜髒亂的成分，十分潔淨。",
+        "exampleKo": "오늘은 날씨가 맑아서 산책하기 좋아요.",
+        "exampleZh": "今天天氣晴朗，很適合散步。"
       },
       {
         "level": 3,
-        "word": "뒤로하다",
-        "pos": "동사",
-        "translation": "把...放在後面，離開",
-        "exampleKo": "걱정은 뒤로하고 먼저 할 일을 시작했어요.",
-        "exampleZh": "我把擔心先放一邊，開始做該做的事。",
-        "highlight": "뒤로하고"
+        "word": "존재",
+        "pos": "명사",
+        "translation": "存在",
+        "definitionZh": "實際上有；或指那樣的物件。",
+        "exampleKo": "이 파일의 존재를 아무도 모르고 있었어요.",
+        "exampleZh": "沒有人知道這個檔案的存在。"
       },
       {
         "level": 4,
-        "word": "용서",
+        "word": "고급반",
         "pos": "명사",
-        "translation": "原諒",
-        "exampleKo": "진심으로 사과하면 용서를 받을 수도 있어요.",
-        "exampleZh": "真心道歉的話，也許能得到原諒。",
-        "highlight": "용서를"
+        "translation": "高級班",
+        "definitionZh": "在學校或補習班等編排的班級中，水平最高的班級。",
+        "exampleKo": "다음 학기에는 고급반 수업을 들을 예정이에요.",
+        "exampleZh": "下學期我預計上高級班課程。"
       }
     ],
     "grammar": [
       {
-        "level": 3,
-        "pattern": "-(으)ㄴ 지",
-        "attachment": "動詞語幹 + (으)ㄴ 지 + 時間。",
-        "meaning": "表示從某動作後經過的時間。",
+        "level": 4,
+        "pattern": "-았/었던",
+        "attachment": "動詞/形容詞語幹 + 았/었던。",
+        "meaning": "表示過去曾經有過但現在不同的狀態。",
         "examples": [
           [
-            "한국어를 배운 지 1년이 됐어요.",
-            "我學韓文已經一年了。"
+            "전에 다녔던 회사 근처에서 친구를 만났어요.",
+            "我在以前上班的公司附近見了朋友。"
           ],
           [
-            "퇴근한 지 얼마 안 돼서 다시 연락을 받았어요.",
-            "下班沒多久就又收到聯絡。"
+            "작년에 배웠던 내용을 다시 복습했어요.",
+            "我重新複習了去年學過的內容。"
           ]
-        ],
-        "grammar_hints": [
-          "한국어를",
-          "퇴근한"
         ]
       },
       {
-        "level": 3,
-        "pattern": "-게 하다",
-        "attachment": "動詞／形容詞語幹 + 게 하다。",
-        "meaning": "表示使役，相當於「讓...」。",
+        "level": 5,
+        "pattern": "-고자",
+        "attachment": "動詞語幹 + 고자。",
+        "meaning": "表示目的或意圖，相當於「為了達成某目的」。",
         "examples": [
           [
-            "팀장님은 모두가 의견을 말하게 했어요.",
-            "組長讓大家都說出意見。"
+            "문제를 해결하고자 팀 회의를 열었어요.",
+            "為了解決問題，我們召開了團隊會議。"
           ],
           [
-            "알림을 켜서 중요한 일을 잊지 않게 했어요.",
-            "我開啟提醒，讓自己不要忘記重要事情。"
+            "고객 의견을 듣고자 설문을 보냈어요.",
+            "為了聽取客戶意見，我們寄出了問卷。"
           ]
-        ],
-        "grammar_hints": [
-          "팀장님은",
-          "알림을"
         ]
       }
     ]
@@ -1906,135 +1802,255 @@
   "2026-09-14": {
     "vocab": [
       {
-        "level": 1,
-        "word": "형",
-        "pos": "명사",
-        "translation": "哥哥",
-        "exampleKo": "형이 이력서 쓰는 방법을 알려 줬어요.",
-        "exampleZh": "哥哥教我怎麼寫履歷。",
-        "highlight": "형이"
-      },
-      {
         "level": 2,
-        "word": "화려하다",
-        "pos": "형용사",
-        "translation": "華麗的",
-        "exampleKo": "디자인이 너무 화려해서 조금 단순하게 바꿨어요.",
-        "exampleZh": "設計太華麗，所以我改得簡單一點。",
-        "highlight": "화려해서"
+        "word": "잡지",
+        "pos": "명사",
+        "translation": "雜誌",
+        "definitionZh": "定期發行的書，有各種內容的新聞、照片、廣告等。",
+        "exampleKo": "카페에서 커피를 마시며 잡지를 읽었어요.",
+        "exampleZh": "我在咖啡廳一邊喝咖啡一邊看雜誌。"
       },
       {
         "level": 3,
-        "word": "물다",
-        "pos": "동사",
-        "translation": "咬，叼",
-        "exampleKo": "아이가 연필을 물고 숙제를 생각하고 있었어요.",
-        "exampleZh": "孩子咬著鉛筆思考作業。",
-        "highlight": "물고"
+        "word": "판매",
+        "pos": "명사",
+        "translation": "銷售",
+        "definitionZh": "出售商品。",
+        "exampleKo": "신제품 판매가 다음 주부터 시작돼요.",
+        "exampleZh": "新產品銷售從下週開始。"
       },
       {
         "level": 4,
-        "word": "응답",
-        "pos": "명사",
-        "translation": "回應，回答",
-        "exampleKo": "고객 응답이 늦어져서 다시 연락했어요.",
-        "exampleZh": "客戶回應變慢，所以我再次聯絡。",
-        "highlight": "응답이"
+        "word": "살리다",
+        "pos": "동사",
+        "translation": "救活，發揮",
+        "definitionZh": "使生命持續。",
+        "exampleKo": "디자이너는 사진의 장점을 잘 살렸어요.",
+        "exampleZh": "設計師很好地發揮了照片的優點。"
       },
       {
         "level": 5,
-        "word": "트다",
-        "pos": "동사",
-        "translation": "裂開，打開",
-        "exampleKo": "날씨가 건조해서 입술이 텄어요.",
-        "exampleZh": "天氣乾燥，所以嘴唇裂了。",
-        "highlight": "텄어요"
+        "word": "계속성",
+        "pos": "명사",
+        "translation": "持續性",
+        "definitionZh": "接連不中斷的性質或狀態。",
+        "exampleKo": "서비스 품질에는 관리의 계속성이 중요해요.",
+        "exampleZh": "服務品質中，管理的持續性很重要。"
       },
       {
         "level": 6,
-        "word": "복구",
-        "pos": "명사",
-        "translation": "恢復，修復",
-        "exampleKo": "서버 복구가 끝나자 서비스가 다시 열렸어요.",
-        "exampleZh": "伺服器修復完成後，服務重新開放了。",
-        "highlight": "복구가"
+        "word": "시기적절하다",
+        "pos": "형용사",
+        "translation": "適時的",
+        "definitionZh": "時機很合適。",
+        "exampleKo": "이번 안내는 고객에게 시기적절한 도움이 됐어요.",
+        "exampleZh": "這次通知對客戶來說是及時的幫助。"
       },
       {
         "level": 1,
-        "word": "모르다",
-        "pos": "동사",
-        "translation": "不知道，不懂",
-        "exampleKo": "모르는 표현은 바로 메모해 두었어요.",
-        "exampleZh": "不懂的表達我馬上先記下來了。",
-        "highlight": "모르는"
+        "word": "싫다",
+        "pos": "형용사",
+        "translation": "討厭的，不喜歡的",
+        "definitionZh": "不中意。",
+        "exampleKo": "저는 사람이 많은 곳이 조금 싫어요.",
+        "exampleZh": "我有點不喜歡人很多的地方。"
       },
       {
         "level": 2,
-        "word": "출근",
+        "word": "금요일",
         "pos": "명사",
-        "translation": "上班",
-        "exampleKo": "비가 와서 오늘 출근 시간이 조금 길었어요.",
-        "exampleZh": "因為下雨，今天上班時間稍微變長了。",
-        "highlight": "출근"
+        "translation": "星期五",
+        "definitionZh": "以星期一為基準，指一個星期中的第五天。",
+        "exampleKo": "금요일 오후에는 업무를 조금 일찍 정리해요.",
+        "exampleZh": "星期五下午我會稍微早點整理工作。"
       },
       {
         "level": 3,
-        "word": "형님",
-        "pos": "명사",
-        "translation": "兄長，大哥",
-        "exampleKo": "형님이 이사 준비를 많이 도와줬어요.",
-        "exampleZh": "哥哥幫了很多搬家準備。",
-        "highlight": "형님이"
+        "word": "높아지다",
+        "pos": "동사",
+        "translation": "變高，提高",
+        "definitionZh": "從下向上的距離變得更長。",
+        "exampleKo": "서비스 만족도가 지난달보다 높아졌어요.",
+        "exampleZh": "服務滿意度比上個月提高了。"
       },
       {
         "level": 4,
-        "word": "적응",
-        "pos": "명사",
-        "translation": "適應",
-        "exampleKo": "새 업무에 적응하는 데 시간이 조금 걸렸어요.",
-        "exampleZh": "適應新工作花了一點時間。",
-        "highlight": "적응하는"
+        "word": "몰래",
+        "pos": "부사",
+        "translation": "偷偷地",
+        "definitionZh": "不讓人察覺地。",
+        "exampleKo": "동료 생일 선물을 몰래 준비했어요.",
+        "exampleZh": "我偷偷準備了同事的生日禮物。"
+      },
+      {
+        "level": 1,
+        "word": "작다",
+        "pos": "형용사",
+        "translation": "小的",
+        "definitionZh": "長度、寬度、體積等少於其他或一般尺寸。",
+        "exampleKo": "이 회의실은 우리 팀이 쓰기에는 조금 작아요.",
+        "exampleZh": "這間會議室對我們團隊來說有點小。"
       }
     ],
     "grammar": [
       {
-        "level": 3,
-        "pattern": "-아/어지다",
-        "attachment": "形容詞語幹 + 아/어지다。",
-        "meaning": "表示狀態變化，相當於「變得...」。",
+        "level": 5,
+        "pattern": "-도록 하다",
+        "attachment": "動詞語幹 + 도록 하다。",
+        "meaning": "表示使其做到或指示，相當於「使某人做到某事」。",
         "examples": [
           [
-            "연습을 하니까 발음이 자연스러워졌어요.",
-            "練習之後發音變自然了。"
+            "내일까지 자료를 제출하도록 하세요.",
+            "請在明天前提交資料。"
           ],
           [
-            "날씨가 갑자기 추워졌어요.",
-            "天氣突然變冷了。"
+            "회의 후에는 결과를 공유하도록 하겠습니다.",
+            "會議後我會分享結果。"
           ]
-        ],
-        "grammar_hints": [
-          "연습을",
-          "날씨가"
         ]
       },
       {
-        "level": 3,
-        "pattern": "-기로 하다",
-        "attachment": "動詞語幹 + 기로 하다。",
-        "meaning": "表示決定，相當於「決定要...」。",
+        "level": 5,
+        "pattern": "-(으)므로",
+        "attachment": "動詞/形容詞語幹 + (으)므로。",
+        "meaning": "表示正式原因，相當於「因為前項而出現後項」。",
         "examples": [
           [
-            "이번 주부터 아침 회의를 줄이기로 했어요.",
-            "我們決定從這週開始減少早會。"
+            "자료가 부족하므로 추가 조사가 필요합니다.",
+            "因為資料不足，所以需要追加調查。"
           ],
           [
-            "퇴근 후에는 바로 운동하기로 했어요.",
-            "我決定下班後直接去運動。"
+            "일정이 변경되었으므로 다시 확인해 주세요.",
+            "因為時程已變更，所以請重新確認。"
           ]
-        ],
-        "grammar_hints": [
-          "이번",
-          "퇴근"
+        ]
+      }
+    ]
+  },
+  "2026-09-15": {
+    "vocab": [
+      {
+        "level": 3,
+        "word": "불가능",
+        "pos": "명사",
+        "translation": "不可能",
+        "definitionZh": "做不了或成不了。",
+        "exampleKo": "오늘 안에 끝내는 것은 거의 불가능해요.",
+        "exampleZh": "今天內完成幾乎是不可能的。"
+      },
+      {
+        "level": 4,
+        "word": "점차",
+        "pos": "명사",
+        "translation": "逐漸",
+        "definitionZh": "按順序前進。",
+        "exampleKo": "새 업무 방식에 점차 익숙해지고 있어요.",
+        "exampleZh": "我逐漸習慣新的工作方式。"
+      },
+      {
+        "level": 5,
+        "word": "활동성",
+        "pos": "명사",
+        "translation": "活動性，活力",
+        "definitionZh": "活動身體或為某事取得好結果而努力工作的特性。",
+        "exampleKo": "이 동아리는 활동성이 높아서 인기가 많아요.",
+        "exampleZh": "這個社團活動力很高，所以很受歡迎。"
+      },
+      {
+        "level": 6,
+        "word": "당선",
+        "pos": "명사",
+        "translation": "當選",
+        "definitionZh": "在選舉中被選中。",
+        "exampleKo": "그 후보의 당선 소식이 아침 뉴스에 나왔어요.",
+        "exampleZh": "那位候選人當選的消息出現在早間新聞。"
+      },
+      {
+        "level": 1,
+        "word": "결과",
+        "pos": "명사",
+        "translation": "結果",
+        "definitionZh": "某件事情或過程結束後的狀態或現象。",
+        "exampleKo": "검사 결과는 내일 오전에 나와요.",
+        "exampleZh": "檢查結果明天上午會出來。"
+      },
+      {
+        "level": 2,
+        "word": "월요일",
+        "pos": "명사",
+        "translation": "星期一",
+        "definitionZh": "一個星期開始的第一天。",
+        "exampleKo": "월요일 아침에는 메일이 특히 많아요.",
+        "exampleZh": "星期一早上的 email 特別多。"
+      },
+      {
+        "level": 3,
+        "word": "운영하다",
+        "pos": "동사",
+        "translation": "經營，運作",
+        "definitionZh": "管理並領導組織或機構、企業等。",
+        "exampleKo": "작은 온라인 쇼핑몰을 직접 운영하고 있어요.",
+        "exampleZh": "我正在自己經營一家小型網路商店。"
+      },
+      {
+        "level": 4,
+        "word": "회담",
+        "pos": "명사",
+        "translation": "會談，談判",
+        "definitionZh": "與某問題相關的人們聚到一起商討；或者這種商討。",
+        "exampleKo": "두 회사의 회담은 오후까지 이어졌어요.",
+        "exampleZh": "兩家公司的會談持續到下午。"
+      },
+      {
+        "level": 1,
+        "word": "조금",
+        "pos": "명사",
+        "translation": "一點，稍微",
+        "definitionZh": "微量或微小的程度。",
+        "exampleKo": "오늘은 일이 많아서 조금 늦을 것 같아요.",
+        "exampleZh": "今天工作很多，可能會稍微晚一點。"
+      },
+      {
+        "level": 2,
+        "word": "흔들다",
+        "pos": "동사",
+        "translation": "搖晃，揮動",
+        "definitionZh": "使某物左右或前後擺動。",
+        "exampleKo": "그는 멀리서 손을 흔들며 인사했어요.",
+        "exampleZh": "他在遠處揮手打招呼。"
+      }
+    ],
+    "grammar": [
+      {
+        "level": 5,
+        "pattern": "-기에",
+        "attachment": "動詞/形容詞語幹 + 기에。",
+        "meaning": "表示原因或判斷依據，相當於「因為前項」。",
+        "examples": [
+          [
+            "시간이 부족하기에 핵심만 설명드리겠습니다.",
+            "因為時間不足，我只說明重點。"
+          ],
+          [
+            "내용이 중요하기에 다시 한번 확인했습니다.",
+            "因為內容重要，所以我又確認了一次。"
+          ]
+        ]
+      },
+      {
+        "level": 5,
+        "pattern": "-길래",
+        "attachment": "動詞/形容詞語幹 + 길래。",
+        "meaning": "表示看到或聽到前項後做後項，相當於「因為前項而出現後項」。",
+        "examples": [
+          [
+            "비가 오길래 우산을 가져왔어요.",
+            "因為下雨，所以我帶了傘。"
+          ],
+          [
+            "메일이 급해 보이길래 바로 답장했어요.",
+            "因為 email 看起來很急，所以我馬上回覆了。"
+          ]
         ]
       }
     ]
